@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: add_response_header_route
+          uri: https://www.baidu.com
+          predicates:
+          - Path=/
+          filters:
+          - AddResponseHeader=X-Response-Red, Blue
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: add_response_header_route
+#          uri: https://www.baidu.com
+#          filters:
+#            - AddResponseHeader=X-Response-Red, Blue

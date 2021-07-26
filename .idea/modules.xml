@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-java-concurrency/concurrency.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-java-concurrency/concurrency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-springcloud-gateaway/springcloud-gateaway.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-springcloud-gateaway/springcloud-gateaway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tangtian_up.iml" filepath="$PROJECT_DIR$/.idea/tangtian_up.iml" />
+    </modules>
+  </component>
+</project>
