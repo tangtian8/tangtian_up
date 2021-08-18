@@ -28,5 +28,7 @@ public class Profiler {
         Profiler.begin();
         TimeUnit.SECONDS.sleep(1);
         System.out.println("Cost:" + Profiler.end() + " mills");
+        //key弱引用并不是导致内存泄漏的原因，而是因为ThreadLocalMap的生命周期与当前线程一样长，并且没有手动删除对应value。
+        TIME_THREADLOCAL.remove();
     }
 }
