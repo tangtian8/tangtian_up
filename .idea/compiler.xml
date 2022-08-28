@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="tangtianup-thinking-in-jvm" />
         <module name="springcloud-gateaway" />
         <module name="mybatis" />
         <module name="tangtianup-thinking-in-mybatis" />
@@ -22,6 +23,7 @@
       <module name="mybatis" target="1.8" />
       <module name="mysql" target="1.8" />
       <module name="springcloud-gateaway" target="1.8" />
+      <module name="tangtianup-thinking-in-jvm" target="8" />
       <module name="tangtianup-thinking-in-mybatis" target="1.7" />
     </bytecodeTargetLevel>
   </component>
