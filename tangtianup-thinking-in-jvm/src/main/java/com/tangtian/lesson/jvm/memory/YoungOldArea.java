@@ -12,6 +12,7 @@ package com.tangtian.lesson.jvm.memory;
  * */
 
 public class YoungOldArea {
+    private String  CMD = "af";
     public static void main(String[] args) {
         byte[] buffer = new byte[1024*1024*20]; //20M
     }

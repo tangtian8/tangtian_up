@@ -7,6 +7,7 @@ import java.util.Random;
 /**
  * @author tangtian
  * @description
+ *  -Xms100m -Xmx100m
  * @date 2022/8/29 7:57
  */
 public class HeapInstance {

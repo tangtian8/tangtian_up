@@ -1,8 +1,11 @@
 package com.tangtian.lesson.jvm.memory;
 
+import java.util.HashMap;
+
 /**
  * @author tangtian
  * @description 内存分配担保案例
+ * -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:+UseSerialGC
  * @date 2022/8/29 8:01
  */
 public class MemoryAllocationGuarantee {
@@ -23,4 +26,5 @@ public class MemoryAllocationGuarantee {
         allocation4 = new byte[5 * _1MB];//5M
         System.out.println("完毕");
     }
+
 }
