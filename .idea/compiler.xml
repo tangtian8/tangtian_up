@@ -2,12 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="tangtianup-thinking-in-jvm" />
         <module name="springcloud-gateaway" />
+        <module name="springboot-permission" />
         <module name="mybatis" />
         <module name="tangtianup-thinking-in-mybatis" />
         <module name="mysql" />
@@ -19,9 +21,12 @@
     <bytecodeTargetLevel>
       <module name="apache-rocketmq-demo" target="1.6" />
       <module name="concurrency" target="1.8" />
+      <module name="mmall" target="1.7" />
+      <module name="monitor_tuning" target="1.8" />
       <module name="mq-demo" target="1.6" />
       <module name="mybatis" target="1.8" />
       <module name="mysql" target="1.8" />
+      <module name="springboot-permission" target="1.8" />
       <module name="springcloud-gateaway" target="1.8" />
       <module name="tangtianup-thinking-in-jvm" target="8" />
       <module name="tangtianup-thinking-in-mybatis" target="1.7" />
@@ -29,6 +34,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mmall" options="-extdirs E:\tangtian_up\tangtianup-thinking-in-mall/src/main/webapp/WEB-INF/lib" />
+      <module name="monitor_tuning" options="-parameters" />
       <module name="springcloud-gateaway" options="-parameters" />
     </option>
   </component>

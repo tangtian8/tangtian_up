@@ -1,0 +1,73 @@
+1.安装ngix
+修改yum源
+[root@localhost local]# cat  /etc/yum.repos.d/nginx.repo
+[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/centos/7/$basearch/
+gpgcheck=0
+enabled=1
+安装：yum install nginx -y
+添加状态监控：
+location = /nginx_status {
+            stub_status on;
+            access_log off;
+            allow 127.0.0.1;
+            deny all;
+}
+
+2.安装php
+yum install php php-gd  php-soap php-mbstring php-xmlrpc php-dom php-fpm -y
+
+3.nginx整合php-fpm
+修改/etc/php-fpm.d/www.conf文件中的user和group，与nginx.conf中的user一致。
+user = nginx
+group = nginx
+
+4.启动php-fpm服务 
+systemctl start php-fpm
+
+5.修改nginx的配置
+location ~ \.php$ {
+        root /usr/share/nginx/html;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root/$fastcgi_script_name;
+        include fastcgi_params;
+}
+
+6.重启nginx 
+nginx -s reload
+
+7.编写index.php
+[root@localhost php]# pwd
+/usr/share/nginx/html
+[root@localhost php]# cat index.php 
+<?php phpinfo(); ?>
+
+8.打开浏览器访问：http://10.110.3.80/index.php
+
+9.安装rddtool相关依赖
+yum install perl rrdtool perl-libwww-perl libwww-perl perl-rrdtool -y
+ 
+10.安装nginx-rdd
+wget http://soft.vpser.net/status/nginx-rrd/nginx-rrd-0.1.4.tgz
+tar zxvf nginx-rrd-0.1.4.tgz
+cd nginx-rrd-0.1.4
+cp usr/sbin/* /usr/sbin #复制主程序文件到 /usr/sbin 下
+cp etc/nginx-rrd.conf /etc #复制配置文件到 /etc 下
+cp html/index.php  /usr/share/nginx/html/ 
+
+11. 修改配置vi /etc/nginx-rrd.conf
+RRD_DIR="/usr/share/nginx/html/nginx-rrd";
+WWW_DIR="/usr/share/nginx/html/";
+
+13. 新建定时任务
+[root@localhost html]# crontab -l
+*  *    * * *   /bin/sh    /usr/sbin/nginx-collect
+*/1 *   * * *  /bin/sh    /usr/sbin/nginx-graph
+查看任务：
+tail -f /var/log/cron
+
+14. ab压测：
+安装ab压测工具：yum -y install httpd-tools
+ab -n 10000 -c 10 http://127.0.0.1/index.html
