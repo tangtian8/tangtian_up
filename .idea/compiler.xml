@@ -7,25 +7,40 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tangtianup-thinking-in-jvm" />
-        <module name="springcloud-gateaway" />
+        <module name="buyer-api" />
         <module name="springboot-permission" />
         <module name="mybatis" />
-        <module name="tangtianup-thinking-in-mybatis" />
-        <module name="mysql" />
+        <module name="admin" />
         <module name="apache-rocketmq-demo" />
         <module name="concurrency" />
         <module name="mq-demo" />
+        <module name="common-api" />
+        <module name="tangtianup-thinking-in-jvm" />
+        <module name="framework" />
+        <module name="springcloud-gateaway" />
+        <module name="tangtianup-thinking-in-mybatis" />
+        <module name="mysql" />
+        <module name="consumer" />
+        <module name="manager-api" />
+        <module name="seller-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="admin" target="1.8" />
       <module name="apache-rocketmq-demo" target="1.6" />
+      <module name="buyer-api" target="1.8" />
+      <module name="common-api" target="1.8" />
       <module name="concurrency" target="1.8" />
+      <module name="consumer" target="1.8" />
+      <module name="framework" target="1.8" />
+      <module name="lili-shop-parent" target="1.8" />
+      <module name="manager-api" target="1.8" />
       <module name="mmall" target="1.7" />
       <module name="monitor_tuning" target="1.8" />
       <module name="mq-demo" target="1.6" />
       <module name="mybatis" target="1.8" />
       <module name="mysql" target="1.8" />
+      <module name="seller-api" target="1.8" />
       <module name="springboot-permission" target="1.8" />
       <module name="springcloud-gateaway" target="1.8" />
       <module name="tangtianup-thinking-in-jvm" target="8" />
@@ -34,8 +49,15 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin" options="-parameters" />
+      <module name="buyer-api" options="-parameters" />
+      <module name="common-api" options="-parameters" />
+      <module name="consumer" options="-parameters" />
+      <module name="framework" options="-parameters" />
+      <module name="manager-api" options="-parameters" />
       <module name="mmall" options="-extdirs E:\tangtian_up\tangtianup-thinking-in-mall/src/main/webapp/WEB-INF/lib" />
       <module name="monitor_tuning" options="-parameters" />
+      <module name="seller-api" options="-parameters" />
       <module name="springcloud-gateaway" options="-parameters" />
     </option>
   </component>

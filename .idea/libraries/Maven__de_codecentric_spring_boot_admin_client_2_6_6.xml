@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: de.codecentric:spring-boot-admin-client:2.6.6">
+    <CLASSES>
+      <root url="jar://D:/maven/repository/de/codecentric/spring-boot-admin-client/2.6.6/spring-boot-admin-client-2.6.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/maven/repository/de/codecentric/spring-boot-admin-client/2.6.6/spring-boot-admin-client-2.6.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/maven/repository/de/codecentric/spring-boot-admin-client/2.6.6/spring-boot-admin-client-2.6.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
