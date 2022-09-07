@@ -18,7 +18,6 @@
         <module name="tangtianup-thinking-in-jvm" />
         <module name="framework" />
         <module name="springcloud-gateaway" />
-        <module name="tangtianup-thinking-in-mybatis" />
         <module name="mysql" />
         <module name="consumer" />
         <module name="manager-api" />

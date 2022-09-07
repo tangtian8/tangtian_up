@@ -2,24 +2,23 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-lilishop/admin/admin.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-lilishop/admin/admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/admin/admin.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/admin/admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-rocketmq/rocketmq/java-rocketmq-demo/apache-rocketmq-demo.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-rocketmq/rocketmq/java-rocketmq-demo/apache-rocketmq-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-lilishop/buyer-api/buyer-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-lilishop/buyer-api/buyer-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-lilishop/common-api/common-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-lilishop/common-api/common-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/buyer-api/buyer-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/buyer-api/buyer-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/common-api/common-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/common-api/common-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-java-concurrency/concurrency.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-java-concurrency/concurrency.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-lilishop/consumer/consumer.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-lilishop/consumer/consumer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-lilishop/framework/framework.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-lilishop/framework/framework.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-lilishop/lili-shop-parent.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-lilishop/lili-shop-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-lilishop/manager-api/manager-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-lilishop/manager-api/manager-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/consumer/consumer.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/consumer/consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/framework/framework.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/framework/framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/lili-shop-parent.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/lili-shop-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/manager-api/manager-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/manager-api/manager-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-rocketmq/tcp/java-tcp-demo/mq-demo.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-rocketmq/tcp/java-tcp-demo/mq-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/codeSource/mybatis-3-mybatis-3.5.9/mybatis.iml" filepath="$PROJECT_DIR$/codeSource/mybatis-3-mybatis-3.5.9/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-mysql/mysql.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-mysql/mysql.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-lilishop/seller-api/seller-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-lilishop/seller-api/seller-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/seller-api/seller-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/seller-api/seller-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-permission/springboot-permission.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-permission/springboot-permission.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-springcloud-gateaway/springcloud-gateaway.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-springcloud-gateaway/springcloud-gateaway.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tangtian_up.iml" filepath="$PROJECT_DIR$/.idea/tangtian_up.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-jvm/tangtianup-thinking-in-jvm.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-jvm/tangtianup-thinking-in-jvm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-mybatis/tangtianup-thinking-in-mybatis.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-mybatis/tangtianup-thinking-in-mybatis.iml" />
     </modules>
   </component>
 </project>

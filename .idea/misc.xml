@@ -13,7 +13,13 @@
         <option value="$PROJECT_DIR$/tangtianup-thinking-in-jvm/pom.xml" />
         <option value="$PROJECT_DIR$/tangtianup-thinking-in-permission/pom.xml" />
         <option value="$PROJECT_DIR$/tangtianup-thinking-lilishop/pom.xml" />
+        <option value="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/tangtianup-thinking-in-mybatis/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
