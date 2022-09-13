@@ -1,5 +1,8 @@
 server:
   port: 8888
+  tomcat:
+    max-threads: 200
+    max-connections: 300
 
   servlet:
     context-path: /
@@ -28,6 +31,9 @@ management:
     web:
       exposure:
         include: '*'
+  metrics:
+    tags:
+      application: ${spring.application.name}
 spring:
   application:
     name: buyer-api
