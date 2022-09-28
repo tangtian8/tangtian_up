@@ -215,17 +215,17 @@ public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements
     @Override
     public GoodsVO getGoodsVO(String goodsId) {
         //缓存获取，如果没有则读取缓存
-        GoodsVO goodsVO = cache.get(CachePrefix.GOODS.getPrefix() + goodsId);
-        if (goodsVO != null) {
-            return goodsVO;
-        }
+//        GoodsVO goodsVO = cache.get(CachePrefix.GOODS.getPrefix() + goodsId);
+//        if (goodsVO != null) {
+//            return goodsVO;
+//        }
         //查询商品信息
         Goods goods = this.getById(goodsId);
         if (goods == null) {
             log.error("商品ID为" + goodsId + "的商品不存在");
             throw new ServiceException(ResultCode.GOODS_NOT_EXIST);
         }
-        goodsVO = new GoodsVO();
+        GoodsVO goodsVO = new GoodsVO();
         //赋值
         BeanUtils.copyProperties(goods, goodsVO);
         //商品id
@@ -262,7 +262,7 @@ public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements
             goodsVO.setWholesaleList(wholesaleList);
         }
 
-        cache.put(CachePrefix.GOODS.getPrefix() + goodsId, goodsVO);
+//        cache.put(CachePrefix.GOODS.getPrefix() + goodsId, goodsVO);
         return goodsVO;
     }
 

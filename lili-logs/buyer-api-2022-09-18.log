@@ -1,0 +1,823 @@
+2022-09-18 09:31:50.793  INFO 20220 --- [main] cn.lili.BuyerApiApplication              : Starting BuyerApiApplication using Java 1.8.0_333 on HZ-IT-205 with PID 20220 (E:\tangtian_up\tangtianup-thinging-in-lilishop\buyer-api\target\classes started by tian.tang in E:\tangtian_up)
+2022-09-18 09:31:50.797  INFO 20220 --- [main] cn.lili.BuyerApiApplication              : No active profile set, falling back to default profiles: default
+2022-09-18 09:31:54.070  INFO 20220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-18 09:31:54.073  INFO 20220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-18 09:31:54.856  INFO 20220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 778 ms. Found 2 Elasticsearch repository interfaces.
+2022-09-18 09:31:54.862  INFO 20220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-18 09:31:54.863  INFO 20220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-18 09:31:54.993  INFO 20220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-18 09:31:55.008  INFO 20220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-18 09:31:55.009  INFO 20220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-18 09:31:55.159  INFO 20220 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.permission.repository.SystemLogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-18 09:31:55.160  INFO 20220 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.search.repository.EsGoodsIndexRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-18 09:31:55.160  INFO 20220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 141 ms. Found 0 Redis repository interfaces.
+2022-09-18 09:31:55.780  INFO 20220 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-09-18 09:31:55.781  INFO 20220 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-18 09:31:55.783  INFO 20220 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-18 09:31:55.783  INFO 20220 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-18 09:31:55.785  INFO 20220 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:31:55.785  INFO 20220 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-09-18 09:31:55.786  INFO 20220 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-09-18 09:31:55.786  INFO 20220 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:31:55.786  INFO 20220 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:31:55.798  INFO 20220 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-09-18 09:31:55.805  INFO 20220 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-09-18 09:31:55.829  INFO 20220 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-09-18 09:31:55.986  INFO 20220 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-09-18 09:31:56.003  INFO 20220 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadProperties' of type [cn.lili.common.properties.ThreadProperties$$EnhancerBySpringCGLIB$$78cf745c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:31:56.005  INFO 20220 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadConfig' of type [cn.lili.common.thread.ThreadConfig$$EnhancerBySpringCGLIB$$eb07d274] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:31:56.403  INFO 20220 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [cn.lili.cache.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$41d42f71] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:31:56.446  INFO 20220 --- [main] cn.lili.cache.config.redis.RedisConfig   : 初始化 -> [Redis CacheErrorHandler]
+2022-09-18 09:31:56.448  INFO 20220 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'errorHandler' of type [cn.lili.cache.config.redis.RedisConfig$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:31:56.508  INFO 20220 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@599310ab' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:31:56.532  INFO 20220 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:31:56.555  INFO 20220 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:31:56.576  INFO 20220 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:31:56.580  INFO 20220 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:31:56.757  INFO 20220 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-09-18 09:31:56.761  INFO 20220 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-09-18 09:31:57.282  INFO 20220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-09-18 09:31:57.297  INFO 20220 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-18 09:31:57.297  INFO 20220 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-09-18 09:31:57.587  INFO 20220 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-18 09:31:57.588  INFO 20220 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6379 ms
+2022-09-18 09:31:59.505  INFO 20220 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-09-18 09:31:59.569  INFO 20220 --- [main] o.a.s.c.config.log.ConfigurationLogger   : ShardingRuleConfiguration
+{}
+
+2022-09-18 09:31:59.572  INFO 20220 --- [main] o.a.s.c.config.log.ConfigurationLogger   : Properties
+sql.show: 'false'
+
+2022-09-18 09:32:02.715  INFO 20220 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@80f3111
+2022-09-18 09:32:02.716  INFO 20220 --- [main] RocketmqRemoting                         : name server address updated. NEW : [localhost:9876] , OLD: null
+2022-09-18 09:32:02.846  INFO 20220 --- [main] RocketmqCommon                           : Try to start service thread:PullMessageService started:false lastThread:null
+2022-09-18 09:32:02.847  INFO 20220 --- [main] RocketmqCommon                           : Try to start service thread:RebalanceService started:false lastThread:null
+2022-09-18 09:32:02.871  INFO 20220 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: null , NEW: localhost:9876. namesrvIndex = 880
+2022-09-18 09:32:03.252  INFO 20220 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:9876] asynchronously
+2022-09-18 09:32:03.300  INFO 20220 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-18 09:32:03.305  INFO 20220 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:9876] success, AbstractBootstrap$PendingRegistrationPromise@4da6e2de(success)
+2022-09-18 09:32:03.352  INFO 20220 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final long cn.lili.modules.goods.serviceimpl.GoodsServiceImpl.getGoodsCountByCategory(java.lang.String)] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-09-18 09:32:03.871  INFO 20220 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:10911] asynchronously
+2022-09-18 09:32:03.873  INFO 20220 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:10911
+2022-09-18 09:32:03.873  INFO 20220 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:10911] success, AbstractBootstrap$PendingRegistrationPromise@3dade396(success)
+2022-09-18 09:32:05.554  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.554  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.554  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.554  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.554  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:05.555  WARN 20220 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:32:06.694  INFO 20220 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
+2022-09-18 09:32:06.694  INFO 20220 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
+2022-09-18 09:32:06.695  INFO 20220 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-18 09:32:15.621  INFO 20220 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2fce55d6
+2022-09-18 09:32:15.623  INFO 20220 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@46f970b6
+2022-09-18 09:32:15.624  INFO 20220 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@cfa5b9f
+2022-09-18 09:32:15.625  INFO 20220 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1a6b2564
+2022-09-18 09:32:15.625  INFO 20220 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@47d6a31a
+2022-09-18 09:32:15.626  INFO 20220 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4a270796
+2022-09-18 09:32:15.627  INFO 20220 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@14df8bee
+2022-09-18 09:32:15.628  INFO 20220 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@57dcdc14
+2022-09-18 09:32:17.858  WARN 20220 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'snowflakeInitiator': Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+2022-09-18 09:32:17.872  INFO 20220 --- [main] RocketmqCommon                           : Try to shutdown service thread:PullMessageService started:true lastThread:Thread[PullMessageService,5,main]
+2022-09-18 09:32:17.873  INFO 20220 --- [main] RocketmqCommon                           : shutdown thread PullMessageService interrupt true
+2022-09-18 09:32:17.873  INFO 20220 --- [main] RocketmqCommon                           : join thread PullMessageService elapsed time(ms) 0 90000
+2022-09-18 09:32:17.874  INFO 20220 --- [main] RocketmqRemoting                         : closeChannel: begin close the channel[127.0.0.1:10911] Found: false
+2022-09-18 09:32:17.874  INFO 20220 --- [main] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:10911] has been removed from the channel table before
+2022-09-18 09:32:17.875  INFO 20220 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 127.0.0.1:10911
+2022-09-18 09:32:17.875  INFO 20220 --- [main] RocketmqRemoting                         : closeChannel: begin close the channel[127.0.0.1:9876] Found: false
+2022-09-18 09:32:17.875  INFO 20220 --- [main] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:9876] has been removed from the channel table before
+2022-09-18 09:32:17.875  INFO 20220 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 127.0.0.1:9876
+2022-09-18 09:32:17.875  INFO 20220 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-18 09:32:17.876  INFO 20220 --- [main] RocketmqRemoting                         : shutdown thread NettyEventExecutor interrupt false
+2022-09-18 09:32:17.876  INFO 20220 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-18 09:32:17.876  INFO 20220 --- [main] RocketmqRemoting                         : join thread NettyEventExecutor elapsed time(ms) 0 90000
+2022-09-18 09:32:17.876  INFO 20220 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:10911] result: true
+2022-09-18 09:32:17.877  INFO 20220 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2022-09-18 09:32:17.877  INFO 20220 --- [main] RocketmqCommon                           : Try to shutdown service thread:RebalanceService started:true lastThread:Thread[RebalanceService,5,main]
+2022-09-18 09:32:17.877  INFO 20220 --- [main] RocketmqCommon                           : shutdown thread RebalanceService interrupt false
+2022-09-18 09:32:17.878  INFO 20220 --- [main] RocketmqCommon                           : join thread RebalanceService elapsed time(ms) 1 90000
+2022-09-18 09:32:18.004  INFO 20220 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-09-18 09:32:18.009  INFO 20220 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-09-18 09:32:18.013  INFO 20220 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-09-18 09:32:18.023  WARN 20220 --- [main] o.s.b.c.p.m.PropertiesMigrationListener  : 
+The use of configuration keys that have been renamed was found in the environment:
+
+Property source 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'':
+	Key: server.tomcat.max-threads
+		Line: 4
+		Replacement: server.tomcat.threads.max
+
+
+Each configuration key has been temporarily mapped to its replacement for your convenience. To silence this warning, please update your configuration to use the new keys.
+
+2022-09-18 09:32:18.032  INFO 20220 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-18 09:32:18.068 ERROR 20220 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'snowflakeInitiator': Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:763)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1318)
+	at cn.lili.BuyerApiApplication.main(BuyerApiApplication.java:33)
+Caused by: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1553)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1461)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1247)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1230)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:979)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:359)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:209)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultValueOperations.setIfAbsent(DefaultValueOperations.java:296)
+	at org.springframework.data.redis.support.atomic.RedisAtomicLong.initializeIfAbsent(RedisAtomicLong.java:151)
+	at org.springframework.data.redis.support.atomic.RedisAtomicLong.<init>(RedisAtomicLong.java:96)
+	at org.springframework.data.redis.support.atomic.RedisAtomicLong.<init>(RedisAtomicLong.java:65)
+	at cn.lili.cache.impl.RedisCache.incr(RedisCache.java:219)
+	at cn.lili.common.utils.SnowflakeInitiator.init(SnowflakeInitiator.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	... 19 common frames omitted
+Caused by: org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:109)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1459)
+	... 42 common frames omitted
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:320)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:211)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.lambda$null$0(LettucePoolingConnectionProvider.java:97)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:211)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:201)
+	at org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:58)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:918)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:431)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:356)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:122)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:117)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:103)
+	... 43 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+
+2022-09-18 09:43:57.684  INFO 3848 --- [main] cn.lili.BuyerApiApplication              : Starting BuyerApiApplication using Java 1.8.0_333 on HZ-IT-205 with PID 3848 (E:\tangtian_up\tangtianup-thinging-in-lilishop\buyer-api\target\classes started by tian.tang in E:\tangtian_up)
+2022-09-18 09:43:57.688  INFO 3848 --- [main] cn.lili.BuyerApiApplication              : No active profile set, falling back to default profiles: default
+2022-09-18 09:44:00.961  INFO 3848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-18 09:44:00.965  INFO 3848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-18 09:44:01.646  INFO 3848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 676 ms. Found 2 Elasticsearch repository interfaces.
+2022-09-18 09:44:01.651  INFO 3848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-18 09:44:01.652  INFO 3848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-18 09:44:01.749  INFO 3848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-18 09:44:01.762  INFO 3848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-18 09:44:01.764  INFO 3848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-18 09:44:01.880  INFO 3848 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.permission.repository.SystemLogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-18 09:44:01.880  INFO 3848 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.search.repository.EsGoodsIndexRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-18 09:44:01.880  INFO 3848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 0 Redis repository interfaces.
+2022-09-18 09:44:02.434  INFO 3848 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-09-18 09:44:02.435  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-18 09:44:02.438  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-18 09:44:02.438  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-18 09:44:02.440  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:44:02.441  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-09-18 09:44:02.441  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-09-18 09:44:02.442  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:44:02.442  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:44:02.450  INFO 3848 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-09-18 09:44:02.458  INFO 3848 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-09-18 09:44:02.467  INFO 3848 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-09-18 09:44:02.585  INFO 3848 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-09-18 09:44:02.595  INFO 3848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadProperties' of type [cn.lili.common.properties.ThreadProperties$$EnhancerBySpringCGLIB$$e6db24c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:44:02.596  INFO 3848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadConfig' of type [cn.lili.common.thread.ThreadConfig$$EnhancerBySpringCGLIB$$591382dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:44:03.027  INFO 3848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [cn.lili.cache.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$afdfdfd9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:44:03.067  INFO 3848 --- [main] cn.lili.cache.config.redis.RedisConfig   : 初始化 -> [Redis CacheErrorHandler]
+2022-09-18 09:44:03.069  INFO 3848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'errorHandler' of type [cn.lili.cache.config.redis.RedisConfig$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:44:03.129  INFO 3848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5dac6bc3' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:44:03.149  INFO 3848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:44:03.171  INFO 3848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:44:03.190  INFO 3848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:44:03.193  INFO 3848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:44:03.363  INFO 3848 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-09-18 09:44:03.366  INFO 3848 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-09-18 09:44:03.856  INFO 3848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-09-18 09:44:03.870  INFO 3848 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-18 09:44:03.871  INFO 3848 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-09-18 09:44:04.100  INFO 3848 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-18 09:44:04.100  INFO 3848 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5957 ms
+2022-09-18 09:44:05.646  INFO 3848 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-09-18 09:44:05.714  INFO 3848 --- [main] o.a.s.c.config.log.ConfigurationLogger   : ShardingRuleConfiguration
+{}
+
+2022-09-18 09:44:05.718  INFO 3848 --- [main] o.a.s.c.config.log.ConfigurationLogger   : Properties
+sql.show: 'false'
+
+2022-09-18 09:44:08.680  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4eda5325
+2022-09-18 09:44:08.682  INFO 3848 --- [main] RocketmqRemoting                         : name server address updated. NEW : [localhost:9876] , OLD: null
+2022-09-18 09:44:08.802  INFO 3848 --- [main] RocketmqCommon                           : Try to start service thread:PullMessageService started:false lastThread:null
+2022-09-18 09:44:08.803  INFO 3848 --- [main] RocketmqCommon                           : Try to start service thread:RebalanceService started:false lastThread:null
+2022-09-18 09:44:08.813  INFO 3848 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: null , NEW: localhost:9876. namesrvIndex = 769
+2022-09-18 09:44:09.160  INFO 3848 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:9876] asynchronously
+2022-09-18 09:44:09.187  INFO 3848 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-18 09:44:09.192  INFO 3848 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:9876] success, AbstractBootstrap$PendingRegistrationPromise@70ad379e(success)
+2022-09-18 09:44:09.272  INFO 3848 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final long cn.lili.modules.goods.serviceimpl.GoodsServiceImpl.getGoodsCountByCategory(java.lang.String)] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-09-18 09:44:09.821  INFO 3848 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:10911] asynchronously
+2022-09-18 09:44:09.822  INFO 3848 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:10911
+2022-09-18 09:44:09.823  INFO 3848 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:10911] success, AbstractBootstrap$PendingRegistrationPromise@263485be(success)
+2022-09-18 09:44:11.530  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.532  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.533  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:11.533  WARN 3848 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:44:12.670  INFO 3848 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
+2022-09-18 09:44:12.670  INFO 3848 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
+2022-09-18 09:44:12.670  INFO 3848 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-18 09:44:21.523  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@29c3dd33
+2022-09-18 09:44:21.574  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6fa1dc0c
+2022-09-18 09:44:21.576  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@74037f9b
+2022-09-18 09:44:21.576  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@b0dc426
+2022-09-18 09:44:21.577  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@3c10ba31
+2022-09-18 09:44:21.578  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5db05003
+2022-09-18 09:44:21.579  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@32200389
+2022-09-18 09:44:21.580  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@57e9dd1f
+2022-09-18 09:44:25.459  INFO 3848 --- [main] org.redisson.Version                     : Redisson 3.15.6
+2022-09-18 09:44:25.460  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@dcaa310
+2022-09-18 09:44:25.460  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2492f6fb
+2022-09-18 09:44:25.464  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@155afbd7
+2022-09-18 09:44:25.465  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@396d21ec
+2022-09-18 09:44:25.467  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@61e7d7f2
+2022-09-18 09:44:25.468  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@52f1d01b
+2022-09-18 09:44:25.468  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@10371dd1
+2022-09-18 09:44:25.469  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@40053c7a
+2022-09-18 09:44:25.470  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1f022bcf
+2022-09-18 09:44:25.470  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@43af513c
+2022-09-18 09:44:25.471  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6bde050d
+2022-09-18 09:44:25.471  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@25102e0
+2022-09-18 09:44:25.472  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@c030d36
+2022-09-18 09:44:25.473  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@359c9b3b
+2022-09-18 09:44:25.473  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2ef116e8
+2022-09-18 09:44:25.474  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@243d57d4
+2022-09-18 09:44:25.475  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@304394d8
+2022-09-18 09:44:25.475  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@615784a8
+2022-09-18 09:44:25.476  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@47b7883c
+2022-09-18 09:44:25.476  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@97af4e9
+2022-09-18 09:44:25.477  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2533444a
+2022-09-18 09:44:25.478  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@781ce680
+2022-09-18 09:44:25.480  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@31167d7
+2022-09-18 09:44:25.480  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5d1206e0
+2022-09-18 09:44:25.481  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@623c181c
+2022-09-18 09:44:25.482  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@7d0bca3d
+2022-09-18 09:44:25.482  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@75ac2594
+2022-09-18 09:44:25.483  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@38c408c7
+2022-09-18 09:44:25.484  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@3a3a0b3b
+2022-09-18 09:44:25.484  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@19c37463
+2022-09-18 09:44:25.485  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@d57624a
+2022-09-18 09:44:25.486  INFO 3848 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@15cdc117
+2022-09-18 09:44:26.095  INFO 3848 --- [redisson-netty-5-23] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-09-18 09:44:26.112  INFO 3848 --- [redisson-netty-5-15] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-09-18 09:44:29.912  WARN 3848 --- [main] .s.d.e.r.s.SimpleElasticsearchRepository : Cannot create index: Timeout connecting to [/127.0.0.1:9200]; nested exception is java.lang.RuntimeException: Timeout connecting to [/127.0.0.1:9200]
+2022-09-18 09:44:44.924  INFO 3848 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2022-09-18 09:44:47.024  INFO 3848 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-09-18 09:45:04.534  INFO 3848 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-09-18 09:45:04.554  INFO 3848 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-18 09:45:04.554  INFO 3848 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2022-09-18 09:45:04.555  INFO 3848 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-09-18 09:45:04.556  INFO 3848 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-09-18 09:45:04.556  INFO 3848 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-18 09:45:04.556  INFO 3848 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2022-09-18 09:45:04.556  INFO 3848 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3fd7a2bd
+2022-09-18 09:45:05.734  INFO 3848 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 56a2d2d9-af7c-421c-bd71-130e6add83cc
+
+2022-09-18 09:45:08.081  INFO 3848 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56dbd054, org.springframework.security.web.context.SecurityContextPersistenceFilter@666971a, org.springframework.security.web.header.HeaderWriterFilter@36806af3, org.springframework.web.filter.CorsFilter@34a06e64, org.springframework.security.web.authentication.logout.LogoutFilter@437b23c4, cn.lili.security.BuyerAuthenticationFilter@5e9c61cd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c5abe41, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3178ca57, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@562c6d5c, org.springframework.security.web.session.SessionManagementFilter@106f7ddd, org.springframework.security.web.access.ExceptionTranslationFilter@5e2abff2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32663c30]
+2022-09-18 09:45:34.774  INFO 3848 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-09-18 09:45:34.775  INFO 3848 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'buyer-api.errorChannel' has 1 subscriber(s).
+2022-09-18 09:45:34.775  INFO 3848 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-09-18 09:45:35.209  INFO 3848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-18 09:45:35.211  INFO 3848 --- [main] u.j.c.RefreshScopeRefreshedEventListener : Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2022-09-18 09:45:35.211  INFO 3848 --- [main] CachingDelegateEncryptablePropertySource : Property Source systemProperties refreshed
+2022-09-18 09:45:35.211  INFO 3848 --- [main] CachingDelegateEncryptablePropertySource : Property Source systemEnvironment refreshed
+2022-09-18 09:45:35.211  INFO 3848 --- [main] CachingDelegateEncryptablePropertySource : Property Source random refreshed
+2022-09-18 09:45:35.212  INFO 3848 --- [main] CachingDelegateEncryptablePropertySource : Property Source migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-09-18 09:45:35.212  INFO 3848 --- [main] CachingDelegateEncryptablePropertySource : Property Source Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-09-18 09:45:35.212  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource server.ports [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:45:35.212  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-18 09:45:35.212  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-18 09:45:35.212  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2022-09-18 09:45:35.212  INFO 3848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Management Server [org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration$1] to EncryptablePropertySourceWrapper
+2022-09-18 09:45:35.213  INFO 3848 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-09-18 09:45:35.219  INFO 3848 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 13 custom documentation plugin(s)
+2022-09-18 09:45:39.566  INFO 3848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:45:42.276  INFO 3848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:45:47.443  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_1
+2022-09-18 09:45:49.779  INFO 3848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:45:50.170  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2022-09-18 09:45:54.210  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPointsGoodsPageUsingGET_1
+2022-09-18 09:45:54.602  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPointsGoodsPageUsingGET_2
+2022-09-18 09:45:54.956  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_1
+2022-09-18 09:45:58.330  INFO 3848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:45:58.785  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_2
+2022-09-18 09:45:59.179  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_2
+2022-09-18 09:45:59.565  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2022-09-18 09:45:59.946  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_3
+2022-09-18 09:45:59.977  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_3
+2022-09-18 09:46:01.552  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_4
+2022-09-18 09:46:01.950  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPurchaseOrderVOUsingPOST_1
+2022-09-18 09:46:02.349  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_5
+2022-09-18 09:46:03.120  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_2
+2022-09-18 09:46:06.950  INFO 3848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:46:09.363  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: casHistoryUsingGET_1
+2022-09-18 09:46:14.057  INFO 3848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:46:16.838  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_6
+2022-09-18 09:46:18.795  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_4
+2022-09-18 09:46:31.084  INFO 3848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:46:34.954  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_5
+2022-09-18 09:46:36.515  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: applyFirstStepUsingPUT_1
+2022-09-18 09:46:37.277  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: applyFirstStepUsingPUT_2
+2022-09-18 09:46:49.388  INFO 3848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:46:51.843  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: notifyUsingGET_1
+2022-09-18 09:46:51.845  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: notifyUsingPOST_1
+2022-09-18 09:47:05.461  INFO 3848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:47:18.547  INFO 3848 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:47:19.614  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: unionIDBindUsingPOST_1
+2022-09-18 09:47:29.101  INFO 3848 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: webAuthorizeUsingGET_1
+2022-09-18 09:47:51.955  INFO 3848 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : closeChannel: begin close the channel[localhost:10911] Found: true
+2022-09-18 09:47:51.956  INFO 3848 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : closeChannel: the channel[localhost:10911] was removed from channel table
+2022-09-18 09:53:32.888  INFO 14268 --- [main] cn.lili.BuyerApiApplication              : Starting BuyerApiApplication using Java 1.8.0_333 on HZ-IT-205 with PID 14268 (E:\tangtian_up\tangtianup-thinging-in-lilishop\buyer-api\target\classes started by tian.tang in E:\tangtian_up)
+2022-09-18 09:53:32.892  INFO 14268 --- [main] cn.lili.BuyerApiApplication              : No active profile set, falling back to default profiles: default
+2022-09-18 09:53:36.272  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-18 09:53:36.276  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-18 09:53:37.053  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 770 ms. Found 2 Elasticsearch repository interfaces.
+2022-09-18 09:53:37.058  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-18 09:53:37.058  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-18 09:53:37.174  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-18 09:53:37.189  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-18 09:53:37.191  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-18 09:53:37.328  INFO 14268 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.permission.repository.SystemLogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-18 09:53:37.328  INFO 14268 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.search.repository.EsGoodsIndexRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-18 09:53:37.328  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 0 Redis repository interfaces.
+2022-09-18 09:53:37.935  INFO 14268 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-09-18 09:53:37.936  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-18 09:53:37.938  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-18 09:53:37.938  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-18 09:53:37.939  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:53:37.939  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-09-18 09:53:37.940  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-09-18 09:53:37.940  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:53:37.940  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:53:37.949  INFO 14268 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-09-18 09:53:37.956  INFO 14268 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-09-18 09:53:37.962  INFO 14268 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-09-18 09:53:38.096  INFO 14268 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-09-18 09:53:38.107  INFO 14268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadProperties' of type [cn.lili.common.properties.ThreadProperties$$EnhancerBySpringCGLIB$$a54eb919] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:53:38.108  INFO 14268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadConfig' of type [cn.lili.common.thread.ThreadConfig$$EnhancerBySpringCGLIB$$17871731] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:53:38.509  INFO 14268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [cn.lili.cache.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$6e53742e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:53:38.551  INFO 14268 --- [main] cn.lili.cache.config.redis.RedisConfig   : 初始化 -> [Redis CacheErrorHandler]
+2022-09-18 09:53:38.553  INFO 14268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'errorHandler' of type [cn.lili.cache.config.redis.RedisConfig$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:53:38.614  INFO 14268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@599310ab' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:53:38.641  INFO 14268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:53:38.663  INFO 14268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:53:38.686  INFO 14268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:53:38.689  INFO 14268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:53:38.863  INFO 14268 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-09-18 09:53:38.866  INFO 14268 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-09-18 09:53:39.425  INFO 14268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-09-18 09:53:39.441  INFO 14268 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-18 09:53:39.442  INFO 14268 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-09-18 09:53:39.702  INFO 14268 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-18 09:53:39.702  INFO 14268 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6415 ms
+2022-09-18 09:53:41.329  INFO 14268 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-09-18 09:53:41.389  INFO 14268 --- [main] o.a.s.c.config.log.ConfigurationLogger   : ShardingRuleConfiguration
+{}
+
+2022-09-18 09:53:41.392  INFO 14268 --- [main] o.a.s.c.config.log.ConfigurationLogger   : Properties
+sql.show: 'false'
+
+2022-09-18 09:53:44.048  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@7c3bac88
+2022-09-18 09:53:44.049  INFO 14268 --- [main] RocketmqRemoting                         : name server address updated. NEW : [localhost:9876] , OLD: null
+2022-09-18 09:53:44.165  INFO 14268 --- [main] RocketmqCommon                           : Try to start service thread:PullMessageService started:false lastThread:null
+2022-09-18 09:53:44.166  INFO 14268 --- [main] RocketmqCommon                           : Try to start service thread:RebalanceService started:false lastThread:null
+2022-09-18 09:53:44.179  INFO 14268 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: null , NEW: localhost:9876. namesrvIndex = 362
+2022-09-18 09:53:44.539  INFO 14268 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:9876] asynchronously
+2022-09-18 09:53:44.570  INFO 14268 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-18 09:53:44.575  INFO 14268 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:9876] success, AbstractBootstrap$PendingRegistrationPromise@43e9dc8f(success)
+2022-09-18 09:53:44.692  INFO 14268 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final long cn.lili.modules.goods.serviceimpl.GoodsServiceImpl.getGoodsCountByCategory(java.lang.String)] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-09-18 09:53:45.183  INFO 14268 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:10911] asynchronously
+2022-09-18 09:53:45.184  INFO 14268 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:10911
+2022-09-18 09:53:45.185  INFO 14268 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:10911] success, AbstractBootstrap$PendingRegistrationPromise@62e12056(success)
+2022-09-18 09:53:47.067  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.067  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.067  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.067  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.067  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.067  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.067  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.067  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.067  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.067  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.068  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.068  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.068  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.068  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.068  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.068  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.068  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.068  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.068  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.068  WARN 14268 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:53:47.282  INFO 14268 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
+2022-09-18 09:53:47.282  INFO 14268 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
+2022-09-18 09:53:47.282  INFO 14268 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-18 09:53:47.283  INFO 14268 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.10.1
+2022-09-18 09:53:47.283  WARN 14268 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version mismatch in between Elasticsearch Client and Cluster: 7.9.3 - 7.10.1
+2022-09-18 09:53:57.885  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@c2de6ec
+2022-09-18 09:53:57.888  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5fbf6d4a
+2022-09-18 09:53:57.889  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@39ce0aba
+2022-09-18 09:53:57.890  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@53e36530
+2022-09-18 09:53:57.890  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@309ae326
+2022-09-18 09:53:57.891  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@146b1d42
+2022-09-18 09:53:57.892  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5db94eaf
+2022-09-18 09:53:57.892  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@15bb7acd
+2022-09-18 09:54:01.711  INFO 14268 --- [main] org.redisson.Version                     : Redisson 3.15.6
+2022-09-18 09:54:01.712  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@9628240
+2022-09-18 09:54:01.713  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@296a6a10
+2022-09-18 09:54:01.714  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4da86d09
+2022-09-18 09:54:01.714  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5a21746a
+2022-09-18 09:54:01.715  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@474c8dec
+2022-09-18 09:54:01.717  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@3d8c55ff
+2022-09-18 09:54:01.718  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@33c2a762
+2022-09-18 09:54:01.718  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@62110754
+2022-09-18 09:54:01.719  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4111c517
+2022-09-18 09:54:01.720  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1eed4367
+2022-09-18 09:54:01.721  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@38321e6f
+2022-09-18 09:54:01.721  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@52f3859a
+2022-09-18 09:54:01.722  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1d05cbae
+2022-09-18 09:54:01.723  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@69075512
+2022-09-18 09:54:01.724  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@41eeff3b
+2022-09-18 09:54:01.725  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@fff7dc9
+2022-09-18 09:54:01.725  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@3c148f23
+2022-09-18 09:54:01.726  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6fe8e276
+2022-09-18 09:54:01.727  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@59c9df97
+2022-09-18 09:54:01.728  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2dacf052
+2022-09-18 09:54:01.728  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@35590f53
+2022-09-18 09:54:01.729  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1d8ab0dc
+2022-09-18 09:54:01.786  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@aa8f19d
+2022-09-18 09:54:01.787  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@40ccaefa
+2022-09-18 09:54:01.788  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@3d920227
+2022-09-18 09:54:01.789  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@75564919
+2022-09-18 09:54:01.790  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@38bf7a37
+2022-09-18 09:54:01.791  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1da1a8a4
+2022-09-18 09:54:01.792  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@300f120d
+2022-09-18 09:54:01.793  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@77d68b94
+2022-09-18 09:54:01.793  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@34fb399b
+2022-09-18 09:54:01.794  INFO 14268 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@240f4328
+2022-09-18 09:54:02.368  INFO 14268 --- [redisson-netty-5-15] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-09-18 09:54:02.386  INFO 14268 --- [redisson-netty-5-17] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-09-18 09:54:06.009  WARN 14268 --- [main] .s.d.e.r.s.SimpleElasticsearchRepository : Cannot create index: Elasticsearch exception [type=mapper_parsing_exception, reason=unknown parameter [fielddata] on mapper [createTime] of type [date]]; nested exception is ElasticsearchStatusException[Elasticsearch exception [type=mapper_parsing_exception, reason=unknown parameter [fielddata] on mapper [createTime] of type [date]]]
+2022-09-18 09:54:22.816  INFO 14268 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2022-09-18 09:54:25.392  INFO 14268 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-09-18 09:54:43.671  INFO 14268 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-09-18 09:54:43.691  INFO 14268 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-18 09:54:43.692  INFO 14268 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2022-09-18 09:54:43.693  INFO 14268 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-09-18 09:54:43.694  INFO 14268 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-09-18 09:54:43.694  INFO 14268 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-18 09:54:43.694  INFO 14268 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2022-09-18 09:54:43.694  INFO 14268 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3a949bec
+2022-09-18 09:54:44.904  INFO 14268 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e2f18806-265d-4e84-aa05-f8c4b8431386
+
+2022-09-18 09:54:47.352  INFO 14268 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41acbb51, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e1cc48b, org.springframework.security.web.header.HeaderWriterFilter@1b3fadda, org.springframework.web.filter.CorsFilter@3e0c4b29, org.springframework.security.web.authentication.logout.LogoutFilter@293432e6, cn.lili.security.BuyerAuthenticationFilter@104f10a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@530e1f71, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b9bb2c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30524cdf, org.springframework.security.web.session.SessionManagementFilter@3f5b2857, org.springframework.security.web.access.ExceptionTranslationFilter@c2e5ad4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c609e43]
+2022-09-18 09:55:15.357  INFO 14268 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-09-18 09:55:15.357  INFO 14268 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'buyer-api.errorChannel' has 1 subscriber(s).
+2022-09-18 09:55:15.359  INFO 14268 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-09-18 09:55:15.781  INFO 14268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-18 09:55:15.782  INFO 14268 --- [main] u.j.c.RefreshScopeRefreshedEventListener : Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2022-09-18 09:55:15.783  INFO 14268 --- [main] CachingDelegateEncryptablePropertySource : Property Source systemProperties refreshed
+2022-09-18 09:55:15.783  INFO 14268 --- [main] CachingDelegateEncryptablePropertySource : Property Source systemEnvironment refreshed
+2022-09-18 09:55:15.783  INFO 14268 --- [main] CachingDelegateEncryptablePropertySource : Property Source random refreshed
+2022-09-18 09:55:15.783  INFO 14268 --- [main] CachingDelegateEncryptablePropertySource : Property Source migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-09-18 09:55:15.783  INFO 14268 --- [main] CachingDelegateEncryptablePropertySource : Property Source Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-09-18 09:55:15.783  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource server.ports [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:55:15.783  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-18 09:55:15.783  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-18 09:55:15.783  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2022-09-18 09:55:15.784  INFO 14268 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Management Server [org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration$1] to EncryptablePropertySourceWrapper
+2022-09-18 09:55:15.784  INFO 14268 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-09-18 09:55:15.791  INFO 14268 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 13 custom documentation plugin(s)
+2022-09-18 09:55:19.997  INFO 14268 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:55:22.926  INFO 14268 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:55:27.234  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_1
+2022-09-18 09:55:29.800  INFO 14268 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:55:30.202  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2022-09-18 09:55:34.090  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPointsGoodsPageUsingGET_1
+2022-09-18 09:55:34.823  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPointsGoodsPageUsingGET_2
+2022-09-18 09:55:34.837  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_1
+2022-09-18 09:55:38.477  INFO 14268 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:55:39.265  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_2
+2022-09-18 09:55:39.633  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_2
+2022-09-18 09:55:40.011  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2022-09-18 09:55:40.020  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_3
+2022-09-18 09:55:40.407  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_3
+2022-09-18 09:55:41.929  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_4
+2022-09-18 09:55:42.323  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPurchaseOrderVOUsingPOST_1
+2022-09-18 09:55:42.681  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_5
+2022-09-18 09:55:43.418  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_2
+2022-09-18 09:55:47.750  INFO 14268 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:55:50.013  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: casHistoryUsingGET_1
+2022-09-18 09:55:55.013  INFO 14268 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:55:57.717  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_6
+2022-09-18 09:55:59.964  INFO 14268 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_4
+2022-09-18 09:56:11.386  INFO 15408 --- [main] cn.lili.BuyerApiApplication              : Starting BuyerApiApplication using Java 1.8.0_333 on HZ-IT-205 with PID 15408 (E:\tangtian_up\tangtianup-thinging-in-lilishop\buyer-api\target\classes started by tian.tang in E:\tangtian_up)
+2022-09-18 09:56:11.391  INFO 15408 --- [main] cn.lili.BuyerApiApplication              : No active profile set, falling back to default profiles: default
+2022-09-18 09:56:14.831  INFO 15408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-18 09:56:14.833  INFO 15408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-18 09:56:15.530  INFO 15408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 692 ms. Found 2 Elasticsearch repository interfaces.
+2022-09-18 09:56:15.535  INFO 15408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-18 09:56:15.536  INFO 15408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-18 09:56:15.661  INFO 15408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-18 09:56:15.675  INFO 15408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-18 09:56:15.677  INFO 15408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-18 09:56:15.809  INFO 15408 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.permission.repository.SystemLogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-18 09:56:15.809  INFO 15408 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.search.repository.EsGoodsIndexRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-18 09:56:15.809  INFO 15408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126 ms. Found 0 Redis repository interfaces.
+2022-09-18 09:56:16.362  INFO 15408 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-09-18 09:56:16.364  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-18 09:56:16.367  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-18 09:56:16.367  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-18 09:56:16.368  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:56:16.368  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-09-18 09:56:16.369  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-09-18 09:56:16.369  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:56:16.369  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:56:16.378  INFO 15408 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-09-18 09:56:16.386  INFO 15408 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-09-18 09:56:16.402  INFO 15408 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-09-18 09:56:16.510  INFO 15408 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-09-18 09:56:16.521  INFO 15408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadProperties' of type [cn.lili.common.properties.ThreadProperties$$EnhancerBySpringCGLIB$$8b496cab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:56:16.522  INFO 15408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadConfig' of type [cn.lili.common.thread.ThreadConfig$$EnhancerBySpringCGLIB$$fd81cac3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:56:16.875  INFO 15408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [cn.lili.cache.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$544e27c0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:56:16.922  INFO 15408 --- [main] cn.lili.cache.config.redis.RedisConfig   : 初始化 -> [Redis CacheErrorHandler]
+2022-09-18 09:56:16.923  INFO 15408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'errorHandler' of type [cn.lili.cache.config.redis.RedisConfig$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:56:17.002  INFO 15408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@361d8567' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:56:17.011  INFO 15408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:56:17.034  INFO 15408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:56:17.056  INFO 15408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:56:17.059  INFO 15408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-18 09:56:17.232  INFO 15408 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-09-18 09:56:17.235  INFO 15408 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-09-18 09:56:17.774  INFO 15408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-09-18 09:56:17.791  INFO 15408 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-18 09:56:17.791  INFO 15408 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-09-18 09:56:18.084  INFO 15408 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-18 09:56:18.084  INFO 15408 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6307 ms
+2022-09-18 09:56:19.672  INFO 15408 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-09-18 09:56:19.745  INFO 15408 --- [main] o.a.s.c.config.log.ConfigurationLogger   : ShardingRuleConfiguration
+{}
+
+2022-09-18 09:56:19.749  INFO 15408 --- [main] o.a.s.c.config.log.ConfigurationLogger   : Properties
+sql.show: 'false'
+
+2022-09-18 09:56:22.457  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@395ac2e5
+2022-09-18 09:56:22.459  INFO 15408 --- [main] RocketmqRemoting                         : name server address updated. NEW : [localhost:9876] , OLD: null
+2022-09-18 09:56:22.575  INFO 15408 --- [main] RocketmqCommon                           : Try to start service thread:PullMessageService started:false lastThread:null
+2022-09-18 09:56:22.576  INFO 15408 --- [main] RocketmqCommon                           : Try to start service thread:RebalanceService started:false lastThread:null
+2022-09-18 09:56:22.593  INFO 15408 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: null , NEW: localhost:9876. namesrvIndex = 438
+2022-09-18 09:56:22.969  INFO 15408 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:9876] asynchronously
+2022-09-18 09:56:22.996  INFO 15408 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-18 09:56:23.001  INFO 15408 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:9876] success, AbstractBootstrap$PendingRegistrationPromise@68ad3d63(success)
+2022-09-18 09:56:23.101  INFO 15408 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final long cn.lili.modules.goods.serviceimpl.GoodsServiceImpl.getGoodsCountByCategory(java.lang.String)] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-09-18 09:56:23.594  INFO 15408 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:10911] asynchronously
+2022-09-18 09:56:23.596  INFO 15408 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:10911
+2022-09-18 09:56:23.596  INFO 15408 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:10911] success, AbstractBootstrap$PendingRegistrationPromise@3986b748(success)
+2022-09-18 09:56:25.583  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.584  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.585  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.585  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.585  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.585  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.585  WARN 15408 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-18 09:56:25.767  INFO 15408 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
+2022-09-18 09:56:25.768  INFO 15408 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
+2022-09-18 09:56:25.768  INFO 15408 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-18 09:56:25.768  INFO 15408 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch cluster: 7.10.1
+2022-09-18 09:56:25.768  WARN 15408 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version mismatch in between Elasticsearch Client and Cluster: 7.9.3 - 7.10.1
+2022-09-18 09:56:37.419  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@23595dd9
+2022-09-18 09:56:37.420  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@28f307ca
+2022-09-18 09:56:37.421  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5a0d25ba
+2022-09-18 09:56:37.422  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@72e89ce2
+2022-09-18 09:56:37.423  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1bb6b0f3
+2022-09-18 09:56:37.424  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2b4b3918
+2022-09-18 09:56:37.424  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1858f93e
+2022-09-18 09:56:37.425  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2e61695b
+2022-09-18 09:56:42.290  INFO 15408 --- [main] org.redisson.Version                     : Redisson 3.15.6
+2022-09-18 09:56:42.291  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@60a07d77
+2022-09-18 09:56:42.291  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@76795a95
+2022-09-18 09:56:42.294  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@32d00eea
+2022-09-18 09:56:42.294  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@66b09935
+2022-09-18 09:56:42.295  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5981b51
+2022-09-18 09:56:42.296  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@39894485
+2022-09-18 09:56:42.298  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@b1caa00
+2022-09-18 09:56:42.299  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6987f367
+2022-09-18 09:56:42.300  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2c002f95
+2022-09-18 09:56:42.301  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5f5efbfc
+2022-09-18 09:56:42.301  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@317c16bd
+2022-09-18 09:56:42.302  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6736c73e
+2022-09-18 09:56:42.303  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4ae730ca
+2022-09-18 09:56:42.303  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@62ceb371
+2022-09-18 09:56:42.304  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@33d6886b
+2022-09-18 09:56:42.305  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6208a618
+2022-09-18 09:56:42.306  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@119aabf3
+2022-09-18 09:56:42.306  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6d8d78a
+2022-09-18 09:56:42.308  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@14a82ea
+2022-09-18 09:56:42.310  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2655ccbd
+2022-09-18 09:56:42.311  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@62d42eb7
+2022-09-18 09:56:42.311  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@22f0d1e0
+2022-09-18 09:56:42.312  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@77784a86
+2022-09-18 09:56:42.313  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@7f4050f0
+2022-09-18 09:56:42.314  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@3ca26839
+2022-09-18 09:56:42.314  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@18f9c19c
+2022-09-18 09:56:42.315  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2d60947f
+2022-09-18 09:56:42.316  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@50da96f3
+2022-09-18 09:56:42.317  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@7f16cf71
+2022-09-18 09:56:42.318  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2935042e
+2022-09-18 09:56:42.319  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5fae1b
+2022-09-18 09:56:42.320  INFO 15408 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@436dded
+2022-09-18 09:56:42.999  INFO 15408 --- [redisson-netty-5-17] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-09-18 09:56:43.362  INFO 15408 --- [redisson-netty-5-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-09-18 09:57:02.265  INFO 15408 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2022-09-18 09:57:04.444  INFO 15408 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-09-18 09:57:21.637  INFO 15408 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-09-18 09:57:21.661  INFO 15408 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-18 09:57:21.661  INFO 15408 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2022-09-18 09:57:21.662  INFO 15408 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-09-18 09:57:21.664  INFO 15408 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-09-18 09:57:21.664  INFO 15408 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-18 09:57:21.664  INFO 15408 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2022-09-18 09:57:21.664  INFO 15408 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@596416c5
+2022-09-18 09:57:22.507  INFO 15408 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 937f156a-4b35-455e-8555-c5a25e3a7cbd
+
+2022-09-18 09:57:24.958  INFO 15408 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@487950e0, org.springframework.security.web.context.SecurityContextPersistenceFilter@6bf552d2, org.springframework.security.web.header.HeaderWriterFilter@4762b2c0, org.springframework.web.filter.CorsFilter@71efa55d, org.springframework.security.web.authentication.logout.LogoutFilter@3db75056, cn.lili.security.BuyerAuthenticationFilter@3627e94a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6242c07c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ea854da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a7f5550, org.springframework.security.web.session.SessionManagementFilter@597d339e, org.springframework.security.web.access.ExceptionTranslationFilter@76448624, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@33176d2e]
+2022-09-18 09:57:51.802  INFO 15408 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-09-18 09:57:51.802  INFO 15408 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'buyer-api.errorChannel' has 1 subscriber(s).
+2022-09-18 09:57:51.802  INFO 15408 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-09-18 09:57:52.211  INFO 15408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-18 09:57:52.213  INFO 15408 --- [main] u.j.c.RefreshScopeRefreshedEventListener : Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2022-09-18 09:57:52.213  INFO 15408 --- [main] CachingDelegateEncryptablePropertySource : Property Source systemProperties refreshed
+2022-09-18 09:57:52.213  INFO 15408 --- [main] CachingDelegateEncryptablePropertySource : Property Source systemEnvironment refreshed
+2022-09-18 09:57:52.213  INFO 15408 --- [main] CachingDelegateEncryptablePropertySource : Property Source random refreshed
+2022-09-18 09:57:52.213  INFO 15408 --- [main] CachingDelegateEncryptablePropertySource : Property Source migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-09-18 09:57:52.213  INFO 15408 --- [main] CachingDelegateEncryptablePropertySource : Property Source Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-09-18 09:57:52.214  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource server.ports [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-18 09:57:52.214  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-18 09:57:52.214  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-18 09:57:52.214  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2022-09-18 09:57:52.214  INFO 15408 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Management Server [org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration$1] to EncryptablePropertySourceWrapper
+2022-09-18 09:57:52.216  INFO 15408 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-09-18 09:57:52.222  INFO 15408 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 13 custom documentation plugin(s)
+2022-09-18 09:57:56.113  INFO 15408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:57:59.141  INFO 15408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:58:03.436  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_1
+2022-09-18 09:58:05.999  INFO 15408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:58:06.402  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2022-09-18 09:58:10.288  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPointsGoodsPageUsingGET_1
+2022-09-18 09:58:11.036  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPointsGoodsPageUsingGET_2
+2022-09-18 09:58:11.049  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_1
+2022-09-18 09:58:14.722  INFO 15408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:58:15.143  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_2
+2022-09-18 09:58:15.525  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_2
+2022-09-18 09:58:15.896  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2022-09-18 09:58:16.276  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_3
+2022-09-18 09:58:16.637  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_3
+2022-09-18 09:58:18.169  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_4
+2022-09-18 09:58:18.562  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPurchaseOrderVOUsingPOST_1
+2022-09-18 09:58:18.916  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_5
+2022-09-18 09:58:19.661  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_2
+2022-09-18 09:58:23.614  INFO 15408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:58:26.200  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: casHistoryUsingGET_1
+2022-09-18 09:58:30.789  INFO 15408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:58:33.453  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_6
+2022-09-18 09:58:35.647  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_4
+2022-09-18 09:58:49.050  INFO 15408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:58:53.759  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_5
+2022-09-18 09:58:55.597  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: applyFirstStepUsingPUT_1
+2022-09-18 09:58:56.342  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: applyFirstStepUsingPUT_2
+2022-09-18 09:59:09.670  INFO 15408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:59:12.524  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: notifyUsingGET_1
+2022-09-18 09:59:12.526  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: notifyUsingPOST_1
+2022-09-18 09:59:28.297  INFO 15408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:59:44.387  INFO 15408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-18 09:59:45.818  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: unionIDBindUsingPOST_1
+2022-09-18 10:00:01.463  INFO 15408 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: webAuthorizeUsingGET_1
+2022-09-18 10:08:33.170  WARN 15408 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: exceptionCaught 127.0.0.1:9876
+2022-09-18 10:08:39.077  WARN 15408 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: exceptionCaught 127.0.0.1:10911
+2022-09-18 10:18:18.750  WARN 15408 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: exceptionCaught 127.0.0.1:9876
+2022-09-18 10:18:31.179  WARN 15408 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: exceptionCaught 127.0.0.1:10911
+2022-09-18 10:20:21.490  WARN 15408 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: exceptionCaught 127.0.0.1:9876
+2022-09-18 10:20:27.766  WARN 15408 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: exceptionCaught 127.0.0.1:10911

@@ -1,0 +1,1508 @@
+2022-09-15 09:10:03.124  INFO 14692 --- [main] cn.lili.BuyerApiApplication              : Starting BuyerApiApplication using Java 1.8.0_291 on HZ-IT-205 with PID 14692 (E:\tangtian_up\tangtianup-thinging-in-lilishop\buyer-api\target\classes started by tian.tang in E:\tangtian_up)
+2022-09-15 09:10:03.128  INFO 14692 --- [main] cn.lili.BuyerApiApplication              : No active profile set, falling back to default profiles: default
+2022-09-15 09:10:06.482  INFO 14692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-15 09:10:06.485  INFO 14692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-15 09:10:07.450  INFO 14692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 958 ms. Found 2 Elasticsearch repository interfaces.
+2022-09-15 09:10:07.456  INFO 14692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-15 09:10:07.456  INFO 14692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-15 09:10:07.619  INFO 14692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 162 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-15 09:10:07.655  INFO 14692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-15 09:10:07.656  INFO 14692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-15 09:10:07.809  INFO 14692 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.permission.repository.SystemLogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-15 09:10:07.810  INFO 14692 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.search.repository.EsGoodsIndexRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-15 09:10:07.810  INFO 14692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 142 ms. Found 0 Redis repository interfaces.
+2022-09-15 09:10:08.479  INFO 14692 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-09-15 09:10:08.480  INFO 14692 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-15 09:10:08.482  INFO 14692 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-15 09:10:08.482  INFO 14692 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-15 09:10:08.483  INFO 14692 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-15 09:10:08.483  INFO 14692 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-09-15 09:10:08.483  INFO 14692 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-09-15 09:10:08.483  INFO 14692 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-15 09:10:08.483  INFO 14692 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-15 09:10:08.495  INFO 14692 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-09-15 09:10:08.504  INFO 14692 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-09-15 09:10:08.513  INFO 14692 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-09-15 09:10:08.623  INFO 14692 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-09-15 09:10:08.632  INFO 14692 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadProperties' of type [cn.lili.common.properties.ThreadProperties$$EnhancerBySpringCGLIB$$6b2663d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:10:08.632  INFO 14692 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadConfig' of type [cn.lili.common.thread.ThreadConfig$$EnhancerBySpringCGLIB$$dd5ec1e8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:10:09.016  INFO 14692 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [cn.lili.cache.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$342b1ee5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:10:09.066  INFO 14692 --- [main] cn.lili.cache.config.redis.RedisConfig   : 初始化 -> [Redis CacheErrorHandler]
+2022-09-15 09:10:09.068  INFO 14692 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'errorHandler' of type [cn.lili.cache.config.redis.RedisConfig$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:10:09.124  INFO 14692 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1cc6017' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:10:09.137  INFO 14692 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:10:09.159  INFO 14692 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:10:09.181  INFO 14692 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:10:09.184  INFO 14692 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:10:09.346  INFO 14692 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-09-15 09:10:09.350  INFO 14692 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-09-15 09:10:09.833  INFO 14692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-09-15 09:10:09.849  INFO 14692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-15 09:10:09.850  INFO 14692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-09-15 09:10:10.105  INFO 14692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-15 09:10:10.106  INFO 14692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6562 ms
+2022-09-15 09:10:11.949  INFO 14692 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-09-15 09:10:12.023  INFO 14692 --- [main] o.a.s.c.config.log.ConfigurationLogger   : ShardingRuleConfiguration
+{}
+
+2022-09-15 09:10:12.027  INFO 14692 --- [main] o.a.s.c.config.log.ConfigurationLogger   : Properties
+sql.show: 'false'
+
+2022-09-15 09:10:15.168  INFO 14692 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1543b88
+2022-09-15 09:10:15.169  INFO 14692 --- [main] RocketmqRemoting                         : name server address updated. NEW : [localhost:9876] , OLD: null
+2022-09-15 09:10:15.355  INFO 14692 --- [main] RocketmqCommon                           : Try to start service thread:PullMessageService started:false lastThread:null
+2022-09-15 09:10:15.355  INFO 14692 --- [main] RocketmqCommon                           : Try to start service thread:RebalanceService started:false lastThread:null
+2022-09-15 09:10:15.374  INFO 14692 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: null , NEW: localhost:9876. namesrvIndex = 674
+2022-09-15 09:10:15.912  INFO 14692 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final long cn.lili.modules.goods.serviceimpl.GoodsServiceImpl.getGoodsCountByCategory(java.lang.String)] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-09-15 09:10:15.918  INFO 14692 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:9876] asynchronously
+2022-09-15 09:10:15.944  INFO 14692 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-15 09:10:15.948  INFO 14692 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:9876] success, AbstractBootstrap$PendingRegistrationPromise@14d0906(success)
+2022-09-15 09:10:16.369  INFO 14692 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[172.20.226.80:10911] asynchronously
+2022-09-15 09:10:16.369  INFO 14692 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 172.20.226.80:10911
+2022-09-15 09:10:16.369  INFO 14692 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[172.20.226.80:10911] success, AbstractBootstrap$PendingRegistrationPromise@159c753(success)
+2022-09-15 09:10:18.174  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.174  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.174  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.175  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.176  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:18.176  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:10:19.336  INFO 14692 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
+2022-09-15 09:10:19.337  INFO 14692 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
+2022-09-15 09:10:19.337  INFO 14692 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-15 09:10:25.387  INFO 14692 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@16c6cc1
+2022-09-15 09:10:25.388  INFO 14692 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@16ca821
+2022-09-15 09:10:25.388  INFO 14692 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@13636f3
+2022-09-15 09:10:25.389  INFO 14692 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@a413f6
+2022-09-15 09:10:25.390  INFO 14692 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@e478c7
+2022-09-15 09:10:25.390  INFO 14692 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@35f99a
+2022-09-15 09:10:25.391  INFO 14692 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@32c581
+2022-09-15 09:10:25.391  INFO 14692 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@55e52
+2022-09-15 09:10:27.451  WARN 14692 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'snowflakeInitiator': Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+2022-09-15 09:10:27.474  INFO 14692 --- [main] RocketmqCommon                           : Try to shutdown service thread:PullMessageService started:true lastThread:Thread[PullMessageService,5,main]
+2022-09-15 09:10:27.474  INFO 14692 --- [main] RocketmqCommon                           : shutdown thread PullMessageService interrupt true
+2022-09-15 09:10:27.474  INFO 14692 --- [main] RocketmqCommon                           : join thread PullMessageService elapsed time(ms) 0 90000
+2022-09-15 09:10:27.475  INFO 14692 --- [main] RocketmqRemoting                         : closeChannel: begin close the channel[127.0.0.1:9876] Found: false
+2022-09-15 09:10:27.476  INFO 14692 --- [main] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:9876] has been removed from the channel table before
+2022-09-15 09:10:27.476  INFO 14692 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 127.0.0.1:9876
+2022-09-15 09:10:27.477  INFO 14692 --- [main] RocketmqRemoting                         : closeChannel: begin close the channel[172.20.226.80:10911] Found: true
+2022-09-15 09:10:27.477  INFO 14692 --- [main] RocketmqRemoting                         : closeChannel: the channel[172.20.226.80:10911] was removed from channel table
+2022-09-15 09:10:27.478  INFO 14692 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 172.20.226.80:10911
+2022-09-15 09:10:27.478  INFO 14692 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:10:27.478  INFO 14692 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:10:27.478  INFO 14692 --- [main] RocketmqRemoting                         : shutdown thread NettyEventExecutor interrupt false
+2022-09-15 09:10:27.478  INFO 14692 --- [main] RocketmqRemoting                         : join thread NettyEventExecutor elapsed time(ms) 0 90000
+2022-09-15 09:10:27.479  INFO 14692 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2022-09-15 09:10:27.479  INFO 14692 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.20.226.80:10911] result: true
+2022-09-15 09:10:27.479  INFO 14692 --- [main] RocketmqCommon                           : Try to shutdown service thread:RebalanceService started:true lastThread:Thread[RebalanceService,5,main]
+2022-09-15 09:10:27.479  INFO 14692 --- [main] RocketmqCommon                           : shutdown thread RebalanceService interrupt false
+2022-09-15 09:10:27.480  INFO 14692 --- [main] RocketmqCommon                           : join thread RebalanceService elapsed time(ms) 1 90000
+2022-09-15 09:10:27.606  INFO 14692 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-09-15 09:10:27.611  INFO 14692 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-09-15 09:10:27.615  INFO 14692 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-09-15 09:10:27.623  WARN 14692 --- [main] o.s.b.c.p.m.PropertiesMigrationListener  : 
+The use of configuration keys that have been renamed was found in the environment:
+
+Property source 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'':
+	Key: server.tomcat.max-threads
+		Line: 4
+		Replacement: server.tomcat.threads.max
+
+
+Each configuration key has been temporarily mapped to its replacement for your convenience. To silence this warning, please update your configuration to use the new keys.
+
+2022-09-15 09:10:27.623  INFO 14692 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-15 09:10:27.693 ERROR 14692 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'snowflakeInitiator': Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:763)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1318)
+	at cn.lili.BuyerApiApplication.main(BuyerApiApplication.java:33)
+Caused by: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1553)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1461)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1247)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1230)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:979)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:359)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:209)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultValueOperations.setIfAbsent(DefaultValueOperations.java:296)
+	at org.springframework.data.redis.support.atomic.RedisAtomicLong.initializeIfAbsent(RedisAtomicLong.java:151)
+	at org.springframework.data.redis.support.atomic.RedisAtomicLong.<init>(RedisAtomicLong.java:96)
+	at org.springframework.data.redis.support.atomic.RedisAtomicLong.<init>(RedisAtomicLong.java:65)
+	at cn.lili.cache.impl.RedisCache.incr(RedisCache.java:219)
+	at cn.lili.common.utils.SnowflakeInitiator.init(SnowflakeInitiator.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	... 19 common frames omitted
+Caused by: org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:109)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1459)
+	... 42 common frames omitted
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:320)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:211)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.lambda$null$0(LettucePoolingConnectionProvider.java:97)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:211)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:201)
+	at org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:58)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:918)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:431)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:356)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:122)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:117)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:103)
+	... 43 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:11:13.214  INFO 15000 --- [main] cn.lili.BuyerApiApplication              : Starting BuyerApiApplication using Java 1.8.0_291 on HZ-IT-205 with PID 15000 (E:\tangtian_up\tangtianup-thinging-in-lilishop\buyer-api\target\classes started by tian.tang in E:\tangtian_up)
+2022-09-15 09:11:13.218  INFO 15000 --- [main] cn.lili.BuyerApiApplication              : No active profile set, falling back to default profiles: default
+2022-09-15 09:11:16.070  INFO 15000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-15 09:11:16.075  INFO 15000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-15 09:11:16.783  INFO 15000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 702 ms. Found 2 Elasticsearch repository interfaces.
+2022-09-15 09:11:16.787  INFO 15000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-15 09:11:16.789  INFO 15000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-15 09:11:16.938  INFO 15000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-15 09:11:16.952  INFO 15000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-15 09:11:16.953  INFO 15000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-15 09:11:17.095  INFO 15000 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.permission.repository.SystemLogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-15 09:11:17.095  INFO 15000 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.search.repository.EsGoodsIndexRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-15 09:11:17.096  INFO 15000 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 0 Redis repository interfaces.
+2022-09-15 09:11:17.658  INFO 15000 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-09-15 09:11:17.659  INFO 15000 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-15 09:11:17.660  INFO 15000 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-15 09:11:17.661  INFO 15000 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-15 09:11:17.662  INFO 15000 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-15 09:11:17.662  INFO 15000 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-09-15 09:11:17.662  INFO 15000 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-09-15 09:11:17.662  INFO 15000 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-15 09:11:17.662  INFO 15000 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-15 09:11:17.670  INFO 15000 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-09-15 09:11:17.677  INFO 15000 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-09-15 09:11:17.683  INFO 15000 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-09-15 09:11:17.775  INFO 15000 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-09-15 09:11:17.785  INFO 15000 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadProperties' of type [cn.lili.common.properties.ThreadProperties$$EnhancerBySpringCGLIB$$18ed712c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:11:17.786  INFO 15000 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadConfig' of type [cn.lili.common.thread.ThreadConfig$$EnhancerBySpringCGLIB$$8b25cf44] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:11:18.098  INFO 15000 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [cn.lili.cache.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$e1f22c41] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:11:18.159  INFO 15000 --- [main] cn.lili.cache.config.redis.RedisConfig   : 初始化 -> [Redis CacheErrorHandler]
+2022-09-15 09:11:18.160  INFO 15000 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'errorHandler' of type [cn.lili.cache.config.redis.RedisConfig$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:11:18.210  INFO 15000 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2c24d1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:11:18.223  INFO 15000 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:11:18.244  INFO 15000 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:11:18.265  INFO 15000 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:11:18.267  INFO 15000 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:11:18.431  INFO 15000 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-09-15 09:11:18.434  INFO 15000 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-09-15 09:11:18.908  INFO 15000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-09-15 09:11:18.922  INFO 15000 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-15 09:11:18.922  INFO 15000 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-09-15 09:11:19.175  INFO 15000 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-15 09:11:19.175  INFO 15000 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5597 ms
+2022-09-15 09:11:20.534  INFO 15000 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-09-15 09:11:20.589  INFO 15000 --- [main] o.a.s.c.config.log.ConfigurationLogger   : ShardingRuleConfiguration
+{}
+
+2022-09-15 09:11:20.592  INFO 15000 --- [main] o.a.s.c.config.log.ConfigurationLogger   : Properties
+sql.show: 'false'
+
+2022-09-15 09:11:23.326  INFO 15000 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@142ff10
+2022-09-15 09:11:23.327  INFO 15000 --- [main] RocketmqRemoting                         : name server address updated. NEW : [localhost:9876] , OLD: null
+2022-09-15 09:11:23.479  INFO 15000 --- [main] RocketmqCommon                           : Try to start service thread:PullMessageService started:false lastThread:null
+2022-09-15 09:11:23.480  INFO 15000 --- [main] RocketmqCommon                           : Try to start service thread:RebalanceService started:false lastThread:null
+2022-09-15 09:11:23.500  INFO 15000 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: null , NEW: localhost:9876. namesrvIndex = 546
+2022-09-15 09:11:23.911  INFO 15000 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:9876] asynchronously
+2022-09-15 09:11:23.935  INFO 15000 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-15 09:11:23.954  INFO 15000 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:9876] success, AbstractBootstrap$PendingRegistrationPromise@1274a63(success)
+2022-09-15 09:11:23.981  INFO 15000 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final long cn.lili.modules.goods.serviceimpl.GoodsServiceImpl.getGoodsCountByCategory(java.lang.String)] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-09-15 09:11:24.503  INFO 15000 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[172.20.226.80:10911] asynchronously
+2022-09-15 09:11:24.505  INFO 15000 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 172.20.226.80:10911
+2022-09-15 09:11:24.506  INFO 15000 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[172.20.226.80:10911] success, AbstractBootstrap$PendingRegistrationPromise@133142c(success)
+2022-09-15 09:11:26.487  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.487  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.488  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.489  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:26.489  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:11:27.622  INFO 15000 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
+2022-09-15 09:11:27.622  INFO 15000 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
+2022-09-15 09:11:27.622  INFO 15000 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-15 09:11:33.523  INFO 15000 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2ac4cc
+2022-09-15 09:11:33.525  INFO 15000 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1089ef7
+2022-09-15 09:11:33.526  INFO 15000 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@ab1b4f
+2022-09-15 09:11:33.526  INFO 15000 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@670af9
+2022-09-15 09:11:33.527  INFO 15000 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@9bb7dd
+2022-09-15 09:11:33.527  INFO 15000 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@16d655f
+2022-09-15 09:11:33.528  INFO 15000 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1f47d1e
+2022-09-15 09:11:33.529  INFO 15000 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@156985b
+2022-09-15 09:11:35.611  WARN 15000 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'snowflakeInitiator': Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+2022-09-15 09:11:35.623  INFO 15000 --- [main] RocketmqCommon                           : Try to shutdown service thread:PullMessageService started:true lastThread:Thread[PullMessageService,5,main]
+2022-09-15 09:11:35.623  INFO 15000 --- [main] RocketmqCommon                           : shutdown thread PullMessageService interrupt true
+2022-09-15 09:11:35.624  INFO 15000 --- [main] RocketmqCommon                           : join thread PullMessageService elapsed time(ms) 1 90000
+2022-09-15 09:11:35.626  INFO 15000 --- [main] RocketmqRemoting                         : closeChannel: begin close the channel[127.0.0.1:9876] Found: false
+2022-09-15 09:11:35.626  INFO 15000 --- [main] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:9876] has been removed from the channel table before
+2022-09-15 09:11:35.627  INFO 15000 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 127.0.0.1:9876
+2022-09-15 09:11:35.627  INFO 15000 --- [main] RocketmqRemoting                         : closeChannel: begin close the channel[172.20.226.80:10911] Found: true
+2022-09-15 09:11:35.627  INFO 15000 --- [main] RocketmqRemoting                         : closeChannel: the channel[172.20.226.80:10911] was removed from channel table
+2022-09-15 09:11:35.627  INFO 15000 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 172.20.226.80:10911
+2022-09-15 09:11:35.627  INFO 15000 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:11:35.627  INFO 15000 --- [main] RocketmqRemoting                         : shutdown thread NettyEventExecutor interrupt false
+2022-09-15 09:11:35.627  INFO 15000 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:11:35.627  INFO 15000 --- [main] RocketmqRemoting                         : join thread NettyEventExecutor elapsed time(ms) 0 90000
+2022-09-15 09:11:35.628  INFO 15000 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2022-09-15 09:11:35.629  INFO 15000 --- [main] RocketmqCommon                           : Try to shutdown service thread:RebalanceService started:true lastThread:Thread[RebalanceService,5,main]
+2022-09-15 09:11:35.629  INFO 15000 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.20.226.80:10911] result: true
+2022-09-15 09:11:35.629  INFO 15000 --- [main] RocketmqCommon                           : shutdown thread RebalanceService interrupt false
+2022-09-15 09:11:35.630  INFO 15000 --- [main] RocketmqCommon                           : join thread RebalanceService elapsed time(ms) 1 90000
+2022-09-15 09:11:35.764  INFO 15000 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-09-15 09:11:35.774  INFO 15000 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-09-15 09:11:35.778  INFO 15000 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-09-15 09:11:35.787  WARN 15000 --- [main] o.s.b.c.p.m.PropertiesMigrationListener  : 
+The use of configuration keys that have been renamed was found in the environment:
+
+Property source 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'':
+	Key: server.tomcat.max-threads
+		Line: 4
+		Replacement: server.tomcat.threads.max
+
+
+Each configuration key has been temporarily mapped to its replacement for your convenience. To silence this warning, please update your configuration to use the new keys.
+
+2022-09-15 09:11:35.793  INFO 15000 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-15 09:11:35.853 ERROR 15000 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'snowflakeInitiator': Invocation of init method failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:763)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1318)
+	at cn.lili.BuyerApiApplication.main(BuyerApiApplication.java:33)
+Caused by: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1553)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1461)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1247)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1230)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:979)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:359)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:209)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:189)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultValueOperations.setIfAbsent(DefaultValueOperations.java:296)
+	at org.springframework.data.redis.support.atomic.RedisAtomicLong.initializeIfAbsent(RedisAtomicLong.java:151)
+	at org.springframework.data.redis.support.atomic.RedisAtomicLong.<init>(RedisAtomicLong.java:96)
+	at org.springframework.data.redis.support.atomic.RedisAtomicLong.<init>(RedisAtomicLong.java:65)
+	at cn.lili.cache.impl.RedisCache.incr(RedisCache.java:219)
+	at cn.lili.common.utils.SnowflakeInitiator.init(SnowflakeInitiator.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	... 19 common frames omitted
+Caused by: org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:109)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1459)
+	... 42 common frames omitted
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:320)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:211)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.lambda$null$0(LettucePoolingConnectionProvider.java:97)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:211)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:201)
+	at org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:58)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:918)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:431)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:356)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:122)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:117)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:103)
+	... 43 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:13:27.697  INFO 21628 --- [main] cn.lili.BuyerApiApplication              : Starting BuyerApiApplication using Java 1.8.0_291 on HZ-IT-205 with PID 21628 (E:\tangtian_up\tangtianup-thinging-in-lilishop\buyer-api\target\classes started by tian.tang in E:\tangtian_up)
+2022-09-15 09:13:27.701  INFO 21628 --- [main] cn.lili.BuyerApiApplication              : No active profile set, falling back to default profiles: default
+2022-09-15 09:13:30.895  INFO 21628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-15 09:13:30.897  INFO 21628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-15 09:13:31.728  INFO 21628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 827 ms. Found 2 Elasticsearch repository interfaces.
+2022-09-15 09:13:31.734  INFO 21628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-15 09:13:31.735  INFO 21628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-15 09:13:31.917  INFO 21628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 181 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-15 09:13:31.931  INFO 21628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-15 09:13:31.933  INFO 21628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-15 09:13:32.112  INFO 21628 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.permission.repository.SystemLogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-15 09:13:32.113  INFO 21628 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.search.repository.EsGoodsIndexRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-15 09:13:32.113  INFO 21628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 168 ms. Found 0 Redis repository interfaces.
+2022-09-15 09:13:32.713  INFO 21628 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-09-15 09:13:32.714  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-15 09:13:32.717  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-15 09:13:32.717  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-15 09:13:32.718  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-15 09:13:32.718  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-09-15 09:13:32.718  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-09-15 09:13:32.718  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-15 09:13:32.718  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-15 09:13:32.726  INFO 21628 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-09-15 09:13:32.732  INFO 21628 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-09-15 09:13:32.740  INFO 21628 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-09-15 09:13:32.834  INFO 21628 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-09-15 09:13:32.845  INFO 21628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadProperties' of type [cn.lili.common.properties.ThreadProperties$$EnhancerBySpringCGLIB$$5e2d1fcd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:13:32.846  INFO 21628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadConfig' of type [cn.lili.common.thread.ThreadConfig$$EnhancerBySpringCGLIB$$d0657de5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:13:33.183  INFO 21628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [cn.lili.cache.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$2731dae2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:13:33.227  INFO 21628 --- [main] cn.lili.cache.config.redis.RedisConfig   : 初始化 -> [Redis CacheErrorHandler]
+2022-09-15 09:13:33.228  INFO 21628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'errorHandler' of type [cn.lili.cache.config.redis.RedisConfig$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:13:33.277  INFO 21628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1c88e00' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:13:33.290  INFO 21628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:13:33.312  INFO 21628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:13:33.333  INFO 21628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:13:33.335  INFO 21628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-15 09:13:33.483  INFO 21628 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-09-15 09:13:33.486  INFO 21628 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-09-15 09:13:33.952  INFO 21628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-09-15 09:13:33.967  INFO 21628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-15 09:13:33.968  INFO 21628 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-09-15 09:13:34.241  INFO 21628 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-15 09:13:34.241  INFO 21628 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6165 ms
+2022-09-15 09:13:35.559  INFO 21628 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-09-15 09:13:35.616  INFO 21628 --- [main] o.a.s.c.config.log.ConfigurationLogger   : ShardingRuleConfiguration
+{}
+
+2022-09-15 09:13:35.619  INFO 21628 --- [main] o.a.s.c.config.log.ConfigurationLogger   : Properties
+sql.show: 'false'
+
+2022-09-15 09:13:38.103  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1e156ee
+2022-09-15 09:13:38.104  INFO 21628 --- [main] RocketmqRemoting                         : name server address updated. NEW : [localhost:9876] , OLD: null
+2022-09-15 09:13:38.259  INFO 21628 --- [main] RocketmqCommon                           : Try to start service thread:PullMessageService started:false lastThread:null
+2022-09-15 09:13:38.259  INFO 21628 --- [main] RocketmqCommon                           : Try to start service thread:RebalanceService started:false lastThread:null
+2022-09-15 09:13:38.282  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: null , NEW: localhost:9876. namesrvIndex = 527
+2022-09-15 09:13:38.708  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:9876] asynchronously
+2022-09-15 09:13:38.745  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-15 09:13:38.749  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:9876] success, AbstractBootstrap$PendingRegistrationPromise@1d459be(success)
+2022-09-15 09:13:38.764  INFO 21628 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final long cn.lili.modules.goods.serviceimpl.GoodsServiceImpl.getGoodsCountByCategory(java.lang.String)] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-09-15 09:13:39.276  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[172.20.226.80:10911] asynchronously
+2022-09-15 09:13:39.279  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 172.20.226.80:10911
+2022-09-15 09:13:39.279  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[172.20.226.80:10911] success, AbstractBootstrap$PendingRegistrationPromise@3d5f34(success)
+2022-09-15 09:13:41.199  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.199  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.199  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.200  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.201  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.201  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:41.201  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-15 09:13:42.344  INFO 21628 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
+2022-09-15 09:13:42.344  INFO 21628 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
+2022-09-15 09:13:42.344  INFO 21628 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-15 09:13:48.039  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@143bedb
+2022-09-15 09:13:48.040  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@a08575
+2022-09-15 09:13:48.040  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@be3497
+2022-09-15 09:13:48.042  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@3d91bc
+2022-09-15 09:13:48.043  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@b84986
+2022-09-15 09:13:48.044  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@9be249
+2022-09-15 09:13:48.044  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@16c6cc1
+2022-09-15 09:13:48.045  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@16ca821
+2022-09-15 09:13:51.200  INFO 21628 --- [main] org.redisson.Version                     : Redisson 3.15.6
+2022-09-15 09:13:51.201  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@f3859a
+2022-09-15 09:13:51.202  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@105cbae
+2022-09-15 09:13:51.203  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1075512
+2022-09-15 09:13:51.204  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1eeff3b
+2022-09-15 09:13:51.205  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1ff7dc9
+2022-09-15 09:13:51.206  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@148f23
+2022-09-15 09:13:51.206  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1e8e276
+2022-09-15 09:13:51.207  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1c9df97
+2022-09-15 09:13:51.208  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1acf052
+2022-09-15 09:13:51.209  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1590f53
+2022-09-15 09:13:51.210  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@18ab0dc
+2022-09-15 09:13:51.210  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@a8f19d
+2022-09-15 09:13:51.211  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@ccaefa
+2022-09-15 09:13:51.212  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1920227
+2022-09-15 09:13:51.212  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1564919
+2022-09-15 09:13:51.213  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@bf7a37
+2022-09-15 09:13:51.213  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1a1a8a4
+2022-09-15 09:13:51.214  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@f120d
+2022-09-15 09:13:51.215  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1d68b94
+2022-09-15 09:13:51.215  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@fb399b
+2022-09-15 09:13:51.216  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@f4328
+2022-09-15 09:13:51.217  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@d8b2de
+2022-09-15 09:13:51.217  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1110efa
+2022-09-15 09:13:51.219  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4bcd62
+2022-09-15 09:13:51.220  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@83c000
+2022-09-15 09:13:51.221  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1e4cf0c
+2022-09-15 09:13:51.222  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@a57194
+2022-09-15 09:13:51.223  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@198e7f
+2022-09-15 09:13:51.223  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@98dc7c
+2022-09-15 09:13:51.224  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@117fe4c
+2022-09-15 09:13:51.225  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@715eb
+2022-09-15 09:13:51.225  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2f1d22
+2022-09-15 09:13:51.837  INFO 21628 --- [redisson-netty-5-23] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-09-15 09:13:51.857  INFO 21628 --- [redisson-netty-5-18] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-09-15 09:13:54.756  WARN 21628 --- [main] .s.d.e.r.s.SimpleElasticsearchRepository : Cannot create index: Timeout connecting to [/127.0.0.1:9200]; nested exception is java.lang.RuntimeException: Timeout connecting to [/127.0.0.1:9200]
+2022-09-15 09:14:04.589  INFO 21628 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2022-09-15 09:14:05.720  INFO 21628 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-09-15 09:14:11.286  INFO 21628 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-09-15 09:14:11.311  INFO 21628 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-15 09:14:11.311  INFO 21628 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2022-09-15 09:14:11.312  INFO 21628 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-09-15 09:14:11.313  INFO 21628 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-09-15 09:14:11.314  INFO 21628 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-15 09:14:11.314  INFO 21628 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2022-09-15 09:14:11.314  INFO 21628 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1b3a4c0
+2022-09-15 09:14:11.815  INFO 21628 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 54a57269-8994-499d-bd36-0cf797909d48
+
+2022-09-15 09:14:12.446  INFO 21628 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12ef7f0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1420507, org.springframework.security.web.header.HeaderWriterFilter@bc1cc4, org.springframework.web.filter.CorsFilter@19f23b2, org.springframework.security.web.authentication.logout.LogoutFilter@f53d4a, cn.lili.security.BuyerAuthenticationFilter@a9f772, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b2582, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a14e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1580cf2, org.springframework.security.web.session.SessionManagementFilter@1ee228b, org.springframework.security.web.access.ExceptionTranslationFilter@9d11c5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@abf27]
+2022-09-15 09:14:16.325  INFO 21628 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-09-15 09:14:16.325  INFO 21628 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'buyer-api.errorChannel' has 1 subscriber(s).
+2022-09-15 09:14:16.325  INFO 21628 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-09-15 09:14:16.353  INFO 21628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-15 09:14:16.354  INFO 21628 --- [main] u.j.c.RefreshScopeRefreshedEventListener : Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2022-09-15 09:14:16.355  INFO 21628 --- [main] CachingDelegateEncryptablePropertySource : Property Source systemProperties refreshed
+2022-09-15 09:14:16.355  INFO 21628 --- [main] CachingDelegateEncryptablePropertySource : Property Source systemEnvironment refreshed
+2022-09-15 09:14:16.355  INFO 21628 --- [main] CachingDelegateEncryptablePropertySource : Property Source random refreshed
+2022-09-15 09:14:16.355  INFO 21628 --- [main] CachingDelegateEncryptablePropertySource : Property Source migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-09-15 09:14:16.355  INFO 21628 --- [main] CachingDelegateEncryptablePropertySource : Property Source Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-09-15 09:14:16.355  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource server.ports [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-15 09:14:16.355  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-15 09:14:16.356  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-15 09:14:16.356  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2022-09-15 09:14:16.356  INFO 21628 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Management Server [org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration$1] to EncryptablePropertySourceWrapper
+2022-09-15 09:14:16.356  INFO 21628 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-09-15 09:14:16.362  INFO 21628 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 13 custom documentation plugin(s)
+2022-09-15 09:14:16.951  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:17.346  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:18.628  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_1
+2022-09-15 09:14:19.326  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:19.361  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2022-09-15 09:14:19.875  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPointsGoodsPageUsingGET_1
+2022-09-15 09:14:19.901  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPointsGoodsPageUsingGET_2
+2022-09-15 09:14:19.915  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_1
+2022-09-15 09:14:20.621  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:20.662  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_2
+2022-09-15 09:14:20.670  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_2
+2022-09-15 09:14:20.682  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2022-09-15 09:14:20.692  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_3
+2022-09-15 09:14:20.704  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_3
+2022-09-15 09:14:21.106  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_4
+2022-09-15 09:14:21.119  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPurchaseOrderVOUsingPOST_1
+2022-09-15 09:14:21.126  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_5
+2022-09-15 09:14:21.142  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_2
+2022-09-15 09:14:21.551  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:21.935  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: casHistoryUsingGET_1
+2022-09-15 09:14:22.335  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:22.801  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_6
+2022-09-15 09:14:22.842  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_4
+2022-09-15 09:14:23.679  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:24.121  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_5
+2022-09-15 09:14:24.135  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: applyFirstStepUsingPUT_1
+2022-09-15 09:14:24.139  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: applyFirstStepUsingPUT_2
+2022-09-15 09:14:24.893  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:24.931  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: notifyUsingGET_1
+2022-09-15 09:14:24.931  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: notifyUsingPOST_1
+2022-09-15 09:14:25.322  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:26.013  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:26.018  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: unionIDBindUsingPOST_1
+2022-09-15 09:14:26.076  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: webAuthorizeUsingGET_1
+2022-09-15 09:14:26.484  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: resetByMobileUsingPOST_1
+2022-09-15 09:14:26.522  INFO 21628 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: autoLoginUsingGET_1
+2022-09-15 09:14:26.941  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:27.668  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:28.045  INFO 21628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-15 09:14:28.046  INFO 21628 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2022-09-15 09:14:28.047  INFO 21628 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-09-15 09:14:28.620  INFO 21628 --- [main] cn.lili.BuyerApiApplication              : Started BuyerApiApplication in 61.946 seconds (JVM running for 63.34)
+2022-09-15 09:14:29.799 ERROR 21628 --- [main] cn.lili.init.EsGoodsIndexInitRunner      : 检测ES商品索引失败
+
+org.elasticsearch.ElasticsearchException: 获取索引 {lili_goods} 是否存在失败：Timeout connecting to [/127.0.0.1:9200]
+	at cn.lili.elasticsearch.BaseElasticsearchService.indexExist(BaseElasticsearchService.java:380)
+	at cn.lili.modules.search.serviceimpl.EsGoodsIndexServiceImpl.initIndex(EsGoodsIndexServiceImpl.java:230)
+	at cn.lili.init.EsGoodsIndexInitRunner.run(EsGoodsIndexInitRunner.java:25)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:799)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:346)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1318)
+	at cn.lili.BuyerApiApplication.main(BuyerApiApplication.java:33)
+
+2022-09-15 09:14:29.806  INFO 21628 --- [main] c.l.c.s.init.SensitiveWordsLoader        : 系统初始化敏感词
+2022-09-15 09:14:29.809  WARN 21628 --- [main] o.s.b.c.p.m.PropertiesMigrationListener  : 
+The use of configuration keys that have been renamed was found in the environment:
+
+Property source 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'':
+	Key: server.tomcat.max-threads
+		Line: 4
+		Replacement: server.tomcat.threads.max
+
+
+Each configuration key has been temporarily mapped to its replacement for your convenience. To silence this warning, please update your configuration to use the new keys.
+
+2022-09-15 09:14:32.358  WARN 21628 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=buyer-api, managementUrl=http://HZ-IT-205.adicon.com:8888/actuator, healthUrl=http://HZ-IT-205.adicon.com:8888/actuator/health, serviceUrl=http://HZ-IT-205.adicon.com:8888/) at spring-boot-admin ([http://127.0.0.1:8000/instances]): I/O error on POST request for "http://127.0.0.1:8000/instances": Connect to 127.0.0.1:8000 [/127.0.0.1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8000 [/127.0.0.1] failed: Connection refused: connect. Further attempts are logged on DEBUG level
+2022-09-15 09:25:44.823  WARN 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: exceptionCaught 127.0.0.1:9876
+2022-09-15 09:25:44.825  WARN 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: exceptionCaught exception.
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:44.826  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : closeChannel: the channel[localhost:9876] was removed from channel table
+2022-09-15 09:25:44.827  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 127.0.0.1:9876
+2022-09-15 09:25:44.827  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:25:44.829  INFO 21628 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2022-09-15 09:25:47.689  WARN 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: exceptionCaught 172.20.226.80:10911
+2022-09-15 09:25:47.690  WARN 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: exceptionCaught exception.
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:47.690  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : closeChannel: the channel[172.20.226.80:10911] was removed from channel table
+2022-09-15 09:25:47.690  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 172.20.226.80:10911
+2022-09-15 09:25:47.690  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:25:47.691  INFO 21628 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.20.226.80:10911] result: true
+2022-09-15 09:25:52.997  INFO 21628 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.028 ERROR 21628 --- [redisson-netty-5-5] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x659da04a, L:/127.0.0.1:63707 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.028 ERROR 21628 --- [redisson-netty-5-12] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xfe332056, L:/127.0.0.1:63702 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.028 ERROR 21628 --- [redisson-netty-5-2] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xfdb91a74, L:/127.0.0.1:63706 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.028 ERROR 21628 --- [redisson-netty-5-25] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xc0e9c969, L:/127.0.0.1:63710 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.028 ERROR 21628 --- [redisson-netty-5-8] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x01c47466, L:/127.0.0.1:63697 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.028 ERROR 21628 --- [redisson-netty-5-4] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xfc3715b5, L:/127.0.0.1:63703 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.028 ERROR 21628 --- [redisson-netty-5-9] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xe1a1624d, L:/127.0.0.1:63700 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.028 ERROR 21628 --- [redisson-netty-5-6] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x2072e07a, L:/127.0.0.1:63701 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.028 ERROR 21628 --- [redisson-netty-5-28] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x27808c10, L:/127.0.0.1:63711 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.028 ERROR 21628 --- [redisson-netty-5-32] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x2b8c984c, L:/127.0.0.1:63713 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.028 ERROR 21628 --- [redisson-netty-5-29] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xdcfced7e, L:/127.0.0.1:63717 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.028 ERROR 21628 --- [redisson-netty-5-24] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xa9a40ec4, L:/127.0.0.1:63708 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-10] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x04601879, L:/127.0.0.1:63698 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-11] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x02bbc6d8, L:/127.0.0.1:63699 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-27] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xc660729f, L:/127.0.0.1:63712 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-3] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x2cad1399, L:/127.0.0.1:63704 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-7] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x34f9e657, L:/127.0.0.1:63705 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-31] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x8cf51cec, L:/127.0.0.1:63716 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-26] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xd15f6775, L:/127.0.0.1:63709 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-10] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xc8f1b47b, L:/127.0.0.1:63719 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-4] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xdca13dc4, L:/127.0.0.1:63720 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-7] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x5944e5fe, L:/127.0.0.1:63714 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-6] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x10b9a1cc, L:/127.0.0.1:63721 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-8] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xdd3eabdd, L:/127.0.0.1:63718 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.032 ERROR 21628 --- [redisson-netty-5-2] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x691a8517, L:/127.0.0.1:63715 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:25:53.103  INFO 21628 --- [lettuce-eventExecutorLoop-1-5] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /127.0.0.1:6379
+2022-09-15 09:25:55.172  WARN 21628 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
+2022-09-15 09:25:59.404  INFO 21628 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 127.0.0.1:6379
+2022-09-15 09:26:01.456  WARN 21628 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
+2022-09-15 09:26:05.802  INFO 21628 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 127.0.0.1:6379
+2022-09-15 09:26:07.883  WARN 21628 --- [lettuce-nioEventLoop-4-8] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
+2022-09-15 09:26:08.275  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: localhost:9876 , NEW: localhost:9876. namesrvIndex = 528
+2022-09-15 09:26:08.276  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:9876] asynchronously
+2022-09-15 09:26:08.301  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-15 09:26:10.343  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:26:10.343  WARN 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:9876] failed, AbstractBootstrap$PendingRegistrationPromise@6eef82(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:26:10.343  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : closeChannel: the channel[localhost:9876] was removed from channel table
+2022-09-15 09:26:10.344  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:26:10.344  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:26:10.344  INFO 21628 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-15 09:26:10.368  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[172.20.226.80:10911] asynchronously
+2022-09-15 09:26:10.370  INFO 21628 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 172.20.226.80:10911
+2022-09-15 09:26:12.401  INFO 21628 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:26:12.402  INFO 21628 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : closeChannel: the channel[172.20.226.80:10911] was removed from channel table
+2022-09-15 09:26:12.402  WARN 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[172.20.226.80:10911] failed, AbstractBootstrap$PendingRegistrationPromise@a17e69(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /172.20.226.80:10911)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /172.20.226.80:10911
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:26:12.402  INFO 21628 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:26:12.402  INFO 21628 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:26:12.403  INFO 21628 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-15 09:26:13.010  INFO 21628 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 127.0.0.1:6379
+2022-09-15 09:26:15.055  WARN 21628 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
+2022-09-15 09:26:20.207  INFO 21628 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 127.0.0.1:6379
+2022-09-15 09:26:22.238  WARN 21628 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
+2022-09-15 09:26:26.409  INFO 21628 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 127.0.0.1:6379
+2022-09-15 09:26:28.448  WARN 21628 --- [lettuce-nioEventLoop-4-6] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
+2022-09-15 09:26:36.703  INFO 21628 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 127.0.0.1:6379
+2022-09-15 09:26:38.326  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: localhost:9876 , NEW: localhost:9876. namesrvIndex = 529
+2022-09-15 09:26:38.328  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:9876] asynchronously
+2022-09-15 09:26:38.329  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-15 09:26:38.743  WARN 21628 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
+2022-09-15 09:26:40.375  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:26:40.375  WARN 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:9876] failed, AbstractBootstrap$PendingRegistrationPromise@9fd654(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:26:40.375  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : closeChannel: the channel[localhost:9876] was removed from channel table
+2022-09-15 09:26:40.375  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:26:40.375  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:26:40.376  INFO 21628 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-15 09:26:40.376  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[172.20.226.80:10911] asynchronously
+2022-09-15 09:26:40.376  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 172.20.226.80:10911
+2022-09-15 09:26:42.426  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:26:42.427  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : closeChannel: the channel[172.20.226.80:10911] was removed from channel table
+2022-09-15 09:26:42.427  WARN 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[172.20.226.80:10911] failed, AbstractBootstrap$PendingRegistrationPromise@7e6001(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /172.20.226.80:10911)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /172.20.226.80:10911
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:26:42.427  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:26:42.427  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:26:42.427  INFO 21628 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-15 09:26:55.204  INFO 21628 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 127.0.0.1:6379
+2022-09-15 09:26:57.255  WARN 21628 --- [lettuce-nioEventLoop-4-8] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
+2022-09-15 09:27:08.274  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: localhost:9876 , NEW: localhost:9876. namesrvIndex = 530
+2022-09-15 09:27:08.275  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:9876] asynchronously
+2022-09-15 09:27:08.276  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-15 09:27:10.310  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:27:10.310  WARN 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:9876] failed, AbstractBootstrap$PendingRegistrationPromise@106fbb1(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:27:10.311  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : closeChannel: the channel[localhost:9876] was removed from channel table
+2022-09-15 09:27:10.311  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:27:10.311  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:27:10.311  INFO 21628 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-15 09:27:10.312  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[172.20.226.80:10911] asynchronously
+2022-09-15 09:27:10.312  INFO 21628 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 172.20.226.80:10911
+2022-09-15 09:27:12.339  INFO 21628 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:27:12.339  WARN 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[172.20.226.80:10911] failed, AbstractBootstrap$PendingRegistrationPromise@1f32b0f(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /172.20.226.80:10911)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /172.20.226.80:10911
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:27:12.339  INFO 21628 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : closeChannel: the channel[172.20.226.80:10911] was removed from channel table
+2022-09-15 09:27:12.340  INFO 21628 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:27:12.340  INFO 21628 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:27:12.340  INFO 21628 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-15 09:27:27.307  INFO 21628 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 127.0.0.1:6379
+2022-09-15 09:27:29.332  WARN 21628 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
+2022-09-15 09:27:38.280  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: localhost:9876 , NEW: localhost:9876. namesrvIndex = 531
+2022-09-15 09:27:38.281  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:9876] asynchronously
+2022-09-15 09:27:38.282  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-15 09:27:40.332  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:27:40.332  WARN 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:9876] failed, AbstractBootstrap$PendingRegistrationPromise@1aff856(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:27:40.332  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : closeChannel: the channel[localhost:9876] was removed from channel table
+2022-09-15 09:27:40.332  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:27:40.332  INFO 21628 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:27:40.332  INFO 21628 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-15 09:27:40.332  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[172.20.226.80:10911] asynchronously
+2022-09-15 09:27:40.333  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 172.20.226.80:10911
+2022-09-15 09:27:42.377  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:27:42.377  WARN 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[172.20.226.80:10911] failed, AbstractBootstrap$PendingRegistrationPromise@438050(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /172.20.226.80:10911)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /172.20.226.80:10911
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:27:42.378  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : closeChannel: the channel[172.20.226.80:10911] was removed from channel table
+2022-09-15 09:27:42.378  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:27:42.378  INFO 21628 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:27:42.378  INFO 21628 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-15 09:27:59.401  INFO 21628 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 127.0.0.1:6379
+2022-09-15 09:28:01.439  WARN 21628 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
+2022-09-15 09:28:08.269  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: localhost:9876 , NEW: localhost:9876. namesrvIndex = 532
+2022-09-15 09:28:08.270  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[localhost:9876] asynchronously
+2022-09-15 09:28:08.270  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-15 09:28:10.317  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:28:10.317  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : closeChannel: the channel[localhost:9876] was removed from channel table
+2022-09-15 09:28:10.317  WARN 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[localhost:9876] failed, AbstractBootstrap$PendingRegistrationPromise@6633d9(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-15 09:28:10.317  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-15 09:28:10.317  INFO 21628 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-15 09:28:10.317  INFO 21628 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-15 09:28:10.318  INFO 21628 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[172.20.226.80:10911] asynchronously
+2022-09-15 09:28:10.318  INFO 21628 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 172.20.226.80:10911
+2022-09-15 09:28:11.218  INFO 21628 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-15 09:28:11.381  INFO 21628 --- [SpringContextShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-09-15 09:28:11.381  INFO 21628 --- [SpringContextShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'buyer-api.errorChannel' has 0 subscriber(s).
+2022-09-15 09:28:11.381  INFO 21628 --- [SpringContextShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2022-09-15 09:28:11.385  INFO 21628 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2022-09-15 09:28:11.385  INFO 21628 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-09-15 09:28:11.385  INFO 21628 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-15 09:28:11.386  INFO 21628 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.

@@ -1,0 +1,762 @@
+2022-09-14 08:42:39.556  INFO 12724 --- [main] cn.lili.BuyerApiApplication              : Starting BuyerApiApplication using Java 1.8.0_291 on HZ-IT-205 with PID 12724 (E:\tangtian_up\tangtianup-thinging-in-lilishop\buyer-api\target\classes started by tian.tang in E:\tangtian_up)
+2022-09-14 08:42:39.556  INFO 12724 --- [main] cn.lili.BuyerApiApplication              : No active profile set, falling back to default profiles: default
+2022-09-14 08:42:48.222  INFO 12724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-14 08:42:48.224  INFO 12724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-14 08:42:49.225  INFO 12724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 993 ms. Found 2 Elasticsearch repository interfaces.
+2022-09-14 08:42:49.230  INFO 12724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-14 08:42:49.233  INFO 12724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-14 08:42:49.380  INFO 12724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-14 08:42:49.395  INFO 12724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-14 08:42:49.396  INFO 12724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-14 08:42:49.542  INFO 12724 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.permission.repository.SystemLogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-14 08:42:49.542  INFO 12724 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.search.repository.EsGoodsIndexRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-14 08:42:49.542  INFO 12724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 142 ms. Found 0 Redis repository interfaces.
+2022-09-14 08:42:50.121  INFO 12724 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-09-14 08:42:50.123  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-14 08:42:50.123  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-14 08:42:50.123  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-14 08:42:50.123  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-14 08:42:50.126  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-09-14 08:42:50.126  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-09-14 08:42:50.126  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-14 08:42:50.126  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-14 08:42:50.133  INFO 12724 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-09-14 08:42:50.141  INFO 12724 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-09-14 08:42:50.148  INFO 12724 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-09-14 08:42:50.255  INFO 12724 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-09-14 08:42:50.263  INFO 12724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadProperties' of type [cn.lili.common.properties.ThreadProperties$$EnhancerBySpringCGLIB$$f56307f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:42:50.266  INFO 12724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadConfig' of type [cn.lili.common.thread.ThreadConfig$$EnhancerBySpringCGLIB$$679b660f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:42:50.617  INFO 12724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [cn.lili.cache.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$be67c30c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:42:50.678  INFO 12724 --- [main] cn.lili.cache.config.redis.RedisConfig   : 初始化 -> [Redis CacheErrorHandler]
+2022-09-14 08:42:50.679  INFO 12724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'errorHandler' of type [cn.lili.cache.config.redis.RedisConfig$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:42:50.731  INFO 12724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@e93c46' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:42:50.741  INFO 12724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:42:50.761  INFO 12724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:42:50.782  INFO 12724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:42:50.782  INFO 12724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:42:50.926  INFO 12724 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-09-14 08:42:50.926  INFO 12724 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-09-14 08:42:51.379  INFO 12724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-09-14 08:42:51.391  INFO 12724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-14 08:42:51.391  INFO 12724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-09-14 08:42:51.657  INFO 12724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-14 08:42:51.657  INFO 12724 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11696 ms
+2022-09-14 08:42:53.198  INFO 12724 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-09-14 08:42:53.260  INFO 12724 --- [main] o.a.s.c.config.log.ConfigurationLogger   : ShardingRuleConfiguration
+{}
+
+2022-09-14 08:42:53.262  INFO 12724 --- [main] o.a.s.c.config.log.ConfigurationLogger   : Properties
+sql.show: 'false'
+
+2022-09-14 08:42:56.393  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@52ce04
+2022-09-14 08:42:56.394  INFO 12724 --- [main] RocketmqRemoting                         : name server address updated. NEW : [127.0.0.1:9876] , OLD: null
+2022-09-14 08:42:56.582  INFO 12724 --- [main] RocketmqCommon                           : Try to start service thread:PullMessageService started:false lastThread:null
+2022-09-14 08:42:56.583  INFO 12724 --- [main] RocketmqCommon                           : Try to start service thread:RebalanceService started:false lastThread:null
+2022-09-14 08:42:56.594  INFO 12724 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: null , NEW: 127.0.0.1:9876. namesrvIndex = 519
+2022-09-14 08:42:57.079  INFO 12724 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[127.0.0.1:9876] asynchronously
+2022-09-14 08:42:57.111  INFO 12724 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-14 08:42:57.214  INFO 12724 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final long cn.lili.modules.goods.serviceimpl.GoodsServiceImpl.getGoodsCountByCategory(java.lang.String)] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-09-14 08:42:59.146  INFO 12724 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:42:59.146  INFO 12724 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:9876] was removed from channel table
+2022-09-14 08:42:59.151  INFO 12724 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:42:59.151  INFO 12724 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-14 08:42:59.153  INFO 12724 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-14 08:42:59.155  WARN 12724 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[127.0.0.1:9876] failed, AbstractBootstrap$PendingRegistrationPromise@c41abe(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:00.046  WARN 12724 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:01.224  INFO 12724 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
+2022-09-14 08:43:01.224  INFO 12724 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
+2022-09-14 08:43:01.224  INFO 12724 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-14 08:43:07.741  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@98fc5
+2022-09-14 08:43:07.743  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1eb558
+2022-09-14 08:43:07.743  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@16c8641
+2022-09-14 08:43:07.743  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@10ed2d9
+2022-09-14 08:43:07.743  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1ab0d9a
+2022-09-14 08:43:07.743  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@ead9c2
+2022-09-14 08:43:07.748  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1cb02d0
+2022-09-14 08:43:07.748  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5c842a
+2022-09-14 08:43:09.924  INFO 12724 --- [main] org.redisson.Version                     : Redisson 3.15.6
+2022-09-14 08:43:09.924  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@107a3b
+2022-09-14 08:43:09.924  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1ad7a94
+2022-09-14 08:43:09.924  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@8374fa
+2022-09-14 08:43:09.924  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@df5adb
+2022-09-14 08:43:09.924  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1133599
+2022-09-14 08:43:09.924  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1829bb5
+2022-09-14 08:43:09.924  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@d90b9b
+2022-09-14 08:43:09.934  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4c9f59
+2022-09-14 08:43:09.934  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1d134
+2022-09-14 08:43:09.934  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1c9aff2
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@178f903
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1ca1e22
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1dee1de
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1207d28
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@16630ee
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@38072e
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@b6c8a6
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@9d3925
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5a8158
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@e9ea0a
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@80ea09
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1f3b72d
+2022-09-14 08:43:09.936  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@19fbaca
+2022-09-14 08:43:09.945  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@33a209
+2022-09-14 08:43:09.945  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@124c964
+2022-09-14 08:43:09.945  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1145db2
+2022-09-14 08:43:09.945  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@17bf0f0
+2022-09-14 08:43:09.945  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@b33bc
+2022-09-14 08:43:09.945  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@14bb5f0
+2022-09-14 08:43:09.945  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6384a6
+2022-09-14 08:43:09.945  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@15172a
+2022-09-14 08:43:09.945  INFO 12724 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1dc5c07
+2022-09-14 08:43:10.276  INFO 12724 --- [redisson-netty-5-14] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-09-14 08:43:10.286  INFO 12724 --- [redisson-netty-5-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-09-14 08:43:13.424  WARN 12724 --- [main] .s.d.e.r.s.SimpleElasticsearchRepository : Cannot create index: Timeout connecting to [/127.0.0.1:9200]; nested exception is java.lang.RuntimeException: Timeout connecting to [/127.0.0.1:9200]
+2022-09-14 08:43:22.938  INFO 12724 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2022-09-14 08:43:24.037  INFO 12724 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-09-14 08:43:26.606  INFO 12724 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: 127.0.0.1:9876 , NEW: 127.0.0.1:9876. namesrvIndex = 520
+2022-09-14 08:43:26.608  INFO 12724 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[127.0.0.1:9876] asynchronously
+2022-09-14 08:43:26.609  INFO 12724 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-14 08:43:28.713  INFO 12724 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:43:28.713  WARN 12724 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[127.0.0.1:9876] failed, AbstractBootstrap$PendingRegistrationPromise@19322ba(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-14 08:43:28.718  INFO 12724 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:9876] was removed from channel table
+2022-09-14 08:43:28.718  INFO 12724 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:43:28.718  INFO 12724 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-14 08:43:28.718  INFO 12724 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-14 08:43:29.668  INFO 12724 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-09-14 08:43:29.689  INFO 12724 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-14 08:43:29.689  INFO 12724 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2022-09-14 08:43:29.689  INFO 12724 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-09-14 08:43:29.689  INFO 12724 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-09-14 08:43:29.692  INFO 12724 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-14 08:43:29.692  INFO 12724 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2022-09-14 08:43:29.692  INFO 12724 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@32fbea
+2022-09-14 08:43:29.753  INFO 12724 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: debb01e7-fa76-485f-8363-ea871682fa21
+
+2022-09-14 08:43:30.447  INFO 12724 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a973af, org.springframework.security.web.context.SecurityContextPersistenceFilter@14ec701, org.springframework.security.web.header.HeaderWriterFilter@dc28df, org.springframework.web.filter.CorsFilter@1033742, org.springframework.security.web.authentication.logout.LogoutFilter@1a3a042, cn.lili.security.BuyerAuthenticationFilter@e8861f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@fdabe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@809f98, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@775a63, org.springframework.security.web.session.SessionManagementFilter@8bef7f, org.springframework.security.web.access.ExceptionTranslationFilter@65249c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b522b]
+2022-09-14 08:43:34.269  INFO 12724 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-09-14 08:43:34.269  INFO 12724 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'buyer-api.errorChannel' has 1 subscriber(s).
+2022-09-14 08:43:34.269  INFO 12724 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-09-14 08:43:34.287  INFO 12724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-14 08:43:34.290  INFO 12724 --- [main] u.j.c.RefreshScopeRefreshedEventListener : Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2022-09-14 08:43:34.290  INFO 12724 --- [main] CachingDelegateEncryptablePropertySource : Property Source systemProperties refreshed
+2022-09-14 08:43:34.290  INFO 12724 --- [main] CachingDelegateEncryptablePropertySource : Property Source systemEnvironment refreshed
+2022-09-14 08:43:34.290  INFO 12724 --- [main] CachingDelegateEncryptablePropertySource : Property Source random refreshed
+2022-09-14 08:43:34.290  INFO 12724 --- [main] CachingDelegateEncryptablePropertySource : Property Source migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-09-14 08:43:34.290  INFO 12724 --- [main] CachingDelegateEncryptablePropertySource : Property Source Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-09-14 08:43:34.290  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource server.ports [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-14 08:43:34.290  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-14 08:43:34.290  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-14 08:43:34.290  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2022-09-14 08:43:34.290  INFO 12724 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Management Server [org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration$1] to EncryptablePropertySourceWrapper
+2022-09-14 08:43:34.292  INFO 12724 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-09-14 08:43:34.297  INFO 12724 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 13 custom documentation plugin(s)
+2022-09-14 08:43:34.791  INFO 12724 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:43:35.560  INFO 12724 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:43:36.752  INFO 12724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_1
+2022-09-14 08:43:37.206  INFO 12724 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:43:37.604  INFO 12724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2022-09-14 08:43:38.119  INFO 12724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPointsGoodsPageUsingGET_1
+2022-09-14 08:43:38.129  INFO 12724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPointsGoodsPageUsingGET_2
+2022-09-14 08:43:38.138  INFO 12724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_1
+2022-09-14 08:43:46.041  INFO 8336 --- [main] cn.lili.BuyerApiApplication              : Starting BuyerApiApplication using Java 1.8.0_291 on HZ-IT-205 with PID 8336 (E:\tangtian_up\tangtianup-thinging-in-lilishop\buyer-api\target\classes started by tian.tang in E:\tangtian_up)
+2022-09-14 08:43:46.041  INFO 8336 --- [main] cn.lili.BuyerApiApplication              : No active profile set, falling back to default profiles: default
+2022-09-14 08:43:49.053  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-14 08:43:49.059  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-14 08:43:49.742  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 677 ms. Found 2 Elasticsearch repository interfaces.
+2022-09-14 08:43:49.748  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-14 08:43:49.749  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-14 08:43:49.892  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 143 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-14 08:43:49.905  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-14 08:43:49.907  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-14 08:43:50.040  INFO 8336 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.permission.repository.SystemLogRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-14 08:43:50.040  INFO 8336 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.lili.modules.search.repository.EsGoodsIndexRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-09-14 08:43:50.040  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 0 Redis repository interfaces.
+2022-09-14 08:43:50.577  INFO 8336 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-09-14 08:43:50.579  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-14 08:43:50.579  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-14 08:43:50.579  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-14 08:43:50.579  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-14 08:43:50.579  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-09-14 08:43:50.579  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-09-14 08:43:50.579  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-14 08:43:50.579  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-14 08:43:50.589  INFO 8336 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-09-14 08:43:50.597  INFO 8336 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-09-14 08:43:50.599  INFO 8336 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-09-14 08:43:50.700  INFO 8336 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-09-14 08:43:50.709  INFO 8336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadProperties' of type [cn.lili.common.properties.ThreadProperties$$EnhancerBySpringCGLIB$$45e8b34e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:43:50.710  INFO 8336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadConfig' of type [cn.lili.common.thread.ThreadConfig$$EnhancerBySpringCGLIB$$b8211166] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:43:51.025  INFO 8336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [cn.lili.cache.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$eed6e63] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:43:51.076  INFO 8336 --- [main] cn.lili.cache.config.redis.RedisConfig   : 初始化 -> [Redis CacheErrorHandler]
+2022-09-14 08:43:51.078  INFO 8336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'errorHandler' of type [cn.lili.cache.config.redis.RedisConfig$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:43:51.133  INFO 8336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@f6974c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:43:51.143  INFO 8336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:43:51.165  INFO 8336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:43:51.182  INFO 8336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:43:51.182  INFO 8336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-14 08:43:51.332  INFO 8336 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-09-14 08:43:51.332  INFO 8336 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-09-14 08:43:51.792  INFO 8336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-09-14 08:43:51.812  INFO 8336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-14 08:43:51.812  INFO 8336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-09-14 08:43:52.057  INFO 8336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-14 08:43:52.066  INFO 8336 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5643 ms
+2022-09-14 08:43:53.462  INFO 8336 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-09-14 08:43:53.514  INFO 8336 --- [main] o.a.s.c.config.log.ConfigurationLogger   : ShardingRuleConfiguration
+{}
+
+2022-09-14 08:43:53.516  INFO 8336 --- [main] o.a.s.c.config.log.ConfigurationLogger   : Properties
+sql.show: 'false'
+
+2022-09-14 08:43:56.164  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@15afde5
+2022-09-14 08:43:56.164  INFO 8336 --- [main] RocketmqRemoting                         : name server address updated. NEW : [127.0.0.1:9876] , OLD: null
+2022-09-14 08:43:56.353  INFO 8336 --- [main] RocketmqCommon                           : Try to start service thread:PullMessageService started:false lastThread:null
+2022-09-14 08:43:56.353  INFO 8336 --- [main] RocketmqCommon                           : Try to start service thread:RebalanceService started:false lastThread:null
+2022-09-14 08:43:56.374  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: null , NEW: 127.0.0.1:9876. namesrvIndex = 44
+2022-09-14 08:43:56.855  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[127.0.0.1:9876] asynchronously
+2022-09-14 08:43:56.881  INFO 8336 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-14 08:43:56.885  INFO 8336 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final long cn.lili.modules.goods.serviceimpl.GoodsServiceImpl.getGoodsCountByCategory(java.lang.String)] because it is marked as final: Consider using interface-based JDK proxies instead!
+2022-09-14 08:43:58.906  INFO 8336 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:43:58.906  INFO 8336 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:9876] was removed from channel table
+2022-09-14 08:43:58.906  INFO 8336 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:43:58.906  INFO 8336 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-14 08:43:58.906  INFO 8336 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-14 08:43:58.906  WARN 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[127.0.0.1:9876] failed, AbstractBootstrap$PendingRegistrationPromise@1b0eed7(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-14 08:43:59.332  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:43:59.333  WARN 8336 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-09-14 08:44:00.490  INFO 8336 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
+2022-09-14 08:44:00.490  INFO 8336 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
+2022-09-14 08:44:00.490  INFO 8336 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-14 08:44:06.376  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1af4162
+2022-09-14 08:44:06.376  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@b0fb24
+2022-09-14 08:44:06.376  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1dabbb9
+2022-09-14 08:44:06.378  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4594b1
+2022-09-14 08:44:06.378  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1fe64ca
+2022-09-14 08:44:06.378  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@d6d08a
+2022-09-14 08:44:06.378  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@17aada
+2022-09-14 08:44:06.378  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@f14035
+2022-09-14 08:44:07.710  INFO 8336 --- [main] org.redisson.Version                     : Redisson 3.15.6
+2022-09-14 08:44:07.710  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@c112a5
+2022-09-14 08:44:07.710  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@a0e29d
+2022-09-14 08:44:07.710  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@31eb42
+2022-09-14 08:44:07.710  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@d103a4
+2022-09-14 08:44:07.710  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@a16621
+2022-09-14 08:44:07.710  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1bcd722
+2022-09-14 08:44:07.710  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@45d2c
+2022-09-14 08:44:07.710  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@18b26b
+2022-09-14 08:44:07.715  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1ff56e7
+2022-09-14 08:44:07.715  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@c9803d
+2022-09-14 08:44:07.715  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4275
+2022-09-14 08:44:07.718  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1983534
+2022-09-14 08:44:07.718  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@8b070e
+2022-09-14 08:44:07.718  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@9db88a
+2022-09-14 08:44:07.718  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@3a4506
+2022-09-14 08:44:07.720  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6ff320
+2022-09-14 08:44:07.720  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@7a2954
+2022-09-14 08:44:07.720  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1ee92f9
+2022-09-14 08:44:07.720  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1bae6f7
+2022-09-14 08:44:07.720  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@c3f893
+2022-09-14 08:44:07.720  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1744b16
+2022-09-14 08:44:07.720  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@e2721b
+2022-09-14 08:44:07.720  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@65a6ee
+2022-09-14 08:44:07.720  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@12fc711
+2022-09-14 08:44:07.726  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@741f59
+2022-09-14 08:44:07.726  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@12fc6a6
+2022-09-14 08:44:07.726  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6046fb
+2022-09-14 08:44:07.728  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1741969
+2022-09-14 08:44:07.728  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1504749
+2022-09-14 08:44:07.728  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@17b9f3
+2022-09-14 08:44:07.730  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@7c69d4
+2022-09-14 08:44:07.730  INFO 8336 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@15e9923
+2022-09-14 08:44:08.300  INFO 8336 --- [redisson-netty-5-13] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-09-14 08:44:08.313  INFO 8336 --- [redisson-netty-5-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-09-14 08:44:11.172  WARN 8336 --- [main] .s.d.e.r.s.SimpleElasticsearchRepository : Cannot create index: Timeout connecting to [/127.0.0.1:9200]; nested exception is java.lang.RuntimeException: Timeout connecting to [/127.0.0.1:9200]
+2022-09-14 08:44:20.364  INFO 8336 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2022-09-14 08:44:21.497  INFO 8336 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-09-14 08:44:26.365  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: 127.0.0.1:9876 , NEW: 127.0.0.1:9876. namesrvIndex = 45
+2022-09-14 08:44:26.366  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[127.0.0.1:9876] asynchronously
+2022-09-14 08:44:26.390  INFO 8336 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-14 08:44:26.888  INFO 8336 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-09-14 08:44:26.910  INFO 8336 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-14 08:44:26.910  INFO 8336 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2022-09-14 08:44:26.910  INFO 8336 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2022-09-14 08:44:26.910  INFO 8336 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-09-14 08:44:26.910  INFO 8336 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-14 08:44:26.910  INFO 8336 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2022-09-14 08:44:26.910  INFO 8336 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@52048c
+2022-09-14 08:44:27.481  INFO 8336 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 25c254f0-7600-4919-b96d-bb3f7fccec54
+
+2022-09-14 08:44:28.181  INFO 8336 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@561914, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f32d74, org.springframework.security.web.header.HeaderWriterFilter@4ee145, org.springframework.web.filter.CorsFilter@17831f9, org.springframework.security.web.authentication.logout.LogoutFilter@18fe7e8, cn.lili.security.BuyerAuthenticationFilter@725cf0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b64ebf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@db0bca, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14dcf0d, org.springframework.security.web.session.SessionManagementFilter@18508a, org.springframework.security.web.access.ExceptionTranslationFilter@8b1140, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11dfee3]
+2022-09-14 08:44:28.708  INFO 8336 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:44:28.708  WARN 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[127.0.0.1:9876] failed, AbstractBootstrap$PendingRegistrationPromise@393910(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-14 08:44:28.708  INFO 8336 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:9876] was removed from channel table
+2022-09-14 08:44:28.708  INFO 8336 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:44:28.708  INFO 8336 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-14 08:44:28.708  INFO 8336 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-14 08:44:31.707  INFO 8336 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-09-14 08:44:31.707  INFO 8336 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'buyer-api.errorChannel' has 1 subscriber(s).
+2022-09-14 08:44:31.707  INFO 8336 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-09-14 08:44:31.816  INFO 8336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-14 08:44:31.816  INFO 8336 --- [main] u.j.c.RefreshScopeRefreshedEventListener : Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2022-09-14 08:44:31.816  INFO 8336 --- [main] CachingDelegateEncryptablePropertySource : Property Source systemProperties refreshed
+2022-09-14 08:44:31.816  INFO 8336 --- [main] CachingDelegateEncryptablePropertySource : Property Source systemEnvironment refreshed
+2022-09-14 08:44:31.816  INFO 8336 --- [main] CachingDelegateEncryptablePropertySource : Property Source random refreshed
+2022-09-14 08:44:31.816  INFO 8336 --- [main] CachingDelegateEncryptablePropertySource : Property Source migrate-Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-09-14 08:44:31.816  INFO 8336 --- [main] CachingDelegateEncryptablePropertySource : Property Source Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-09-14 08:44:31.816  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource server.ports [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-09-14 08:44:31.816  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-09-14 08:44:31.816  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-09-14 08:44:31.816  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2022-09-14 08:44:31.816  INFO 8336 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Management Server [org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration$1] to EncryptablePropertySourceWrapper
+2022-09-14 08:44:31.816  INFO 8336 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-09-14 08:44:31.826  INFO 8336 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 13 custom documentation plugin(s)
+2022-09-14 08:44:32.685  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:33.465  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:34.639  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_1
+2022-09-14 08:44:35.030  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:35.076  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2022-09-14 08:44:35.904  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPointsGoodsPageUsingGET_1
+2022-09-14 08:44:35.914  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPointsGoodsPageUsingGET_2
+2022-09-14 08:44:35.922  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_1
+2022-09-14 08:44:36.313  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:36.692  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_2
+2022-09-14 08:44:36.702  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_2
+2022-09-14 08:44:36.712  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2022-09-14 08:44:36.718  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_3
+2022-09-14 08:44:36.727  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_3
+2022-09-14 08:44:36.774  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_4
+2022-09-14 08:44:37.156  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPurchaseOrderVOUsingPOST_1
+2022-09-14 08:44:37.162  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_5
+2022-09-14 08:44:37.177  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_2
+2022-09-14 08:44:37.570  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:38.014  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: casHistoryUsingGET_1
+2022-09-14 08:44:38.409  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:38.841  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_6
+2022-09-14 08:44:38.891  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_4
+2022-09-14 08:44:39.712  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:39.790  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_5
+2022-09-14 08:44:40.183  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: applyFirstStepUsingPUT_1
+2022-09-14 08:44:40.185  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: applyFirstStepUsingPUT_2
+2022-09-14 08:44:40.576  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:40.622  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: notifyUsingGET_1
+2022-09-14 08:44:40.625  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: notifyUsingPOST_1
+2022-09-14 08:44:41.348  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:41.699  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:41.706  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: unionIDBindUsingPOST_1
+2022-09-14 08:44:41.785  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: webAuthorizeUsingGET_1
+2022-09-14 08:44:42.180  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: resetByMobileUsingPOST_1
+2022-09-14 08:44:42.201  INFO 8336 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: autoLoginUsingGET_1
+2022-09-14 08:44:42.962  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:43.310  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:43.694  INFO 8336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-09-14 08:44:43.697  INFO 8336 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2022-09-14 08:44:43.697  INFO 8336 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-09-14 08:44:44.164  INFO 8336 --- [main] cn.lili.BuyerApiApplication              : Started BuyerApiApplication in 59.151 seconds (JVM running for 60.267)
+2022-09-14 08:44:45.324 ERROR 8336 --- [main] cn.lili.init.EsGoodsIndexInitRunner      : 检测ES商品索引失败
+
+org.elasticsearch.ElasticsearchException: 获取索引 {lili_goods} 是否存在失败：Timeout connecting to [/127.0.0.1:9200]
+	at cn.lili.elasticsearch.BaseElasticsearchService.indexExist(BaseElasticsearchService.java:380)
+	at cn.lili.modules.search.serviceimpl.EsGoodsIndexServiceImpl.initIndex(EsGoodsIndexServiceImpl.java:230)
+	at cn.lili.init.EsGoodsIndexInitRunner.run(EsGoodsIndexInitRunner.java:25)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:799)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:346)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1318)
+	at cn.lili.BuyerApiApplication.main(BuyerApiApplication.java:33)
+
+2022-09-14 08:44:45.326  INFO 8336 --- [main] c.l.c.s.init.SensitiveWordsLoader        : 系统初始化敏感词
+2022-09-14 08:44:45.702  WARN 8336 --- [main] o.s.b.c.p.m.PropertiesMigrationListener  : 
+The use of configuration keys that have been renamed was found in the environment:
+
+Property source 'Config resource 'class path resource [application.yml]' via location 'optional:classpath:/'':
+	Key: server.tomcat.max-threads
+		Line: 4
+		Replacement: server.tomcat.threads.max
+
+
+Each configuration key has been temporarily mapped to its replacement for your convenience. To silence this warning, please update your configuration to use the new keys.
+
+2022-09-14 08:44:46.704  INFO 8336 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as c4bc4423b7ba
+2022-09-14 08:44:56.376  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: 127.0.0.1:9876 , NEW: 127.0.0.1:9876. namesrvIndex = 46
+2022-09-14 08:44:56.377  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[127.0.0.1:9876] asynchronously
+2022-09-14 08:44:56.398  INFO 8336 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-14 08:44:58.429  INFO 8336 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:44:58.430  INFO 8336 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:9876] was removed from channel table
+2022-09-14 08:44:58.430  WARN 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[127.0.0.1:9876] failed, AbstractBootstrap$PendingRegistrationPromise@a7edad(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-14 08:44:58.430  INFO 8336 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:44:58.430  INFO 8336 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-14 08:44:58.430  INFO 8336 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-14 08:45:03.912  INFO 8336 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-14 08:45:03.912  INFO 8336 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-14 08:45:03.915  INFO 8336 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-09-14 08:45:17.487  WARN 8336 --- [http-nio-8888-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/test1?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 83076
+2022-09-14 08:45:17.488  WARN 8336 --- [http-nio-8888-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/test1?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 84036
+2022-09-14 08:45:17.488  WARN 8336 --- [http-nio-8888-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/test1?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 84041
+2022-09-14 08:45:17.489  WARN 8336 --- [http-nio-8888-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/test1?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 84045
+2022-09-14 08:45:17.489  WARN 8336 --- [http-nio-8888-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/test1?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 84056
+2022-09-14 08:45:17.490  WARN 8336 --- [http-nio-8888-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/test1?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 84057
+2022-09-14 08:45:17.491  WARN 8336 --- [http-nio-8888-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/test1?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 84058
+2022-09-14 08:45:20.463  WARN 8336 --- [http-nio-8888-exec-3] s.b.a.e.ElasticsearchRestHealthIndicator : Elasticsearch health check failed
+
+java.net.ConnectException: Timeout connecting to [/127.0.0.1:9200]
+	at org.elasticsearch.client.RestClient.extractAndWrapCause(RestClient.java:849)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:259)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:246)
+	at org.springframework.boot.actuate.elasticsearch.ElasticsearchRestHealthIndicator.doHealthCheck(ElasticsearchRestHealthIndicator.java:65)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:85)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:44)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:77)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:290)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:373)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at cn.lili.common.security.filter.XssFilter.doFilter(XssFilter.java:32)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at cn.lili.security.BuyerAuthenticationFilter.doFilterInternal(BuyerAuthenticationFilter.java:71)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:97)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Timeout connecting to [/127.0.0.1:9200]
+	at org.apache.http.nio.pool.RouteSpecificPool.timeout(RouteSpecificPool.java:169)
+	at org.apache.http.nio.pool.AbstractNIOConnPool.requestTimeout(AbstractNIOConnPool.java:632)
+	at org.apache.http.nio.pool.AbstractNIOConnPool$InternalSessionRequestCallback.timeout(AbstractNIOConnPool.java:898)
+	at org.apache.http.impl.nio.reactor.SessionRequestImpl.timeout(SessionRequestImpl.java:198)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processTimeouts(DefaultConnectingIOReactor.java:213)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:158)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:351)
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221)
+	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
+	... 1 common frames omitted
+
+2022-09-14 08:45:26.371  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: 127.0.0.1:9876 , NEW: 127.0.0.1:9876. namesrvIndex = 47
+2022-09-14 08:45:26.372  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[127.0.0.1:9876] asynchronously
+2022-09-14 08:45:26.400  INFO 8336 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-14 08:45:28.430  INFO 8336 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:45:28.430  WARN 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[127.0.0.1:9876] failed, AbstractBootstrap$PendingRegistrationPromise@1dc3c4e(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-14 08:45:28.430  INFO 8336 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:9876] was removed from channel table
+2022-09-14 08:45:28.430  INFO 8336 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:45:28.430  INFO 8336 --- [NettyClientWorkerThread_4] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-14 08:45:28.430  INFO 8336 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-14 08:45:56.376  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: 127.0.0.1:9876 , NEW: 127.0.0.1:9876. namesrvIndex = 48
+2022-09-14 08:45:56.376  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[127.0.0.1:9876] asynchronously
+2022-09-14 08:45:56.377  INFO 8336 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-14 08:45:58.446  INFO 8336 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:45:58.446  WARN 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[127.0.0.1:9876] failed, AbstractBootstrap$PendingRegistrationPromise@e63024(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-14 08:45:58.446  INFO 8336 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:9876] was removed from channel table
+2022-09-14 08:45:58.446  INFO 8336 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:45:58.446  INFO 8336 --- [NettyClientWorkerThread_1] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-14 08:45:58.446  INFO 8336 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-14 08:46:26.372  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: 127.0.0.1:9876 , NEW: 127.0.0.1:9876. namesrvIndex = 49
+2022-09-14 08:46:26.372  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[127.0.0.1:9876] asynchronously
+2022-09-14 08:46:26.372  INFO 8336 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-14 08:46:28.407  INFO 8336 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:46:28.407  WARN 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[127.0.0.1:9876] failed, AbstractBootstrap$PendingRegistrationPromise@26a5cf(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-14 08:46:28.408  INFO 8336 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:9876] was removed from channel table
+2022-09-14 08:46:28.408  INFO 8336 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:46:28.408  INFO 8336 --- [NettyClientWorkerThread_2] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-14 08:46:28.408  INFO 8336 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-14 08:46:56.376  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : new name server is chosen. OLD: 127.0.0.1:9876 , NEW: 127.0.0.1:9876. namesrvIndex = 50
+2022-09-14 08:46:56.377  INFO 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: begin to connect remote host[127.0.0.1:9876] asynchronously
+2022-09-14 08:46:56.378  INFO 8336 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => 127.0.0.1:9876
+2022-09-14 08:46:58.404  INFO 8336 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:46:58.405  INFO 8336 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : closeChannel: the channel[127.0.0.1:9876] was removed from channel table
+2022-09-14 08:46:58.405  INFO 8336 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : NETTY CLIENT PIPELINE: CLOSE 
+2022-09-14 08:46:58.405  WARN 8336 --- [MQClientFactoryScheduledThread] RocketmqRemoting                         : createChannel: connect remote host[127.0.0.1:9876] failed, AbstractBootstrap$PendingRegistrationPromise@1976e7e(failure: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876)
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9876
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-09-14 08:46:58.405  INFO 8336 --- [NettyClientWorkerThread_3] RocketmqRemoting                         : eventCloseChannel: the channel[null] has been removed from the channel table before
+2022-09-14 08:46:58.405  INFO 8336 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2022-09-14 08:47:06.894  INFO 8336 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.

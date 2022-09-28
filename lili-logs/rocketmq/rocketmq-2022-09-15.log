@@ -1,0 +1,323 @@
+22-09-15.09:10:15.169 [main            ] INFO  RocketmqClient          - user specified name server address: localhost:9876
+22-09-15.09:10:15.314 [main            ] INFO  RocketmqClient          - Created a new client Instance, InstanceIndex:0, ClientID:172.20.226.80@14692#85366193815900, ClientConfig:ClientConfig [namesrvAddr=localhost:9876, clientIP=172.20.226.80, instanceName=14692#85366193815900, clientCallbackExecutorThreads=8, pollNameServerInterval=30000, heartbeatBrokerInterval=30000, persistConsumerOffsetInterval=5000, pullTimeDelayMillsWhenException=1000, unitMode=false, unitName=null, vipChannelEnabled=false, useTLS=false, language=JAVA, namespace=null, mqClientApiTimeout=3000], ClientVersion:V4_9_3, SerializerType:JSON
+22-09-15.09:10:15.315 [main            ] INFO  RocketmqClient          - Created new MQClientInstance for clientId:[172.20.226.80@14692#85366193815900]
+22-09-15.09:10:15.356 [main            ] INFO  RocketmqClient          - the producer [CLIENT_INNER_PRODUCER] start OK. sendMessageWithVIPChannel=false
+22-09-15.09:10:15.356 [PullMessageService] INFO  RocketmqClient          - PullMessageService service started
+22-09-15.09:10:15.357 [RebalanceService] INFO  RocketmqClient          - RebalanceService service started
+22-09-15.09:10:15.361 [main            ] INFO  RocketmqClient          - the client factory [172.20.226.80@14692#85366193815900] start OK
+22-09-15.09:10:15.361 [main            ] INFO  RocketmqClient          - the producer [lili_group] start OK. sendMessageWithVIPChannel=false
+22-09-15.09:10:16.073 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - the topic[TBW102] route info changed, old[null] ,new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=broker-a, readQueueNums=8, writeQueueNums=8, perm=7, topicSysFlag=0]], brokerDatas=[BrokerData [brokerName=broker-a, brokerAddrs={0=172.20.226.80:10911}]], filterServerTable={}]]
+22-09-15.09:10:16.074 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=ThreadLocalIndex{threadLocalIndex=null}, haveTopicRouterInfo=false]
+22-09-15.09:10:16.074 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=ThreadLocalIndex{threadLocalIndex=null}, haveTopicRouterInfo=false]
+22-09-15.09:10:16.074 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - topicRouteTable.put. Topic = TBW102, TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=broker-a, readQueueNums=8, writeQueueNums=8, perm=7, topicSysFlag=0]], brokerDatas=[BrokerData [brokerName=broker-a, brokerAddrs={0=172.20.226.80:10911}]], filterServerTable={}]]
+22-09-15.09:10:16.379 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - send heart beat to broker[broker-a 0 172.20.226.80:10911] success
+22-09-15.09:10:16.380 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - HeartbeatData [clientID=172.20.226.80@14692#85366193815900, producerDataSet=[ProducerData [groupName=lili_group], ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[]]
+22-09-15.09:10:27.471 [main            ] INFO  RocketmqClient          - unregister client[Producer: lili_group Consumer: null] from broker[broker-a 0 172.20.226.80:10911] success
+22-09-15.09:10:27.474 [main            ] INFO  RocketmqClient          - unregister client[Producer: CLIENT_INNER_PRODUCER Consumer: null] from broker[broker-a 0 172.20.226.80:10911] success
+22-09-15.09:10:27.474 [main            ] INFO  RocketmqClient          - the producer [CLIENT_INNER_PRODUCER] shutdown OK
+22-09-15.09:10:27.474 [PullMessageService] INFO  RocketmqClient          - PullMessageService service end
+22-09-15.09:10:27.480 [RebalanceService] INFO  RocketmqClient          - RebalanceService service end
+22-09-15.09:10:27.480 [main            ] INFO  RocketmqClient          - the client factory [172.20.226.80@14692#85366193815900] shutdown OK
+22-09-15.09:10:27.480 [main            ] INFO  RocketmqClient          - the producer [lili_group] shutdown OK
+22-09-15.09:11:23.327 [main            ] INFO  RocketmqClient          - user specified name server address: localhost:9876
+22-09-15.09:11:23.465 [main            ] INFO  RocketmqClient          - Created a new client Instance, InstanceIndex:0, ClientID:172.20.226.80@15000#85434382803300, ClientConfig:ClientConfig [namesrvAddr=localhost:9876, clientIP=172.20.226.80, instanceName=15000#85434382803300, clientCallbackExecutorThreads=8, pollNameServerInterval=30000, heartbeatBrokerInterval=30000, persistConsumerOffsetInterval=5000, pullTimeDelayMillsWhenException=1000, unitMode=false, unitName=null, vipChannelEnabled=false, useTLS=false, language=JAVA, namespace=null, mqClientApiTimeout=3000], ClientVersion:V4_9_3, SerializerType:JSON
+22-09-15.09:11:23.465 [main            ] INFO  RocketmqClient          - Created new MQClientInstance for clientId:[172.20.226.80@15000#85434382803300]
+22-09-15.09:11:23.480 [PullMessageService] INFO  RocketmqClient          - PullMessageService service started
+22-09-15.09:11:23.480 [main            ] INFO  RocketmqClient          - the producer [CLIENT_INNER_PRODUCER] start OK. sendMessageWithVIPChannel=false
+22-09-15.09:11:23.480 [RebalanceService] INFO  RocketmqClient          - RebalanceService service started
+22-09-15.09:11:23.485 [main            ] INFO  RocketmqClient          - the client factory [172.20.226.80@15000#85434382803300] start OK
+22-09-15.09:11:23.485 [main            ] INFO  RocketmqClient          - the producer [lili_group] start OK. sendMessageWithVIPChannel=false
+22-09-15.09:11:24.077 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - the topic[TBW102] route info changed, old[null] ,new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=broker-a, readQueueNums=8, writeQueueNums=8, perm=7, topicSysFlag=0]], brokerDatas=[BrokerData [brokerName=broker-a, brokerAddrs={0=172.20.226.80:10911}]], filterServerTable={}]]
+22-09-15.09:11:24.078 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=ThreadLocalIndex{threadLocalIndex=null}, haveTopicRouterInfo=false]
+22-09-15.09:11:24.079 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=ThreadLocalIndex{threadLocalIndex=null}, haveTopicRouterInfo=false]
+22-09-15.09:11:24.079 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - topicRouteTable.put. Topic = TBW102, TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=broker-a, readQueueNums=8, writeQueueNums=8, perm=7, topicSysFlag=0]], brokerDatas=[BrokerData [brokerName=broker-a, brokerAddrs={0=172.20.226.80:10911}]], filterServerTable={}]]
+22-09-15.09:11:24.509 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - send heart beat to broker[broker-a 0 172.20.226.80:10911] success
+22-09-15.09:11:24.509 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - HeartbeatData [clientID=172.20.226.80@15000#85434382803300, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER], ProducerData [groupName=lili_group]], consumerDataSet=[]]
+22-09-15.09:11:35.620 [main            ] INFO  RocketmqClient          - unregister client[Producer: lili_group Consumer: null] from broker[broker-a 0 172.20.226.80:10911] success
+22-09-15.09:11:35.623 [main            ] INFO  RocketmqClient          - unregister client[Producer: CLIENT_INNER_PRODUCER Consumer: null] from broker[broker-a 0 172.20.226.80:10911] success
+22-09-15.09:11:35.623 [main            ] INFO  RocketmqClient          - the producer [CLIENT_INNER_PRODUCER] shutdown OK
+22-09-15.09:11:35.623 [PullMessageService] INFO  RocketmqClient          - PullMessageService service end
+22-09-15.09:11:35.629 [RebalanceService] INFO  RocketmqClient          - RebalanceService service end
+22-09-15.09:11:35.630 [main            ] INFO  RocketmqClient          - the client factory [172.20.226.80@15000#85434382803300] shutdown OK
+22-09-15.09:11:35.630 [main            ] INFO  RocketmqClient          - the producer [lili_group] shutdown OK
+22-09-15.09:13:38.104 [main            ] INFO  RocketmqClient          - user specified name server address: localhost:9876
+22-09-15.09:13:38.243 [main            ] INFO  RocketmqClient          - Created a new client Instance, InstanceIndex:0, ClientID:172.20.226.80@21628#85569187214000, ClientConfig:ClientConfig [namesrvAddr=localhost:9876, clientIP=172.20.226.80, instanceName=21628#85569187214000, clientCallbackExecutorThreads=8, pollNameServerInterval=30000, heartbeatBrokerInterval=30000, persistConsumerOffsetInterval=5000, pullTimeDelayMillsWhenException=1000, unitMode=false, unitName=null, vipChannelEnabled=false, useTLS=false, language=JAVA, namespace=null, mqClientApiTimeout=3000], ClientVersion:V4_9_3, SerializerType:JSON
+22-09-15.09:13:38.243 [main            ] INFO  RocketmqClient          - Created new MQClientInstance for clientId:[172.20.226.80@21628#85569187214000]
+22-09-15.09:13:38.260 [PullMessageService] INFO  RocketmqClient          - PullMessageService service started
+22-09-15.09:13:38.260 [main            ] INFO  RocketmqClient          - the producer [CLIENT_INNER_PRODUCER] start OK. sendMessageWithVIPChannel=false
+22-09-15.09:13:38.260 [RebalanceService] INFO  RocketmqClient          - RebalanceService service started
+22-09-15.09:13:38.264 [main            ] INFO  RocketmqClient          - the client factory [172.20.226.80@21628#85569187214000] start OK
+22-09-15.09:13:38.264 [main            ] INFO  RocketmqClient          - the producer [lili_group] start OK. sendMessageWithVIPChannel=false
+22-09-15.09:13:38.868 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - the topic[TBW102] route info changed, old[null] ,new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=broker-a, readQueueNums=8, writeQueueNums=8, perm=7, topicSysFlag=0]], brokerDatas=[BrokerData [brokerName=broker-a, brokerAddrs={0=172.20.226.80:10911}]], filterServerTable={}]]
+22-09-15.09:13:38.869 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=ThreadLocalIndex{threadLocalIndex=null}, haveTopicRouterInfo=false]
+22-09-15.09:13:38.869 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=ThreadLocalIndex{threadLocalIndex=null}, haveTopicRouterInfo=false]
+22-09-15.09:13:38.869 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - topicRouteTable.put. Topic = TBW102, TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=broker-a, readQueueNums=8, writeQueueNums=8, perm=7, topicSysFlag=0]], brokerDatas=[BrokerData [brokerName=broker-a, brokerAddrs={0=172.20.226.80:10911}]], filterServerTable={}]]
+22-09-15.09:13:39.282 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - send heart beat to broker[broker-a 0 172.20.226.80:10911] success
+22-09-15.09:13:39.282 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - HeartbeatData [clientID=172.20.226.80@21628#85569187214000, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER], ProducerData [groupName=lili_group]], consumerDataSet=[]]
+22-09-15.09:23:39.283 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - send heart beat to broker[broker-a 0 172.20.226.80:10911] success
+22-09-15.09:23:39.283 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - HeartbeatData [clientID=172.20.226.80@21628#85569187214000, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER], ProducerData [groupName=lili_group]], consumerDataSet=[]]
+22-09-15.09:26:10.367 [MQClientFactoryScheduledThread] ERROR RocketmqClient          - updateTopicRouteInfoFromNameServer Exception
+org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateNameserverChannel(NettyRemotingClient.java:458)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateChannel(NettyRemotingClient.java:413)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:382)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1379)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1369)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:623)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:510)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:359)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:276)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+22-09-15.09:26:10.368 [MQClientFactoryScheduledThread] ERROR RocketmqClient          - ScheduledTask updateTopicRouteInfoFromNameServer exception
+java.lang.IllegalStateException: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:680)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:510)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:359)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:276)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateNameserverChannel(NettyRemotingClient.java:458)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateChannel(NettyRemotingClient.java:413)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:382)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1379)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1369)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:623)
+	... 11 common frames omitted
+22-09-15.09:26:12.403 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - send heart beat to broker[broker-a 0 172.20.226.80:10911] failed
+org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to 172.20.226.80:10911 failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:407)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.sendHearbeat(MQClientAPIImpl.java:1033)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.sendHeartbeatToAllBroker(MQClientInstance.java:558)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.sendHeartbeatToAllBrokerWithLock(MQClientInstance.java:471)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$4.run(MQClientInstance.java:289)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+22-09-15.09:26:40.375 [MQClientFactoryScheduledThread] ERROR RocketmqClient          - updateTopicRouteInfoFromNameServer Exception
+org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateNameserverChannel(NettyRemotingClient.java:458)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateChannel(NettyRemotingClient.java:413)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:382)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1379)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1369)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:623)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:510)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:359)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:276)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+22-09-15.09:26:40.376 [MQClientFactoryScheduledThread] ERROR RocketmqClient          - ScheduledTask updateTopicRouteInfoFromNameServer exception
+java.lang.IllegalStateException: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:680)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:510)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:359)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:276)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateNameserverChannel(NettyRemotingClient.java:458)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateChannel(NettyRemotingClient.java:413)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:382)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1379)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1369)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:623)
+	... 11 common frames omitted
+22-09-15.09:26:42.427 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - send heart beat to broker[broker-a 0 172.20.226.80:10911] failed
+org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to 172.20.226.80:10911 failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:407)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.sendHearbeat(MQClientAPIImpl.java:1033)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.sendHeartbeatToAllBroker(MQClientInstance.java:558)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.sendHeartbeatToAllBrokerWithLock(MQClientInstance.java:471)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$4.run(MQClientInstance.java:289)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+22-09-15.09:27:10.311 [MQClientFactoryScheduledThread] ERROR RocketmqClient          - updateTopicRouteInfoFromNameServer Exception
+org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateNameserverChannel(NettyRemotingClient.java:458)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateChannel(NettyRemotingClient.java:413)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:382)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1379)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1369)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:623)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:510)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:359)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:276)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+22-09-15.09:27:10.311 [MQClientFactoryScheduledThread] ERROR RocketmqClient          - ScheduledTask updateTopicRouteInfoFromNameServer exception
+java.lang.IllegalStateException: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:680)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:510)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:359)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:276)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateNameserverChannel(NettyRemotingClient.java:458)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateChannel(NettyRemotingClient.java:413)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:382)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1379)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1369)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:623)
+	... 11 common frames omitted
+22-09-15.09:27:12.340 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - send heart beat to broker[broker-a 0 172.20.226.80:10911] failed
+org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to 172.20.226.80:10911 failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:407)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.sendHearbeat(MQClientAPIImpl.java:1033)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.sendHeartbeatToAllBroker(MQClientInstance.java:558)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.sendHeartbeatToAllBrokerWithLock(MQClientInstance.java:471)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$4.run(MQClientInstance.java:289)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+22-09-15.09:27:40.332 [MQClientFactoryScheduledThread] ERROR RocketmqClient          - updateTopicRouteInfoFromNameServer Exception
+org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateNameserverChannel(NettyRemotingClient.java:458)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateChannel(NettyRemotingClient.java:413)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:382)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1379)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1369)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:623)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:510)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:359)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:276)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+22-09-15.09:27:40.332 [MQClientFactoryScheduledThread] ERROR RocketmqClient          - ScheduledTask updateTopicRouteInfoFromNameServer exception
+java.lang.IllegalStateException: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:680)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:510)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:359)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:276)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateNameserverChannel(NettyRemotingClient.java:458)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateChannel(NettyRemotingClient.java:413)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:382)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1379)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1369)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:623)
+	... 11 common frames omitted
+22-09-15.09:27:42.378 [MQClientFactoryScheduledThread] INFO  RocketmqClient          - send heart beat to broker[broker-a 0 172.20.226.80:10911] failed
+org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to 172.20.226.80:10911 failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:407)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.sendHearbeat(MQClientAPIImpl.java:1033)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.sendHeartbeatToAllBroker(MQClientInstance.java:558)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.sendHeartbeatToAllBrokerWithLock(MQClientInstance.java:471)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$4.run(MQClientInstance.java:289)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+22-09-15.09:28:10.317 [MQClientFactoryScheduledThread] ERROR RocketmqClient          - updateTopicRouteInfoFromNameServer Exception
+org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateNameserverChannel(NettyRemotingClient.java:458)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateChannel(NettyRemotingClient.java:413)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:382)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1379)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1369)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:623)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:510)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:359)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:276)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+22-09-15.09:28:10.317 [MQClientFactoryScheduledThread] ERROR RocketmqClient          - ScheduledTask updateTopicRouteInfoFromNameServer exception
+java.lang.IllegalStateException: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:680)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:510)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:359)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:276)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [localhost:9876] failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateNameserverChannel(NettyRemotingClient.java:458)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateChannel(NettyRemotingClient.java:413)
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:382)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1379)
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1369)
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:623)
+	... 11 common frames omitted
