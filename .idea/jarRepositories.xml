@@ -17,6 +17,11 @@
       <option name="url" value="https://maven.aliyun.com/repository/public" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="spring-milestones" />
+      <option name="name" value="Spring Milestones" />
+      <option name="url" value="https://repo.spring.io/milestone" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="http://192.168.31.206:8081/repository/adicon-public/" />
@@ -35,6 +40,26 @@
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="adicon-releases" />
+      <option name="name" value="adicon-releases" />
+      <option name="url" value="http://192.168.31.206:8081/repository/adicon-releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-snapshots" />
+      <option name="name" value="Spring Snapshots" />
+      <option name="url" value="https://repo.spring.io/snapshot" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="adicon-shapshots" />
+      <option name="name" value="adicon-shapshots" />
+      <option name="url" value="http://192.168.31.206:8081/repository/adicon-snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus" />
+      <option name="name" value="nexus" />
+      <option name="url" value="http://192.168.31.206:8081/repository/adicon-public" />
     </remote-repository>
   </component>
 </project>

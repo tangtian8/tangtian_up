@@ -7,8 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mysqlexercise" />
         <module name="buyer-api" />
+        <module name="rocketmq" />
         <module name="springboot-permission" />
+        <module name="day11-netty" />
         <module name="mybatis" />
         <module name="admin" />
         <module name="apache-rocketmq-demo" />
@@ -18,10 +21,15 @@
         <module name="tangtianup-thinking-in-jvm" />
         <module name="framework" />
         <module name="springcloud-gateaway" />
+        <module name="herocat-starter" />
+        <module name="herocat-app" />
+        <module name="hero-producer" />
+        <module name="hero-consumer" />
         <module name="mysql" />
         <module name="consumer" />
         <module name="manager-api" />
         <module name="seller-api" />
+        <module name="dubbo-samples-basic" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,7 +39,14 @@
       <module name="common-api" target="1.8" />
       <module name="concurrency" target="1.8" />
       <module name="consumer" target="1.8" />
+      <module name="day11-netty" target="1.8" />
+      <module name="dubbo-samples-basic" target="1.8" />
       <module name="framework" target="1.8" />
+      <module name="hero-consumer" target="1.8" />
+      <module name="hero-producer" target="1.8" />
+      <module name="herocat-app" target="1.8" />
+      <module name="herocat-starter" target="1.8" />
+      <module name="HeroRPC" target="1.5" />
       <module name="lili-shop-parent" target="1.8" />
       <module name="manager-api" target="1.8" />
       <module name="mmall" target="1.7" />
@@ -39,6 +54,8 @@
       <module name="mq-demo" target="1.6" />
       <module name="mybatis" target="1.8" />
       <module name="mysql" target="1.8" />
+      <module name="mysqlexercise" target="1.8" />
+      <module name="rocketmq" target="1.8" />
       <module name="seller-api" target="1.8" />
       <module name="springboot-permission" target="1.8" />
       <module name="springcloud-gateaway" target="1.8" />
@@ -56,6 +73,8 @@
       <module name="manager-api" options="-parameters" />
       <module name="mmall" options="-extdirs E:\tangtian_up\tangtianup-thinking-in-mall/src/main/webapp/WEB-INF/lib" />
       <module name="monitor_tuning" options="-parameters" />
+      <module name="mysqlexercise" options="-parameters" />
+      <module name="rocketmq" options="-parameters" />
       <module name="seller-api" options="-parameters" />
       <module name="springcloud-gateaway" options="-parameters" />
     </option>

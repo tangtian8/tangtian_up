@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.tangtian.mysqlexercise.mapper.CommentMapper">
+    <resultMap id="BaseResultMap" type="top.tangtian.mysqlexercise.pojo.Comment">
+        <result column="id" property="id" jdbcType="TINYINT"/>
+        <result column="user_id" property="userId" jdbcType="TINYINT"/>
+        <result column="content_id" property="contentId" jdbcType="TINYINT"/>
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        user_id,
+        content_id,
+        content
+    </sql>
+    <select id="findAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from comment;
+    </select>
+
+</mapper>

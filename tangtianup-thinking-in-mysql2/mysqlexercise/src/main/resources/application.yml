@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/test1?useSSL=false&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+#    username: root
+#    password:
+
+  shardingsphere:
+    datasource:
+      names: master,slave0,slave1,slave2
+      master:
+        type: com.zaxxer.hikari.HikariDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        jdbcUrl: jdbc:mysql://localhost:3306/test1?useSSL=false&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password:
+      slave0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        jdbcUrl: jdbc:mysql://localhost:3307/test1?useSSL=false&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password:
+      slave1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        jdbcUrl: jdbc:mysql://localhost:3308/test1?useSSL=false&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: root
+      slave2:
+        type: com.zaxxer.hikari.HikariDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        jdbcUrl: jdbc:mysql://localhost:3309/test1?useSSL=false&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: root
+    masterSlaveRule:
+      load-balance-algorithm-type: round_robin
+      name: ms
+      masterDataSourceName: master
+      slaveDataSourceNames: [slave0,slave1,slave2]
+
+    props:
+      sql:
+        show: true
