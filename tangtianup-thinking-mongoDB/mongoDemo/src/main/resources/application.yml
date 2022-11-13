@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      # 集群配置mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+      uri: mongodb://127.0.0.1:27019,127.0.0.1:27029,127.0.0.1:27039/testdb?maxPoolSize=512

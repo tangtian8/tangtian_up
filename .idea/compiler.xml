@@ -12,9 +12,9 @@
         <module name="rocketmq" />
         <module name="springboot-permission" />
         <module name="day11-netty" />
+        <module name="mongoDemo" />
         <module name="mybatis" />
         <module name="admin" />
-        <module name="apache-rocketmq-demo" />
         <module name="concurrency" />
         <module name="mq-demo" />
         <module name="common-api" />
@@ -50,6 +50,7 @@
       <module name="lili-shop-parent" target="1.8" />
       <module name="manager-api" target="1.8" />
       <module name="mmall" target="1.7" />
+      <module name="mongoDemo" target="1.8" />
       <module name="monitor_tuning" target="1.8" />
       <module name="mq-demo" target="1.6" />
       <module name="mybatis" target="1.8" />
@@ -72,6 +73,7 @@
       <module name="framework" options="-parameters" />
       <module name="manager-api" options="-parameters" />
       <module name="mmall" options="-extdirs E:\tangtian_up\tangtianup-thinking-in-mall/src/main/webapp/WEB-INF/lib" />
+      <module name="mongoDemo" options="-parameters" />
       <module name="monitor_tuning" options="-parameters" />
       <module name="mysqlexercise" options="-parameters" />
       <module name="rocketmq" options="-parameters" />

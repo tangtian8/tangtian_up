@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-netty/HeroRPC/HeroRPC.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-netty/HeroRPC/HeroRPC.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/admin/admin.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/admin/admin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-rocketmq/rocketmq/java-rocketmq-demo/apache-rocketmq-demo.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-rocketmq/rocketmq/java-rocketmq-demo/apache-rocketmq-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/buyer-api/buyer-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/buyer-api/buyer-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/common-api/common-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/common-api/common-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-java-concurrency/concurrency.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-java-concurrency/concurrency.iml" />
@@ -18,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-netty/herocat/herocat-starter.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-netty/herocat/herocat-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/lili-shop-parent.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/lili-shop-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/manager-api/manager-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/manager-api/manager-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-mongoDB/mongoDemo/mongoDemo.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-mongoDB/mongoDemo/mongoDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-rocketmq/tcp/java-tcp-demo/mq-demo.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-rocketmq/tcp/java-tcp-demo/mq-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/codeSource/mybatis-3-mybatis-3.5.9/mybatis.iml" filepath="$PROJECT_DIR$/codeSource/mybatis-3-mybatis-3.5.9/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-mysql/mysql.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-mysql/mysql.iml" />
