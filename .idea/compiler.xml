@@ -24,6 +24,7 @@
         <module name="herocat-starter" />
         <module name="herocat-app" />
         <module name="hero-producer" />
+        <module name="seata-samples-dubbo" />
         <module name="hero-consumer" />
         <module name="mysql" />
         <module name="consumer" />
@@ -57,6 +58,8 @@
       <module name="mysql" target="1.8" />
       <module name="mysqlexercise" target="1.8" />
       <module name="rocketmq" target="1.8" />
+      <module name="seata-samples" target="1.8" />
+      <module name="seata-samples-dubbo" target="1.8" />
       <module name="seller-api" target="1.8" />
       <module name="springboot-permission" target="1.8" />
       <module name="springcloud-gateaway" target="1.8" />

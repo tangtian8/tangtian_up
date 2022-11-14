@@ -47,7 +47,7 @@ public class BusinessServiceImpl implements BusinessService {
         // just test batch update
         //stockService.batchDeduct(commodityCode, orderCount);
         orderService.create(userId, commodityCode, orderCount);
-        if (random.nextBoolean()) {
+        if (false) {
             throw new RuntimeException("random exception mock!");
         }
 
