@@ -24,7 +24,7 @@
 
     <cache-ref namespace="org.apache.ibatis.submitted.cacheorder.Mapper2"/>
 
-    <select id="getUser" resultType="org.apache.ibatis.submitted.cacheorder.User">
+    <select id="getUser" resultType="org.apache.ibatis.submitted.cacheorder.pojo.User">
         select * from users
     </select>
 

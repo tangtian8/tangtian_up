@@ -26,7 +26,7 @@
     insert into users (id, name) values (#{id}, #{name})
   </insert>
 
-  <select id="selectUser" resultType="org.apache.ibatis.submitted.no_param_type.User">
+  <select id="selectUser" resultType="org.apache.ibatis.submitted.no_param_type.pojo.User">
     select * from users
   </select>
 

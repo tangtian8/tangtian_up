@@ -22,7 +22,7 @@
 
 <mapper namespace="org.apache.ibatis.submitted.uuid_test.Mapper">
 
-    <select id="getUser" resultType="org.apache.ibatis.submitted.basetest.User">
+    <select id="getUser" resultType="org.apache.ibatis.submitted.basetest.pojo.User">
         select * from users where id = #{id, typeHandler=org.apache.ibatis.submitted.uuid_test.UUIDTypeHandler}
     </select>
 

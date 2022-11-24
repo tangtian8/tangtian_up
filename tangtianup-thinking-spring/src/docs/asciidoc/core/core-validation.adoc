@@ -831,7 +831,7 @@ example uses a `PropertyEditorRegistrar` in the implementation of an `@InitBinde
 			this.customPropertyEditorRegistrar.registerCustomEditors(binder);
 		}
 
-		// other methods related to registering a User
+		// other methods related to registering a pojo.User
 	}
 ----
 [source,kotlin,indent=0,subs="verbatim,quotes",role="secondary"]
@@ -846,7 +846,7 @@ example uses a `PropertyEditorRegistrar` in the implementation of an `@InitBinde
 			this.customPropertyEditorRegistrar.registerCustomEditors(binder)
 		}
 
-		// other methods related to registering a User
+		// other methods related to registering a pojo.User
 	}
 ----
 

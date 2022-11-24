@@ -174,7 +174,7 @@ symmetrically, to make requests from clients and to make requests from servers.
 
 
 [[rsocket-requester-client]]
-=== Client Requester
+=== jdkdynamic.Client Requester
 
 To obtain an `RSocketRequester` on the client side is to connect to a server which involves
 sending an RSocket `SETUP` frame with connection settings. `RSocketRequester` provides a
@@ -267,7 +267,7 @@ the same application, it may be preferable to declare it in Spring configuration
 
 
 [[rsocket-requester-client-responder]]
-==== Client Responders
+==== jdkdynamic.Client Responders
 
 `RSocketRequester.Builder` can be used to configure responders to requests from the
 server.
@@ -668,7 +668,7 @@ you need to share configuration between a client and a server in the same proces
 
 
 [[rsocket-annot-responders-client]]
-=== Client Responders
+=== jdkdynamic.Client Responders
 
 Annotated responders on the client side need to be configured in the
 `RSocketRequester.Builder`. For details, see

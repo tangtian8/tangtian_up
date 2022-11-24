@@ -22,7 +22,7 @@
 
 <mapper namespace="org.apache.ibatis.submitted.call_setters_on_nulls.Mapper">
 
-    <select id="getUserUnmapped" resultType="org.apache.ibatis.submitted.call_setters_on_nulls.User">
+    <select id="getUserUnmapped" resultType="org.apache.ibatis.submitted.call_setters_on_nulls.pojo.User">
         select * from users
     </select>
 
@@ -34,7 +34,7 @@
         select * from users
     </select>
 
-    <resultMap type="org.apache.ibatis.submitted.call_setters_on_nulls.User" id="userMap">
+    <resultMap type="org.apache.ibatis.submitted.call_setters_on_nulls.pojo.User" id="userMap">
         <id property="id" column="id" />
         <result property="name" column="name" />
     </resultMap>

@@ -98,8 +98,8 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2022-09-10 15:28:52.412  WARN 6280 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-10 15:28:52.412  WARN 6280 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-10 15:28:54.589  INFO 6280 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
-2022-09-10 15:28:54.589  INFO 6280 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
-2022-09-10 15:28:54.589  INFO 6280 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-10 15:28:54.589  INFO 6280 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client in build: 7.9.3
+2022-09-10 15:28:54.589  INFO 6280 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client used: 7.9.3
 2022-09-10 15:28:59.177  INFO 6280 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@fad6bd
 2022-09-10 15:28:59.177  INFO 6280 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1e0922c
 2022-09-10 15:28:59.178  INFO 6280 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1c344ce
@@ -2669,8 +2669,8 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2022-09-10 15:33:31.787  WARN 18780 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-10 15:33:31.787  WARN 18780 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-10 15:33:32.945  INFO 18780 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
-2022-09-10 15:33:32.946  INFO 18780 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
-2022-09-10 15:33:32.946  INFO 18780 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-10 15:33:32.946  INFO 18780 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client in build: 7.9.3
+2022-09-10 15:33:32.946  INFO 18780 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client used: 7.9.3
 2022-09-10 15:33:37.472  INFO 18780 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@3b7825
 2022-09-10 15:33:37.473  INFO 18780 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@106a39e
 2022-09-10 15:33:37.474  INFO 18780 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@54d05f
@@ -4442,8 +4442,8 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2022-09-10 16:08:55.668  WARN 18212 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-10 16:08:55.668  WARN 18212 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-10 16:08:56.810  INFO 18212 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
-2022-09-10 16:08:56.810  INFO 18212 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
-2022-09-10 16:08:56.810  INFO 18212 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-10 16:08:56.810  INFO 18212 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client in build: 7.9.3
+2022-09-10 16:08:56.810  INFO 18212 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client used: 7.9.3
 2022-09-10 16:09:01.555  INFO 18212 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1cc792f
 2022-09-10 16:09:01.555  INFO 18212 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@127d781
 2022-09-10 16:09:01.556  INFO 18212 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1ae279e
@@ -6260,8 +6260,8 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2022-09-10 16:54:00.725  WARN 5380 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-10 16:54:00.725  WARN 5380 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-10 16:54:01.852  INFO 5380 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
-2022-09-10 16:54:01.852  INFO 5380 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
-2022-09-10 16:54:01.852  INFO 5380 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-10 16:54:01.852  INFO 5380 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client in build: 7.9.3
+2022-09-10 16:54:01.852  INFO 5380 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client used: 7.9.3
 2022-09-10 16:54:06.240  INFO 5380 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@d6f172
 2022-09-10 16:54:06.240  INFO 5380 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@121a69f
 2022-09-10 16:54:06.240  INFO 5380 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@b063fd

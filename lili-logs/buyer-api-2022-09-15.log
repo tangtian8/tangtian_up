@@ -81,8 +81,8 @@ sql.show: 'false'
 2022-09-15 09:10:18.176  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-15 09:10:18.176  WARN 14692 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-15 09:10:19.336  INFO 14692 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
-2022-09-15 09:10:19.337  INFO 14692 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
-2022-09-15 09:10:19.337  INFO 14692 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-15 09:10:19.337  INFO 14692 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client in build: 7.9.3
+2022-09-15 09:10:19.337  INFO 14692 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client used: 7.9.3
 2022-09-15 09:10:25.387  INFO 14692 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@16c6cc1
 2022-09-15 09:10:25.388  INFO 14692 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@16ca821
 2022-09-15 09:10:25.388  INFO 14692 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@13636f3
@@ -298,8 +298,8 @@ sql.show: 'false'
 2022-09-15 09:11:26.489  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-15 09:11:26.489  WARN 15000 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-15 09:11:27.622  INFO 15000 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
-2022-09-15 09:11:27.622  INFO 15000 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
-2022-09-15 09:11:27.622  INFO 15000 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-15 09:11:27.622  INFO 15000 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client in build: 7.9.3
+2022-09-15 09:11:27.622  INFO 15000 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client used: 7.9.3
 2022-09-15 09:11:33.523  INFO 15000 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2ac4cc
 2022-09-15 09:11:33.525  INFO 15000 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1089ef7
 2022-09-15 09:11:33.526  INFO 15000 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@ab1b4f
@@ -515,8 +515,8 @@ sql.show: 'false'
 2022-09-15 09:13:41.201  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-15 09:13:41.201  WARN 21628 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-15 09:13:42.344  INFO 21628 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
-2022-09-15 09:13:42.344  INFO 21628 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
-2022-09-15 09:13:42.344  INFO 21628 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-15 09:13:42.344  INFO 21628 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client in build: 7.9.3
+2022-09-15 09:13:42.344  INFO 21628 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client used: 7.9.3
 2022-09-15 09:13:48.039  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@143bedb
 2022-09-15 09:13:48.040  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@a08575
 2022-09-15 09:13:48.040  INFO 21628 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@be3497

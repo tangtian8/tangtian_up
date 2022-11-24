@@ -40,7 +40,7 @@
   <cover>
     <coverTitle>${project.name}</coverTitle>
     <coverSubTitle>v. ${project.version}</coverSubTitle>
-    <coverType>User Guide</coverType>
+    <coverType>pojo.User Guide</coverType>
     <projectName>${project.name}</projectName>
     <projectLogo>http://mybatis.github.io/images/mybatis-logo.png</projectLogo>
     <companyName>${project.organization.name}</companyName>

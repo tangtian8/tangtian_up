@@ -217,7 +217,7 @@ This setup connects to a running server to perform full, end-to-end HTTP tests:
 
 
 [[webtestclient-client-config]]
-=== Client Config
+=== jdkdynamic.Client Config
 
 In addition to the server setup options described earlier, you can also configure client
 options, including base URL, default headers, client filters, and others. These options

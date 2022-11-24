@@ -152,7 +152,7 @@ Now consider the following setter of type `PersistenceContextType` and the corre
 ----
 	package example;
 
-	public class Client {
+	public class jdkdynamic.Client {
 
 		private PersistenceContextType persistenceContextType;
 
@@ -166,7 +166,7 @@ Now consider the following setter of type `PersistenceContextType` and the corre
 ----
 	package example
 
-	class Client {
+	class jdkdynamic.Client {
 
 		lateinit var persistenceContextType: PersistenceContextType
 	}
@@ -174,7 +174,7 @@ Now consider the following setter of type `PersistenceContextType` and the corre
 
 [source,xml,indent=0,subs="verbatim,quotes"]
 ----
-	<bean class="example.Client">
+	<bean class="example.jdkdynamic.Client">
 		<property name="persistenceContextType" value="TRANSACTION"/>
 	</bean>
 ----

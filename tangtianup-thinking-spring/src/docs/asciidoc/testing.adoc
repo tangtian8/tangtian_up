@@ -5405,7 +5405,7 @@ a Hibernate-based `UserRepository`:
 			// track initial state in test database:
 			final int count = countRowsInTable("user");
 
-			User user = new User(...);
+			pojo.User user = new pojo.User(...);
 			repository.save(user);
 
 			// Manual flush is required to avoid false positive in test
@@ -5448,7 +5448,7 @@ a Hibernate-based `UserRepository`:
 			// track initial state in test database:
 			val count = countRowsInTable("user")
 
-			val user = User()
+			val user = pojo.User()
 			repository.save(user)
 
 			// Manual flush is required to avoid false positive in test
@@ -8797,7 +8797,7 @@ http://www.gebish.org/manual/current/[The Book of Geb] user's manual.
 
 
 [[spring-mvc-test-client]]
-=== Testing Client Applications
+=== Testing jdkdynamic.Client Applications
 
 You can use client-side tests to test code that internally uses the `RestTemplate`. The
 idea is to declare expected requests and to provide "`stub`" responses so that you can
@@ -8927,7 +8927,7 @@ the static method name. Other IDEs (such IntelliJ) may not require any additiona
 configuration. Check for the support for code completion on static members.
 
 [[spring-mvc-test-client-resources]]
-==== Further Examples of Client-side REST Tests
+==== Further Examples of jdkdynamic.Client-side REST Tests
 
 Spring MVC Test's own tests include
 {spring-framework-main-code}/spring-test/src/test/java/org/springframework/test/web/client/samples[example

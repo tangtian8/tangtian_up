@@ -22,7 +22,7 @@
 
 <mapper namespace="org.apache.ibatis.submitted.primitive_array.Mapper">
 
-  <resultMap type="org.apache.ibatis.submitted.primitive_array.User" id="userMap">
+  <resultMap type="org.apache.ibatis.submitted.primitive_array.pojo.User" id="userMap">
     <id property="id" column="id" />
     <result property="name" column="name" />
     <association property="num" column="id" select="getNum" />

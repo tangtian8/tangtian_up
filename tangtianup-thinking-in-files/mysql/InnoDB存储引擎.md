@@ -567,7 +567,7 @@ Compredssed 按照zlib的算法进行压缩,对于BLOB,TEXT,VARCHAR大长度的�
   - 虚拟行记录，限定记录的边界。
   - Infimun记录比该页中任何主键值都要小的值
   - Supremun指比任何可能大的值还要大的值
-- User Records（用户记录，即行记录）
+- pojo.User Records（用户记录，即行记录）
   - 实际存储行记录的内容，InnoDB存储引擎表总是B+树索引组织
 - Free Space（空闲空间）
   - 空闲空间，链表数据结构，在一条记录被删除后，空间会被加入到空闲链表中。

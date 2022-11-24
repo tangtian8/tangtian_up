@@ -24,7 +24,7 @@
   namespace="org.apache.ibatis.submitted.resolution.javamethods.MapperA">
 
   <resultMap
-    type="org.apache.ibatis.submitted.resolution.User" id="userRM">
+    type="org.apache.ibatis.submitted.resolution.pojo.User" id="userRM">
     <id column="id" property="id" />
     <result column="name" property="name" />
   </resultMap>

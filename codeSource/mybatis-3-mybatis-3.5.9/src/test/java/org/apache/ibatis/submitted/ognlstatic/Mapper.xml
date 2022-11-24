@@ -22,7 +22,7 @@
 
 <mapper namespace="org.apache.ibatis.submitted.ognlstatic.Mapper">
 
-    <select id="getUserStatic" resultType="org.apache.ibatis.submitted.ognlstatic.User">
+    <select id="getUserStatic" resultType="org.apache.ibatis.submitted.ognlstatic.pojo.User">
         SELECT     *
         FROM     users
         <trim prefix="WHERE" prefixOverrides="AND |OR ">
@@ -32,7 +32,7 @@
         </trim>
     </select>
 
-    <select id="getUserIfNode" resultType="org.apache.ibatis.submitted.ognlstatic.User">
+    <select id="getUserIfNode" resultType="org.apache.ibatis.submitted.ognlstatic.pojo.User">
        select * from users
        <if test="value not in {null, ''}">
        where name = #{value}

@@ -22,13 +22,13 @@
 
 <mapper namespace="org.apache.ibatis.submitted.lazy_properties.Mapper">
 
-  <resultMap type="org.apache.ibatis.submitted.lazy_properties.User"
+  <resultMap type="org.apache.ibatis.submitted.lazy_properties.pojo.User"
     id="user">
     <id property="id" column="id" />
     <result property="name" column="name" />
   </resultMap>
 
-  <resultMap type="org.apache.ibatis.submitted.lazy_properties.User"
+  <resultMap type="org.apache.ibatis.submitted.lazy_properties.pojo.User"
     id="userWithLazyProperties" extends="user">
     <association property="lazy1" column="id" select="getLazy1"
       fetchType="lazy" />

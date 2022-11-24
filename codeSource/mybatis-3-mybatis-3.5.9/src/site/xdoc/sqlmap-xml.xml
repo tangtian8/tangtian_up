@@ -544,7 +544,7 @@ ps.setInt(1,id);]]></source>
           to them, for example:
         </p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="User">
+        <source><![CDATA[<select id="selectUsers" resultType="pojo.User">
   select id, username, password
   from users
   where id = #{id}
@@ -558,13 +558,13 @@ ps.setInt(1,id);]]></source>
           different. For example:
         </p>
 
-        <source><![CDATA[<insert id="insertUser" parameterType="User">
+        <source><![CDATA[<insert id="insertUser" parameterType="pojo.User">
   insert into users (id, username, password)
   values (#{id}, #{username}, #{password})
 </insert>]]></source>
 
         <p>
-          If a parameter object of type User was passed into that statement, the id, username and password
+          If a parameter object of type pojo.User was passed into that statement, the id, username and password
           property would be looked up and their values passed to a <code>PreparedStatement</code> parameter.
         </p>
 
@@ -658,27 +658,27 @@ ps.setInt(1,id);]]></source>
           for example, if you want to <code>select</code> from a table by any one of its columns, instead of writing code like:
           <source><![CDATA[
 @Select("select * from user where id = #{id}")
-User findById(@Param("id") long id);
+pojo.User findById(@Param("id") long id);
 
 @Select("select * from user where name = #{name}")
-User findByName(@Param("name") String name);
+pojo.User findByName(@Param("name") String name);
 
 @Select("select * from user where email = #{email}")
-User findByEmail(@Param("email") String email);
+pojo.User findByEmail(@Param("email") String email);
 
 // and more "findByXxx" method
 ]]></source>
           you can just write:
           <source><![CDATA[
 @Select("select * from user where ${column} = #{value}")
-User findByColumn(@Param("column") String column, @Param("value") String value);
+pojo.User findByColumn(@Param("column") String column, @Param("value") String value);
 ]]></source>
           in which the <code>${column}</code> will be substituted directly and the <code>#{value}</code> will be "prepared".
           Thus you can just do the same work by:
           <source><![CDATA[
-User userOfId1 = userMapper.findByColumn("id", 1L);
-User userOfNameKid = userMapper.findByColumn("name", "kid");
-User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
+pojo.User userOfId1 = userMapper.findByColumn("id", 1L);
+pojo.User userOfNameKid = userMapper.findByColumn("name", "kid");
+pojo.User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
 ]]></source>
         </p>
 
@@ -723,7 +723,7 @@ User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
           Java Objects) for the domain model. MyBatis supports both. Consider the following JavaBean:
         </p>
         <source><![CDATA[package com.someapp.model;
-public class User {
+public class pojo.User {
   private int id;
   private String username;
   private String hashedPassword;
@@ -757,7 +757,7 @@ public class User {
           Such a JavaBean could be mapped to a <code>ResultSet</code> just as easily as the <code>HashMap</code>.
         </p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="com.someapp.model.User">
+        <source><![CDATA[<select id="selectUsers" resultType="com.someapp.model.pojo.User">
   select id, username, hashedPassword
   from some_table
   where id = #{id}
@@ -769,10 +769,10 @@ public class User {
         </p>
 
         <source><![CDATA[<!-- In Config XML file -->
-<typeAlias type="com.someapp.model.User" alias="User"/>
+<typeAlias type="com.someapp.model.pojo.User" alias="pojo.User"/>
 
 <!-- In SQL Mapping XML file -->
-<select id="selectUsers" resultType="User">
+<select id="selectUsers" resultType="pojo.User">
   select id, username, hashedPassword
   from some_table
   where id = #{id}
@@ -786,7 +786,7 @@ public class User {
           example:
         </p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="User">
+        <source><![CDATA[<select id="selectUsers" resultType="pojo.User">
   select
     user_id             as "id",
     user_name           as "userName",
@@ -802,7 +802,7 @@ public class User {
           way to solve column name mismatches.
         </p>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User">
   <id property="id" column="user_id" />
   <result property="username" column="user_name"/>
   <result property="password" column="hashed_password"/>
@@ -1141,9 +1141,9 @@ public class User {
           Consider the following constructor:
         </p>
 
-        <source><![CDATA[public class User {
+        <source><![CDATA[public class pojo.User {
    //...
-   public User(Integer id, String username, int age) {
+   public pojo.User(Integer id, String username, int age) {
      //...
   }
 //...
@@ -1980,7 +1980,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
   where id = #{id}
 </select>]]></source>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User">
   <result property="password" column="hashed_password"/>
 </resultMap>]]></source>
 
@@ -2034,7 +2034,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
           by adding the attribute <code>autoMapping</code> to it:
         </p>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User" autoMapping="false">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User" autoMapping="false">
   <result property="password" column="hashed_password"/>
 </resultMap>]]></source>
 

@@ -27,7 +27,7 @@
   </settings>
 
   <typeAliases>
-    <typeAlias alias="UserAlias" type="org.apache.ibatis.submitted.complex_property.User"/>
+    <typeAlias alias="UserAlias" type="org.apache.ibatis.submitted.complex_property.pojo.User"/>
   </typeAliases>
 
   <environments default="development">
@@ -44,7 +44,7 @@
   </environments>
 
   <mappers>
-    <mapper resource="org/apache/ibatis/submitted/complex_property/User.xml"/>
+    <mapper resource="org/apache/ibatis/submitted/complex_property/pojo.User.xml"/>
   </mappers>
 
 </configuration>

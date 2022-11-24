@@ -22,7 +22,7 @@
 
 <mapper namespace="org.apache.ibatis.submitted.duplicate_statements.Mapper">
 
-    <select id="getAllUsers" resultType="org.apache.ibatis.submitted.duplicate_statements.User">
+    <select id="getAllUsers" resultType="org.apache.ibatis.submitted.duplicate_statements.pojo.User">
         select * from users
     </select>
 

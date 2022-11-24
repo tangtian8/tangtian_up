@@ -22,7 +22,7 @@
 
 <mapper namespace="org.apache.ibatis.submitted.named_constructor_args.Mapper">
 
-  <resultMap type="org.apache.ibatis.submitted.named_constructor_args.User"
+  <resultMap type="org.apache.ibatis.submitted.named_constructor_args.pojo.User"
     id="threeArgsConstructorRM">
     <constructor>
       <idArg column="id" name="id" />

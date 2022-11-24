@@ -26,14 +26,14 @@
         select id, name from users where id = #{id}
     </select>
 
-    <resultMap type="org.apache.ibatis.submitted.automapping.User" id="result" autoMapping="true">
+    <resultMap type="org.apache.ibatis.submitted.automapping.pojo.User" id="result" autoMapping="true">
     </resultMap>
 
     <select id="getUserWithPhoneNumber" resultMap="resultWithPhoneNumber">
         select * from users where id = #{id}
     </select>
 
-    <resultMap type="org.apache.ibatis.submitted.automapping.User" id="resultWithPhoneNumber" autoMapping="true">
+    <resultMap type="org.apache.ibatis.submitted.automapping.pojo.User" id="resultWithPhoneNumber" autoMapping="true">
         <result property="phone" column="phone_number"/>
     </resultMap>
 
@@ -51,7 +51,7 @@
         <include refid="selectUserPetBreeder" />
     </select>
 
-    <resultMap type="org.apache.ibatis.submitted.automapping.User" id="resultWithPets_Inline" autoMapping="true">
+    <resultMap type="org.apache.ibatis.submitted.automapping.pojo.User" id="resultWithPets_Inline" autoMapping="true">
         <id column="id" property="id"/>
         <collection property="pets" ofType="org.apache.ibatis.submitted.automapping.Pet">
             <id column="petId" property="petId"/>
@@ -63,7 +63,7 @@
         <include refid="selectUserPetBreeder" />
     </select>
 
-    <resultMap type="org.apache.ibatis.submitted.automapping.User" id="resultWithPets_External" autoMapping="true">
+    <resultMap type="org.apache.ibatis.submitted.automapping.pojo.User" id="resultWithPets_External" autoMapping="true">
         <id column="id" property="id"/>
         <collection property="pets" resultMap="petResult" />
     </resultMap>

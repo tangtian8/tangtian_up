@@ -22,13 +22,13 @@
 
 <mapper namespace="org.apache.ibatis.submitted.enum_with_method.Mapper">
 
-    <select id="getUser" resultType="org.apache.ibatis.submitted.enum_with_method.User">
+    <select id="getUser" resultType="org.apache.ibatis.submitted.enum_with_method.pojo.User">
         select *
         from users
         where id = #{id}
     </select>
 
-    <!-- without parameterType="org.apache.ibatis.submitted.enum_with_method.User" -->
+    <!-- without parameterType="org.apache.ibatis.submitted.enum_with_method.pojo.User" -->
     <insert id="insertUser">
         insert into users
         values (#{id}, #{name}, #{cur})

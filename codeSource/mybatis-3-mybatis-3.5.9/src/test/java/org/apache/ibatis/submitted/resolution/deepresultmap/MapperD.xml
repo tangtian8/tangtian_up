@@ -25,7 +25,7 @@
 
 
   <resultMap
-    type="org.apache.ibatis.submitted.resolution.User" id="rmD">
+    type="org.apache.ibatis.submitted.resolution.pojo.User" id="rmD">
     <id property="id" column="userId" />
     <result property="name" column="userName" />
   </resultMap>

@@ -31,7 +31,7 @@
     </select>
 
     <resultMap id="userResult"
-        type="org.apache.ibatis.submitted.column_forwarding.User">
+        type="org.apache.ibatis.submitted.column_forwarding.pojo.User">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="state" property="state" />

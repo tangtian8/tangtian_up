@@ -22,11 +22,11 @@
 
 <mapper namespace="org.apache.ibatis.submitted.mapper_extend.ParentMapper">
 
-  <select id="getUserByName" resultType="org.apache.ibatis.submitted.mapper_extend.User">
+  <select id="getUserByName" resultType="org.apache.ibatis.submitted.mapper_extend.pojo.User">
     select * from users where name = #{name}
   </select>
 
-    <select id="getUserXML" resultType="org.apache.ibatis.submitted.mapper_extend.User">
+    <select id="getUserXML" resultType="org.apache.ibatis.submitted.mapper_extend.pojo.User">
         select * from users where id = 1
     </select>
 

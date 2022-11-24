@@ -68,7 +68,7 @@
         where id=#{value}
     </select>
 
-    <insert id="insert" parameterType="org.apache.ibatis.submitted.multidb.User">
+    <insert id="insert" parameterType="org.apache.ibatis.submitted.multidb.pojo.User">
         <selectKey keyProperty="id" resultType="int" order="BEFORE">
             <if test="_databaseId == 'hsql'">
                 select max(id) + 1 from hsql
@@ -85,7 +85,7 @@
         </if>
     </insert>
 
-    <insert id="insert2" parameterType="org.apache.ibatis.submitted.multidb.User">
+    <insert id="insert2" parameterType="org.apache.ibatis.submitted.multidb.pojo.User">
         <selectKey keyProperty="id" resultType="int" order="BEFORE">
                 select max(id) + 1 from common
         </selectKey>

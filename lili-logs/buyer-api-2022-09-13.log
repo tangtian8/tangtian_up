@@ -98,8 +98,8 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2022-09-13 07:19:58.285  WARN 18792 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-13 07:19:58.285  WARN 18792 --- [main] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
 2022-09-13 07:19:59.470  INFO 18792 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.1.12
-2022-09-13 07:19:59.470  INFO 18792 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.9.3
-2022-09-13 07:19:59.470  INFO 18792 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.9.3
+2022-09-13 07:19:59.470  INFO 18792 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client in build: 7.9.3
+2022-09-13 07:19:59.470  INFO 18792 --- [main] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch jdkdynamic.Client used: 7.9.3
 2022-09-13 07:20:05.464  INFO 18792 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2f2811
 2022-09-13 07:20:05.464  INFO 18792 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@baefb0
 2022-09-13 07:20:05.468  INFO 18792 --- [main] io.netty.channel.nio.NioEventLoop        : instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@96b5a1

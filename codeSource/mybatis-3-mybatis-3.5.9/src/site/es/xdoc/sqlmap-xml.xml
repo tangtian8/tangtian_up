@@ -452,7 +452,7 @@ Por ejemplo, si la columna id de la tabla Author del ejemplo siguiente fuera aut
         <p>En todos los statements anteriores se han mostrado ejemplos de parámetros simples. Los parámetros son elementos muy potentes en MyBatis. En los casos simples, probablemente el 90% de los casos, no hay mucho que decir sobre ellos, por ejemplo:
         </p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="User">
+        <source><![CDATA[<select id="selectUsers" resultType="pojo.User">
   select id, username, password
   from users
   where id = #{id}
@@ -461,12 +461,12 @@ Por ejemplo, si la columna id de la tabla Author del ejemplo siguiente fuera aut
         <p>El ejemplo anterior muestra un mapeo muy simple de parámetro con nombre. El atributo parameterType se ha informado a “int”, por lo tanto el nombre del parámetro puede ser cualquiera. Los tipos primitivos y los tipos de datos simples como Integer o String no tienen propiedades relevantes y por tanto el parámetro será reemplazado por su valor. Sin embargo, si pasas un objeto complejo, entonces el comportamiento es distinto. Por ejemplo:
         </p>
 
-        <source><![CDATA[<insert id="insertUser" parameterType="User">
+        <source><![CDATA[<insert id="insertUser" parameterType="pojo.User">
   insert into users (id, username, password)
   values (#{id}, #{username}, #{password})
 </insert>]]></source>
 
-        <p>Si se pasa un objeto de tipo User como parámetro en este statement, se buscarán en él las propiedades id, username y password  y sus valores se pasarán como parámetros de un PreparedStatement.
+        <p>Si se pasa un objeto de tipo pojo.User como parámetro en este statement, se buscarán en él las propiedades id, username y password  y sus valores se pasarán como parámetros de un PreparedStatement.
         </p>
 
         <p>Esta es una Buena forma de pasar parámetros a statements. Pero los parameter maps (mapas de parámetros) tienen otras muchas características.features of parameter maps.
@@ -532,27 +532,27 @@ Por ejemplo, si la columna id de la tabla Author del ejemplo siguiente fuera aut
           for example, if you want to <code>select</code> from a table by any one of its columns, instead of writing code like:
           <source><![CDATA[
 @Select("select * from user where id = #{id}")
-User findById(@Param("id") long id);
+pojo.User findById(@Param("id") long id);
 
 @Select("select * from user where name = #{name}")
-User findByName(@Param("name") String name);
+pojo.User findByName(@Param("name") String name);
 
 @Select("select * from user where email = #{email}")
-User findByEmail(@Param("email") String email);
+pojo.User findByEmail(@Param("email") String email);
 
 // and more "findByXxx" method
 ]]></source>
           you can just write:
           <source><![CDATA[
 @Select("select * from user where ${column} = #{value}")
-User findByColumn(@Param("column") String column, @Param("value") String value);
+pojo.User findByColumn(@Param("column") String column, @Param("value") String value);
 ]]></source>
           in which the <code>${column}</code> will be substituted directly and the <code>#{value}</code> will be "prepared".
           Thus you can just do the same work by:
           <source><![CDATA[
-User userOfId1 = userMapper.findByColumn("id", 1L);
-User userOfNameKid = userMapper.findByColumn("name", "kid");
-User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
+pojo.User userOfId1 = userMapper.findByColumn("id", 1L);
+pojo.User userOfNameKid = userMapper.findByColumn("name", "kid");
+pojo.User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
 ]]></source>
         </p>
 
@@ -583,7 +583,7 @@ User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
           Este statement simplemente obtiene como resultado una HashMap que contiene como claves todas las columnas, tal y como se ha especificado en el atributo resultType. Aunque es muy útil en muchos casos, una HashMap no contribuye a un buen modelo de dominio. Es más probable que tu aplicación use JavaBeans o POJOs (Plain Old Java Objects) para el modelo de dominio. MyBatis soporta ambos. Dado el siguiente JavaBean:
         </p>
         <source><![CDATA[package com.someapp.model;
-public class User {
+public class pojo.User {
   private int id;
   private String username;
   private String hashedPassword;
@@ -616,7 +616,7 @@ public class User {
           Este JavaBean puede mapearse desde un ResultSet de forma casi tan sencilla como la HashMap.
         </p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="com.someapp.model.User">
+        <source><![CDATA[<select id="selectUsers" resultType="com.someapp.model.pojo.User">
   select id, username, hashedPassword
   from some_table
   where id = #{id}
@@ -626,10 +626,10 @@ public class User {
         </p>
 
         <source><![CDATA[<!-- In Config XML file -->
-<typeAlias type="com.someapp.model.User" alias="User"/>
+<typeAlias type="com.someapp.model.pojo.User" alias="pojo.User"/>
 
 <!-- In SQL Mapping XML file -->
-<select id="selectUsers" resultType="User">
+<select id="selectUsers" resultType="pojo.User">
   select id, username, hashedPassword
   from some_table
   where id = #{id}
@@ -639,7 +639,7 @@ public class User {
           En estos casos MyBatis crea automáticamente un RestulMap entre bastidores para mapear las columnas a las propiedades del JavaBean en base a sus nombres. Si los nombres de las columnas no coinciden exactamente, puedes emplear alias en los nombres de columnas de la sentencia SQL (una característica estándar del SQL) para hacer que coincidan. Por ejemplo:
         </p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="User">
+        <source><![CDATA[<select id="selectUsers" resultType="pojo.User">
   select
     user_id             as "id",
     user_name           as "userName",
@@ -652,7 +652,7 @@ public class User {
           Lo mejor de los ResultMaps es que ya has aprendido mucho sobre ellos ¡y ni siquiera los has visto! Los casos sencillos no requieren nada más que lo que ya has visto. Solo como ejemplo, veamos qué aspecto tendría el último ejemplo utilizando un ResultMap externo, lo cual es otra forma de solucionar las divergencias entre los nombres de columnas y de propiedades.
         </p>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User">
   <id property="id" column="user_id" />
   <result property="username" column="username"/>
   <result property="password" column="password"/>
@@ -931,9 +931,9 @@ public class User {
 
         <p>Dado el siguiente constructor:</p>
 
-        <source><![CDATA[public class User {
+        <source><![CDATA[public class pojo.User {
    //...
-   public User(Integer id, String username, int age) {
+   public pojo.User(Integer id, String username, int age) {
      //...
   }
 //...
@@ -1609,7 +1609,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
   where id = #{id}
 </select>]]></source>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User">
   <result property="password" column="hashed_password"/>
 </resultMap>]]></source>
 
@@ -1663,7 +1663,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
           añadiendole el atributo<code>autoMapping</code>:
         </p>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User" autoMapping="false">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User" autoMapping="false">
   <result property="password" column="hashed_password"/>
 </resultMap>]]></source>
 

@@ -561,7 +561,7 @@ List<BatchResult> flush();]]></source>
   @Result(property = "lastName", column = "last_name")
 })
 @Select("select * from users where id = #{id}")
-User getUserById(Integer id);
+pojo.User getUserById(Integer id);
 
 @Results(id = "companyResults")
 @ConstructorArgs({
@@ -573,7 +573,7 @@ Company getCompanyById(Integer id);</source>
 
   <p>This example shows solo parameter using the Sql Provider annotation:</p>
   <source><![CDATA[@SelectProvider(type = UserSqlBuilder.class, method = "buildGetUsersByName")
-List<User> getUsersByName(String name);
+List<pojo.User> getUsersByName(String name);
 
 class UserSqlBuilder {
   public static String buildGetUsersByName(final String name) {
@@ -590,7 +590,7 @@ class UserSqlBuilder {
 
   <p>This example shows multiple parameters using the Sql Provider annotation:</p>
   <source><![CDATA[@SelectProvider(type = UserSqlBuilder.class, method = "buildGetUsersByName")
-List<User> getUsersByName(
+List<pojo.User> getUsersByName(
     @Param("name") String name, @Param("orderByColumn") String orderByColumn);
 
 class UserSqlBuilder {
@@ -619,7 +619,7 @@ class UserSqlBuilder {
 
     <p>This example shows usage the default implementation of <code>ProviderMethodResolver</code>(available since MyBatis 3.5.1 or later):</p>
     <source><![CDATA[@SelectProvider(type = UserSqlProvider.class)
-List<User> getUsersByName(String name);
+List<pojo.User> getUsersByName(String name);
 
 // Implements the ProviderMethodResolver on your provider class
 class UserSqlProvider implements ProviderMethodResolver {
@@ -647,13 +647,13 @@ configuration.setDefaultSqlProviderType(TemplateFilePathProvider.class); // Spec
 public interface UserMapper {
 
   @SelectProvider // Same with @SelectProvider(TemplateFilePathProvider.class)
-  User findUser(int id);
+  pojo.User findUser(int id);
 
   @InsertProvider // Same with @InsertProvider(TemplateFilePathProvider.class)
-  void createUser(User user);
+  void createUser(pojo.User user);
 
   @UpdateProvider // Same with @UpdateProvider(TemplateFilePathProvider.class)
-  void updateUser(User user);
+  void updateUser(pojo.User user);
 
   @DeleteProvider // Same with @DeleteProvider(TemplateFilePathProvider.class)
   void deleteUser(int id);
@@ -661,7 +661,7 @@ public interface UserMapper {
 
     <p>This example shows usage the default implementation of <code>ProviderMethodResolver</code>(available since MyBatis 3.5.1 or later):</p>
     <source><![CDATA[@SelectProvider(UserSqlProvider.class)
-List<User> getUsersByName(String name);
+List<pojo.User> getUsersByName(String name);
 
 // Implements the ProviderMethodResolver on your provider class
 class UserSqlProvider implements ProviderMethodResolver {

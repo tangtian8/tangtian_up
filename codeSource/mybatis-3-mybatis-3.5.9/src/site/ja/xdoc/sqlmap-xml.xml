@@ -505,7 +505,7 @@ ps.setInt(1,id);]]></source>
           例：
         </p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="User">
+        <source><![CDATA[<select id="selectUsers" resultType="pojo.User">
   select id, username, password
   from users
   where id = #{id}
@@ -516,13 +516,13 @@ ps.setInt(1,id);]]></source>
           パラメーターとして複合型を渡した場合はもう少し複雑です。次の例を見てください。
         </p>
 
-        <source><![CDATA[<insert id="insertUser" parameterType="User">
+        <source><![CDATA[<insert id="insertUser" parameterType="pojo.User">
   insert into users (id, username, password)
   values (#{id}, #{username}, #{password})
 </insert>]]></source>
 
         <p>
-          User 型のオブジェクトがパラメーターとしてステートメントに渡されると、id, username, password の各プロパティが参照され、その値が PreparedStatement の引数として渡されます。
+          pojo.User 型のオブジェクトがパラメーターとしてステートメントに渡されると、id, username, password の各プロパティが参照され、その値が PreparedStatement の引数として渡されます。
         </p>
 
         <p>
@@ -603,13 +603,13 @@ ps.setInt(1,id);]]></source>
           例えば、任意のカラム値に一致するレコードを取得する場合に、以下のようにカラム毎にメソッドを用意するのではなく、
           <source><![CDATA[
 @Select("select * from user where id = #{id}")
-User findById(@Param("id") long id);
+pojo.User findById(@Param("id") long id);
 
 @Select("select * from user where name = #{name}")
-User findByName(@Param("name") String name);
+pojo.User findByName(@Param("name") String name);
 
 @Select("select * from user where email = #{email}")
-User findByEmail(@Param("email") String email);
+pojo.User findByEmail(@Param("email") String email);
 
 // and more "findByXxx" method
 ]]></source>
@@ -618,14 +618,14 @@ User findByEmail(@Param("email") String email);
 
           <source><![CDATA[
 @Select("select * from user where ${column} = #{value}")
-User findByColumn(@Param("column") String column, @Param("value") String value);
+pojo.User findByColumn(@Param("column") String column, @Param("value") String value);
 ]]></source>
           <code>${column}</code> は指定した文字列(カラム名)が直接代入され、<code>#{value}</code> はバインド変数として扱われるため、
           以下のように使用することができます。
           <source><![CDATA[
-User userOfId1 = userMapper.findByColumn("id", 1L);
-User userOfNameKid = userMapper.findByColumn("name", "kid");
-User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
+pojo.User userOfId1 = userMapper.findByColumn("id", 1L);
+pojo.User userOfNameKid = userMapper.findByColumn("name", "kid");
+pojo.User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
 ]]></source>
         </p>
 
@@ -663,7 +663,7 @@ User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
           次のような JavaBean があったとします。
         </p>
         <source><![CDATA[package com.someapp.model;
-public class User {
+public class pojo.User {
   private int id;
   private String username;
   private String hashedPassword;
@@ -697,7 +697,7 @@ public class User {
           このような条件を満たす JavaBean であれば、HashMap のときと同じように ResultSet にマップすることができます。
         </p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="com.someapp.model.User">
+        <source><![CDATA[<select id="selectUsers" resultType="com.someapp.model.pojo.User">
   select id, username, hashedPassword
   from some_table
   where id = #{id}
@@ -708,10 +708,10 @@ public class User {
         </p>
 
         <source><![CDATA[<!-- In Config XML file -->
-<typeAlias type="com.someapp.model.User" alias="User"/>
+<typeAlias type="com.someapp.model.pojo.User" alias="pojo.User"/>
 
 <!-- In SQL Mapping XML file -->
-<select id="selectUsers" resultType="User">
+<select id="selectUsers" resultType="pojo.User">
   select id, username, hashedPassword
   from some_table
   where id = #{id}
@@ -722,7 +722,7 @@ public class User {
           もし列名が一致しない場合、select 文で列に別名をつけることで対応可能です（列の別名は標準 SQL の機能です）。
         </p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="User">
+        <source><![CDATA[<select id="selectUsers" resultType="pojo.User">
   select
     user_id     as "id",
     user_name     as "userName",
@@ -737,7 +737,7 @@ public class User {
           列名の不一致を解消するもう一つの方法でもありますが、この最後のサンプルで resultMap を明示的に定義したらどうなるか見てみましょう。
         </p>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User">
   <id property="id" column="user_id" />
   <result property="username" column="username"/>
   <result property="password" column="password"/>
@@ -1055,9 +1055,9 @@ public class User {
           次のようなコンストラクタを考えてみます。
         </p>
 
-        <source><![CDATA[public class User {
+        <source><![CDATA[public class pojo.User {
    //...
-   public User(Integer id, String username, int age) {
+   public pojo.User(Integer id, String username, int age) {
   //...
   }
 //...
@@ -1827,7 +1827,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
   where id = #{id}
 </select>]]></source>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User">
   <result property="password" column="hashed_password"/>
 </resultMap>]]></source>
 
@@ -1879,7 +1879,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
           尚、グローバルな自動マッピング設定とは別に、<code>autoMapping</code> 属性を指定することで特定のステートメントでの自動マッピング動作を有効／無効化することもできます。
         </p>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User" autoMapping="false">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User" autoMapping="false">
   <result property="password" column="hashed_password"/>
 </resultMap>]]></source>
 

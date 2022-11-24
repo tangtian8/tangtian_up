@@ -26,7 +26,7 @@
         select * from users
     </select>
 
-    <resultMap type="org.apache.ibatis.submitted.cursor_simple.User" id="results">
+    <resultMap type="org.apache.ibatis.submitted.cursor_simple.pojo.User" id="results">
         <id column="id" property="id"/>
     <result property="name" column="name"/>
     </resultMap>

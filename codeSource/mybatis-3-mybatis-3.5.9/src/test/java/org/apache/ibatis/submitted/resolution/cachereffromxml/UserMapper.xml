@@ -27,7 +27,7 @@
     namespace="org.apache.ibatis.submitted.resolution.cachereffromxml.UserMapper" />
 
   <select id="getUser"
-    resultType="org.apache.ibatis.submitted.resolution.User">
+    resultType="org.apache.ibatis.submitted.resolution.pojo.User">
     select *
     from users where id = #{id}
   </select>

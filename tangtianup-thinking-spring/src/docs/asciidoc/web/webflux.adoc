@@ -510,7 +510,7 @@ While `HttpHandler` has a simple goal to abstract the use of different HTTP serv
 `WebHandler` API aims to provide a broader set of features commonly used in web applications
 such as:
 
-* User session with attributes.
+* pojo.User session with attributes.
 * Request attributes.
 * Resolved `Locale` or `Principal` for the request.
 * Access to parsed and cached form data.
@@ -2593,7 +2593,7 @@ you can use the `@SessionAttribute` annotation on a method parameter, as the fol
 .Java
 ----
 	@GetMapping("/")
-	public String handle(@SessionAttribute User user) { // <1>
+	public String handle(@SessionAttribute pojo.User user) { // <1>
 		// ...
 	}
 ----
@@ -2603,7 +2603,7 @@ you can use the `@SessionAttribute` annotation on a method parameter, as the fol
 .Kotlin
 ----
 	@GetMapping("/")
-	fun handle(@SessionAttribute user: User): String { // <1>
+	fun handle(@SessionAttribute user: pojo.User): String { // <1>
 		// ...
 	}
 ----
@@ -2629,7 +2629,7 @@ as the following example shows:
 .Java
 ----
 	@GetMapping("/")
-	public String handle(@RequestAttribute Client client) { <1>
+	public String handle(@RequestAttribute jdkdynamic.Client client) { <1>
 		// ...
 	}
 ----
@@ -2639,7 +2639,7 @@ as the following example shows:
 .Kotlin
 ----
 	@GetMapping("/")
-	fun handle(@RequestAttribute client: Client): String { // <1>
+	fun handle(@RequestAttribute client: jdkdynamic.Client): String { // <1>
 		// ...
 	}
 ----
@@ -3049,13 +3049,13 @@ which allows rendering only a subset of all fields in an `Object`. To use it wit
 	public class UserController {
 
 		@GetMapping("/user")
-		@JsonView(User.WithoutPasswordView.class)
-		public User getUser() {
-			return new User("eric", "7!jd#h23");
+		@JsonView(pojo.User.WithoutPasswordView.class)
+		public pojo.User getUser() {
+			return new pojo.User("eric", "7!jd#h23");
 		}
 	}
 
-	public class User {
+	public class pojo.User {
 
 		public interface WithoutPasswordView {};
 		public interface WithPasswordView extends WithoutPasswordView {};
@@ -3063,10 +3063,10 @@ which allows rendering only a subset of all fields in an `Object`. To use it wit
 		private String username;
 		private String password;
 
-		public User() {
+		public pojo.User() {
 		}
 
-		public User(String username, String password) {
+		public pojo.User(String username, String password) {
 			this.username = username;
 			this.password = password;
 		}
@@ -3090,13 +3090,13 @@ which allows rendering only a subset of all fields in an `Object`. To use it wit
 	class UserController {
 
 		@GetMapping("/user")
-		@JsonView(User.WithoutPasswordView::class)
-		fun getUser(): User {
-			return User("eric", "7!jd#h23")
+		@JsonView(pojo.User.WithoutPasswordView::class)
+		fun getUser(): pojo.User {
+			return pojo.User("eric", "7!jd#h23")
 		}
 	}
 
-	class User(
+	class pojo.User(
 			@JsonView(WithoutPasswordView::class) val username: String,
 			@JsonView(WithPasswordView::class) val password: String
 	) {

@@ -22,11 +22,11 @@
 
 <mapper namespace="org.apache.ibatis.submitted.multipleiterates.Mapper">
 
-  <select id="getUser" resultType="org.apache.ibatis.submitted.multipleiterates.User">
+  <select id="getUser" resultType="org.apache.ibatis.submitted.multipleiterates.pojo.User">
     select * from users
   </select>
 
-  <insert id="insertUser" parameterType="org.apache.ibatis.submitted.multipleiterates.User">
+  <insert id="insertUser" parameterType="org.apache.ibatis.submitted.multipleiterates.pojo.User">
     insert into users
     (id,
     name,

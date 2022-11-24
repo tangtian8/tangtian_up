@@ -47,7 +47,7 @@ The expression language supports the following functionality:
 * Inline maps
 * Ternary operator
 * Variables
-* User-defined functions
+* pojo.User-defined functions
 * Collection projection
 * Collection selection
 * Templated expressions

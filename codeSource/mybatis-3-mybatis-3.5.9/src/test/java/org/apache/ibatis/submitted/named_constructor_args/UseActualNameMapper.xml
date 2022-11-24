@@ -22,7 +22,7 @@
 
 <mapper namespace="org.apache.ibatis.submitted.named_constructor_args.UseActualNameMapper">
 
-  <resultMap type="org.apache.ibatis.submitted.named_constructor_args.User"
+  <resultMap type="org.apache.ibatis.submitted.named_constructor_args.pojo.User"
     id="twoArgsConstructorRM">
     <constructor>
       <!-- As the arg name is different from the property name,  -->

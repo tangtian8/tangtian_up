@@ -437,7 +437,7 @@ ps.setInt(1,id);]]></source>
 		Parameters는 마이바티스에서 매우 중요한 엘리먼트이다.
 		대략 90%정도 간단한 경우 이러한 형태로 설정할 것이다.</p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="User">
+        <source><![CDATA[<select id="selectUsers" resultType="pojo.User">
   select id, username, password
   from users
   where id = #{id}
@@ -449,7 +449,7 @@ ps.setInt(1,id);]]></source>
 		그래서 파라미터 전체가 값을 대체하게 된다.
 		하지만 복잡한 객체를 전달하고자 한다면 다음의 예제처럼 상황은 조금 다르게 된다.</p>
 
-        <source><![CDATA[<insert id="insertUser" parameterType="User">
+        <source><![CDATA[<insert id="insertUser" parameterType="pojo.User">
   insert into users (id, username, password)
   values (#{id}, #{username}, #{password})
 </insert>]]></source>
@@ -516,27 +516,27 @@ ps.setInt(1,id);]]></source>
           for example, if you want to <code>select</code> from a table by any one of its columns, instead of writing code like:
           <source><![CDATA[
 @Select("select * from user where id = #{id}")
-User findById(@Param("id") long id);
+pojo.User findById(@Param("id") long id);
 
 @Select("select * from user where name = #{name}")
-User findByName(@Param("name") String name);
+pojo.User findByName(@Param("name") String name);
 
 @Select("select * from user where email = #{email}")
-User findByEmail(@Param("email") String email);
+pojo.User findByEmail(@Param("email") String email);
 
 // and more "findByXxx" method
 ]]></source>
           you can just write:
           <source><![CDATA[
 @Select("select * from user where ${column} = #{value}")
-User findByColumn(@Param("column") String column, @Param("value") String value);
+pojo.User findByColumn(@Param("column") String column, @Param("value") String value);
 ]]></source>
           in which the <code>${column}</code> will be substituted directly and the <code>#{value}</code> will be "prepared".
           Thus you can just do the same work by:
           <source><![CDATA[
-User userOfId1 = userMapper.findByColumn("id", 1L);
-User userOfNameKid = userMapper.findByColumn("name", "kid");
-User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
+pojo.User userOfId1 = userMapper.findByColumn("id", 1L);
+pojo.User userOfNameKid = userMapper.findByColumn("name", "kid");
+pojo.User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
 ]]></source>
         </p>
 
@@ -572,7 +572,7 @@ User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
 		자바빈의 경우를 보자.</p>
 
         <source><![CDATA[package com.someapp.model;
-public class User {
+public class pojo.User {
   private int id;
   private String username;
   private String hashedPassword;
@@ -602,7 +602,7 @@ public class User {
 
         <p>그래서 자바빈은 HashMap과 마찬가지로 매우 쉽게 ResultSet에 매핑될 수 있다.</p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="com.someapp.model.User">
+        <source><![CDATA[<select id="selectUsers" resultType="com.someapp.model.pojo.User">
   select id, username, hashedPassword
   from some_table
   where id = #{id}
@@ -613,10 +613,10 @@ public class User {
 		예를들면,</p>
 
         <source><![CDATA[<!-- XML설정파일에서 -->
-<typeAlias type="com.someapp.model.User" alias="User"/>
+<typeAlias type="com.someapp.model.pojo.User" alias="pojo.User"/>
 
 <!-- SQL매핑 XML파일에서 -->
-<select id="selectUsers" resultType="User">
+<select id="selectUsers" resultType="pojo.User">
   select id, username, hashedPassword
   from some_table
   where id = #{id}
@@ -626,7 +626,7 @@ public class User {
 		만약 칼럼명이 프로퍼티명과 다르다면 SQL구문에 별칭을 지정할 수 있다.
 		예를들면.</p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="User">
+        <source><![CDATA[<select id="selectUsers" resultType="pojo.User">
   select
     user_id             as "id",
     user_name           as "userName",
@@ -639,7 +639,7 @@ public class User {
 		하지만 다 본건 아니다.
 		칼럼명과 프로퍼티명이 다른 경우에 대해 데이터베이스 별칭을 사용하는 것과 다른 방법으로 명시적인 resultMap 을 선언하는 방법이 있다.</p>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User">
   <id property="id" column="user_id" />
   <result property="username" column="username"/>
   <result property="password" column="password"/>
@@ -931,9 +931,9 @@ public class User {
 
         <p>다음의 생성자를 보자.</p>
 
-        <source><![CDATA[public class User {
+        <source><![CDATA[public class pojo.User {
    //...
-   public User(Integer id, String username, int age) {
+   public pojo.User(Integer id, String username, int age) {
      //...
   }
 //...
@@ -1552,7 +1552,7 @@ public class User {
   where id = #{id}
 </select>]]></source>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User">
   <result property="password" column="hashed_password"/>
 </resultMap>]]></source>
 
@@ -1607,7 +1607,7 @@ public class User {
           자동매핑 설정에 상관없이 구문별로 <code>autoMapping</code>속성을 추가해서 자동매핑을 사용하거나 사용하지 않을수도 있다.
         </p>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User" autoMapping="false">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User" autoMapping="false">
   <result property="password" column="hashed_password"/>
 </resultMap>]]></source>
 

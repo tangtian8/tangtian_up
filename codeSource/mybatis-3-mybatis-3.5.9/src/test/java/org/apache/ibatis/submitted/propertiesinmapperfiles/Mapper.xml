@@ -22,7 +22,7 @@
 
 <mapper namespace="org.apache.ibatis.submitted.propertiesinmapperfiles.Mapper">
 
-    <select id="getUser" resultType="org.apache.ibatis.submitted.propertiesinmapperfiles.User">
+    <select id="getUser" resultType="org.apache.ibatis.submitted.propertiesinmapperfiles.pojo.User">
         select * from users where ${property} = #{id}
     </select>
 

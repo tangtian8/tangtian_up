@@ -23,7 +23,7 @@
 <mapper namespace="org.apache.ibatis.submitted.array_type_handler.Mapper">
 
   <insert id="insert"
-    parameterType="org.apache.ibatis.submitted.array_type_handler.User">
+    parameterType="org.apache.ibatis.submitted.array_type_handler.pojo.User">
     insert into users
       (id, name, nicknames)
     values

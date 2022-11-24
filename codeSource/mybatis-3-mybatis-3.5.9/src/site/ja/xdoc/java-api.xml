@@ -564,7 +564,7 @@ List<BatchResult> flush();]]></source>
   @Result(property = "lastName", column = "last_name")
 })
 @Select("select * from users where id = #{id}")
-User getUserById(Integer id);
+pojo.User getUserById(Integer id);
 
 @Results(id = "companyResults")
 @ConstructorArgs({
@@ -576,7 +576,7 @@ Company getCompanyById(Integer id);</source>
 
   <p>次のコードは SQLプロバイダー用のアノテーションを使用して、パラメータをひとつ受け取る例です。</p>
   <source><![CDATA[@SelectProvider(type = UserSqlBuilder.class, method = "buildGetUsersByName")
-List<User> getUsersByName(String name);
+List<pojo.User> getUsersByName(String name);
 
 class UserSqlBuilder {
   public static String buildGetUsersByName(final String name) {
@@ -593,7 +593,7 @@ class UserSqlBuilder {
 
   <p>次のコードは SQLプロバイダー用のアノテーションを使用して、複数パラメータをひとつ受け取る例です。</p>
   <source><![CDATA[@SelectProvider(type = UserSqlBuilder.class, method = "buildGetUsersByName")
-List<User> getUsersByName(
+List<pojo.User> getUsersByName(
     @Param("name") String name, @Param("orderByColumn") String orderByColumn);
 
 class UserSqlBuilder {
@@ -631,13 +631,13 @@ configuration.setDefaultSqlProviderType(TemplateFilePathProvider.class); // 全�
 public interface UserMapper {
 
   @SelectProvider // @SelectProvider(TemplateFilePathProvider.class) と同義
-  User findUser(int id);
+  pojo.User findUser(int id);
 
   @InsertProvider // @InsertProvider(TemplateFilePathProvider.class) と同義
-  void createUser(User user);
+  void createUser(pojo.User user);
 
   @UpdateProvider // @UpdateProvider(TemplateFilePathProvider.class) と同義
-  void updateUser(User user);
+  void updateUser(pojo.User user);
 
   @DeleteProvider // @DeleteProvider(TemplateFilePathProvider.class) と同義
   void deleteUser(int id);
@@ -645,7 +645,7 @@ public interface UserMapper {
 
     <p>次のコードは、<code>ProviderMethodResolver</code>(MyBatis 3.5.1以降で利用可能)のデフォルト実装の利用例です。</p>
     <source><![CDATA[@SelectProvider(UserSqlProvider.class)
-List<User> getUsersByName(String name);
+List<pojo.User> getUsersByName(String name);
 
 // SQLプロバイダクラスにProviderMethodResolverを実装する
 class UserSqlProvider implements ProviderMethodResolver {

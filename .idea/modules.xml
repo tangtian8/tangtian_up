@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-netty/HeroRPC/HeroRPC.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-netty/HeroRPC/HeroRPC.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/admin/admin.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/admin/admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-agent/agent/agent.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-agent/agent/agent.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/buyer-api/buyer-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/buyer-api/buyer-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/common-api/common-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/common-api/common-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-java-concurrency/concurrency.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-java-concurrency/concurrency.iml" />
@@ -28,8 +29,10 @@
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinging-in-lilishop/seller-api/seller-api.iml" filepath="$PROJECT_DIR$/tangtianup-thinging-in-lilishop/seller-api/seller-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-permission/springboot-permission.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-permission/springboot-permission.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-springcloud-gateaway/springcloud-gateaway.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-springcloud-gateaway/springcloud-gateaway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-mybatis/tangtian-mybatis/tangtian-mybatis.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-mybatis/tangtian-mybatis/tangtian-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tangtian_up.iml" filepath="$PROJECT_DIR$/.idea/tangtian_up.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-jvm/tangtianup-thinking-in-jvm.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-jvm/tangtianup-thinking-in-jvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-mybatis/usemybatis/usemybatis.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-mybatis/usemybatis/usemybatis.iml" />
     </modules>
   </component>
 </project>

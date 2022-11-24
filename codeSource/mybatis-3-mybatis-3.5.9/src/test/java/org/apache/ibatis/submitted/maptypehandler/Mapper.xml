@@ -22,7 +22,7 @@
 
 <mapper namespace="org.apache.ibatis.submitted.maptypehandler.Mapper">
 
-    <select id="getUserXML" resultType="org.apache.ibatis.submitted.maptypehandler.User" parameterType="map">
+    <select id="getUserXML" resultType="org.apache.ibatis.submitted.maptypehandler.pojo.User" parameterType="map">
         select * from users where id = #{id} and name = #{name}
     </select>
 

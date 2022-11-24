@@ -29,7 +29,7 @@
     insert into users values(#{id}, #{name})
   </insert>
 
-  <select id="select" resultType="org.apache.ibatis.submitted.batch_keys.User" >
+  <select id="select" resultType="org.apache.ibatis.submitted.batch_keys.pojo.User" >
     select id, name from users
   </select>
 
@@ -37,7 +37,7 @@
     insert into users2 (name) values(#{name})
   </insert>
 
-  <select id="selectIdentity" resultType="org.apache.ibatis.submitted.batch_keys.User" >
+  <select id="selectIdentity" resultType="org.apache.ibatis.submitted.batch_keys.pojo.User" >
     select id, name from users2
   </select>
 

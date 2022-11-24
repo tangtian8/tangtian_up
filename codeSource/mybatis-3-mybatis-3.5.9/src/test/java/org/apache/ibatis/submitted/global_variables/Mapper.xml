@@ -28,7 +28,7 @@
         <property name="longValue" value="${longProperty}"/>
     </cache>
 
-    <select id="getUser" resultType="org.apache.ibatis.submitted.global_variables.User">
+    <select id="getUser" resultType="org.apache.ibatis.submitted.global_variables.pojo.User">
         select * from ${table} where id = #{id}
     </select>
 

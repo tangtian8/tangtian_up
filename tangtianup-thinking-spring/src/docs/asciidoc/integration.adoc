@@ -315,8 +315,8 @@ to serialize only a subset of the object properties, as the following example sh
 
 [source,java,indent=0,subs="verbatim,quotes"]
 ----
-	MappingJacksonValue value = new MappingJacksonValue(new User("eric", "7!jd#h23"));
-	value.setSerializationView(User.WithoutPasswordView.class);
+	MappingJacksonValue value = new MappingJacksonValue(new pojo.User("eric", "7!jd#h23"));
+	value.setSerializationView(pojo.User.WithoutPasswordView.class);
 
 	RequestEntity<MappingJacksonValue> requestEntity =
 		RequestEntity.post(new URI("https://example.com/user")).body(value);
@@ -2945,7 +2945,7 @@ Note that, when you use a RMI-based connector, you need the lookup service (`tna
 
 
 [[jmx-jsr160-client]]
-==== Client-side Connectors
+==== jdkdynamic.Client-side Connectors
 
 To create an `MBeanServerConnection` to a remote JSR-160-enabled `MBeanServer`, you can use the
 `MBeanServerConnectionFactoryBean`, as the following example shows:

@@ -22,7 +22,7 @@
 
 <mapper namespace="org.apache.ibatis.submitted.mapper_extend.MapperOverload">
 
-    <select id="getUserXML" resultType="org.apache.ibatis.submitted.mapper_extend.User">
+    <select id="getUserXML" resultType="org.apache.ibatis.submitted.mapper_extend.pojo.User">
         select * from users where id = 2
     </select>
 

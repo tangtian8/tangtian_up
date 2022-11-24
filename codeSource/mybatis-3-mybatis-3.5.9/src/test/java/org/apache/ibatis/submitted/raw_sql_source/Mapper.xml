@@ -22,15 +22,15 @@
 
 <mapper namespace="org.apache.ibatis.submitted.raw_sql_source.Mapper">
 
-    <select id="getUser1" resultType="org.apache.ibatis.submitted.raw_sql_source.User">
+    <select id="getUser1" resultType="org.apache.ibatis.submitted.raw_sql_source.pojo.User">
         select * from users where id = #{value}
     </select>
 
-    <select id="getUser2" resultType="org.apache.ibatis.submitted.raw_sql_source.User">
+    <select id="getUser2" resultType="org.apache.ibatis.submitted.raw_sql_source.pojo.User">
         select * from users where id = ${value}
     </select>
 
-    <select id="getUser3" resultType="org.apache.ibatis.submitted.raw_sql_source.User">
+    <select id="getUser3" resultType="org.apache.ibatis.submitted.raw_sql_source.pojo.User">
         <if test="true">
             select * from users where id = #{value}
         </if>

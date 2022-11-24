@@ -24,7 +24,7 @@
   namespace="org.apache.ibatis.submitted.resolution.deepresultmap.MapperA">
 
   <resultMap
-    type="org.apache.ibatis.submitted.resolution.User" id="rmA"
+    type="org.apache.ibatis.submitted.resolution.pojo.User" id="rmA"
     extends="org.apache.ibatis.submitted.resolution.deepresultmap.MapperB.rmB">
   </resultMap>
 

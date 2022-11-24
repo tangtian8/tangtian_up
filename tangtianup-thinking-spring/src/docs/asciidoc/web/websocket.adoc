@@ -691,7 +691,7 @@ should consider customizing the settings according to your specific needs.
 
 
 [[websocket-fallback-sockjs-servlet3-async]]
-=== Client Disconnects
+=== jdkdynamic.Client Disconnects
 
 HTTP streaming and HTTP long polling SockJS transports require a connection to remain
 open longer than usual. For an overview of these techniques, see
@@ -1820,7 +1820,7 @@ that ensures the user's HTTP session does not expire while the WebSocket session
 
 
 [[websocket-stomp-user-destination]]
-=== User Destinations
+=== pojo.User Destinations
 
 An application can send messages that target a specific user, and Spring's STOMP support
 recognizes destinations prefixed with `/user/` for this purpose.
@@ -2020,7 +2020,7 @@ WebSocket session is closed. In some cases, this event is published more than on
 per session. Components should be idempotent with regard to multiple disconnect events.
 
 NOTE: When you use a full-featured broker, the STOMP "`broker relay`" automatically reconnects the
-"`system`" connection if broker becomes temporarily unavailable. Client connections,
+"`system`" connection if broker becomes temporarily unavailable. jdkdynamic.Client connections,
 however, are not automatically reconnected. Assuming heartbeats are enabled, the client
 typically notices the broker is not responding within 10 seconds. Clients need to
 implement their own reconnecting logic.
@@ -2080,7 +2080,7 @@ multiple disconnect events.
 
 
 [[websocket-stomp-client]]
-=== STOMP Client
+=== STOMP jdkdynamic.Client
 
 Spring provides a STOMP over WebSocket client and a STOMP over TCP client.
 
@@ -2432,7 +2432,7 @@ every 30 minutes. This bean can be exported to JMX through Spring's
 `MBeanExporter` for viewing at runtime (for example, through JDK's `jconsole`).
 The following list summarizes the available information:
 
-Client WebSocket Sessions::
+jdkdynamic.Client WebSocket Sessions::
 	Current::: Indicates how many client sessions there are
 	currently, with the count further broken down by WebSocket versus HTTP
 	streaming and polling SockJS sessions.
@@ -2462,12 +2462,12 @@ STOMP Broker Relay::
 	session was closed. Therefore, a lower DISCONNECT frame count is an indication
 	that the broker is pro-actively closing connections (maybe because of a
 	heartbeat that did not arrive in time, an invalid input frame, or other issue).
-Client Inbound Channel:: Statistics from the thread pool that backs the `clientInboundChannel`
+jdkdynamic.Client Inbound Channel:: Statistics from the thread pool that backs the `clientInboundChannel`
 	that provide insight into the health of incoming message processing. Tasks queueing
 	up here is an indication that the application may be too slow to handle messages.
 	If there I/O bound tasks (for example, slow database queries, HTTP requests to third party
 	REST API, and so on), consider increasing the thread pool size.
-Client Outbound Channel:: Statistics from the thread pool that backs the `clientOutboundChannel`
+jdkdynamic.Client Outbound Channel:: Statistics from the thread pool that backs the `clientOutboundChannel`
 	that provides insight into the health of broadcasting messages to clients. Tasks
 	queueing up here is an indication clients are too slow to consume messages.
 	One way to address this is to increase the thread pool size to accommodate the

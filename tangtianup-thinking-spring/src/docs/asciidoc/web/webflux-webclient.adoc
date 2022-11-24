@@ -35,7 +35,7 @@ You can also use `WebClient.builder()` with further options:
 * `defaultHeader`: Headers for every request.
 * `defaultCookie`: Cookies for every request.
 * `defaultRequest`: `Consumer` to customize every request.
-* `filter`: Client filter for every request.
+* `filter`: jdkdynamic.Client filter for every request.
 * `exchangeStrategies`: HTTP message reader/writer customizations.
 * `clientConnector`: HTTP client library settings.
 

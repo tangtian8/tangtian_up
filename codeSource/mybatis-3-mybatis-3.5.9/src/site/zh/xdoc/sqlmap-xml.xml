@@ -512,7 +512,7 @@ ps.setInt(1,id);]]></source>
           非常强大的元素。对于大多数简单的使用场景，你都不需要使用复杂的参数，比如：
         </p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="User">
+        <source><![CDATA[<select id="selectUsers" resultType="pojo.User">
   select id, username, password
   from users
   where id = #{id}
@@ -525,13 +525,13 @@ ps.setInt(1,id);]]></source>
           然而，如果传入一个复杂的对象，行为就会有点不一样了。比如：
         </p>
 
-        <source><![CDATA[<insert id="insertUser" parameterType="User">
+        <source><![CDATA[<insert id="insertUser" parameterType="pojo.User">
   insert into users (id, username, password)
   values (#{id}, #{username}, #{password})
 </insert>]]></source>
 
         <p>
-          如果 User 类型的参数对象传递到了语句中，会查找 id、username 和 password
+          如果 pojo.User 类型的参数对象传递到了语句中，会查找 id、username 和 password
           属性，然后将它们的值传入预处理语句的参数中。
         </p>
 
@@ -619,27 +619,27 @@ ps.setInt(1,id);]]></source>
           举个例子，如果你想 <code>select</code> 一个表任意一列的数据时，不需要这样写：
           <source><![CDATA[
 @Select("select * from user where id = #{id}")
-User findById(@Param("id") long id);
+pojo.User findById(@Param("id") long id);
 
 @Select("select * from user where name = #{name}")
-User findByName(@Param("name") String name);
+pojo.User findByName(@Param("name") String name);
 
 @Select("select * from user where email = #{email}")
-User findByEmail(@Param("email") String email);
+pojo.User findByEmail(@Param("email") String email);
 
 // 其它的 "findByXxx" 方法
 ]]></source>
           而是可以只写这样一个方法：
           <source><![CDATA[
 @Select("select * from user where ${column} = #{value}")
-User findByColumn(@Param("column") String column, @Param("value") String value);
+pojo.User findByColumn(@Param("column") String column, @Param("value") String value);
 ]]></source>
           其中 <code>${column}</code> 会被直接替换，而 <code>#{value}</code> 会使用 <code>?</code> 预处理。
           这样，就能完成同样的任务：
           <source><![CDATA[
-User userOfId1 = userMapper.findByColumn("id", 1L);
-User userOfNameKid = userMapper.findByColumn("name", "kid");
-User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
+pojo.User userOfId1 = userMapper.findByColumn("id", 1L);
+pojo.User userOfNameKid = userMapper.findByColumn("name", "kid");
+pojo.User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
 ]]></source>
         </p>
 
@@ -677,7 +677,7 @@ User userOfEmail = userMapper.findByColumn("email", "noone@nowhere.com");
 		  上述语句只是简单地将所有的列映射到 <code>HashMap</code> 的键上，这由 <code>resultType</code> 属性指定。虽然在大部分情况下都够用，但是 HashMap 并不是一个很好的领域模型。你的程序更可能会使用 JavaBean 或 POJO（Plain Old Java Objects，普通老式 Java 对象）作为领域模型。MyBatis 对两者都提供了支持。看看下面这个 JavaBean：
         </p>
         <source><![CDATA[package com.someapp.model;
-public class User {
+public class pojo.User {
   private int id;
   private String username;
   private String hashedPassword;
@@ -712,7 +712,7 @@ public class User {
           <code>HashMap</code> 一样简单。
         </p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="com.someapp.model.User">
+        <source><![CDATA[<select id="selectUsers" resultType="com.someapp.model.pojo.User">
   select id, username, hashedPassword
   from some_table
   where id = #{id}
@@ -723,10 +723,10 @@ public class User {
         </p>
 
         <source><![CDATA[<!-- mybatis-config.xml 中 -->
-<typeAlias type="com.someapp.model.User" alias="User"/>
+<typeAlias type="com.someapp.model.pojo.User" alias="pojo.User"/>
 
 <!-- SQL 映射 XML 中 -->
-<select id="selectUsers" resultType="User">
+<select id="selectUsers" resultType="pojo.User">
   select id, username, hashedPassword
   from some_table
   where id = #{id}
@@ -738,7 +738,7 @@ public class User {
           语句中设置列别名（这是一个基本的 SQL 特性）来完成匹配。比如：
         </p>
 
-        <source><![CDATA[<select id="selectUsers" resultType="User">
+        <source><![CDATA[<select id="selectUsers" resultType="pojo.User">
   select
     user_id             as "id",
     user_name           as "userName",
@@ -756,7 +756,7 @@ public class User {
           <code>resultMap</code> 会怎样，这也是解决列名不匹配的另外一种方式。
         </p>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User">
   <id property="id" column="user_id" />
   <result property="username" column="user_name"/>
   <result property="password" column="hashed_password"/>
@@ -1081,9 +1081,9 @@ public class User {
           看看下面这个构造方法:
         </p>
 
-        <source><![CDATA[public class User {
+        <source><![CDATA[public class pojo.User {
    //...
-   public User(Integer id, String username, int age) {
+   public pojo.User(Integer id, String username, int age) {
      //...
   }
 //...
@@ -1886,7 +1886,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
   where id = #{id}
 </select>]]></source>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User">
   <result property="password" column="hashed_password"/>
 </resultMap>]]></source>
 
@@ -1941,7 +1941,7 @@ SELECT * FROM POST WHERE BLOG_ID = #{id}]]></source>
           属性来为指定的结果映射设置启用/禁用自动映射。
         </p>
 
-        <source><![CDATA[<resultMap id="userResultMap" type="User" autoMapping="false">
+        <source><![CDATA[<resultMap id="userResultMap" type="pojo.User" autoMapping="false">
   <result property="password" column="hashed_password"/>
 </resultMap>]]></source>
 

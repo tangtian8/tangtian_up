@@ -420,7 +420,7 @@ specify CORS settings by URL pattern. If both are specified, they are combined b
 
 
 [[webflux-websocket-client]]
-=== Client
+=== jdkdynamic.Client
 
 Spring WebFlux provides a `WebSocketClient` abstraction with implementations for
 Reactor Netty, Tomcat, Jetty, Undertow, and standard Java (that is, JSR-356).

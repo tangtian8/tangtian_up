@@ -22,7 +22,7 @@
 
 <mapper namespace="org.apache.ibatis.submitted.foreach.Mapper">
 
-    <select id="getUser" resultType="org.apache.ibatis.submitted.foreach.User">
+    <select id="getUser" resultType="org.apache.ibatis.submitted.foreach.pojo.User">
         select * from users
          WHERE id in (
         <foreach item="item" index="index" collection="friendList"

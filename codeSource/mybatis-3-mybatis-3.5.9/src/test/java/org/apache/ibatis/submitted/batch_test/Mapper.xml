@@ -21,7 +21,7 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="org.apache.ibatis.submitted.batch_test.Mapper">
-    <resultMap id="userResultMap" type="org.apache.ibatis.submitted.batch_test.User">
+    <resultMap id="userResultMap" type="org.apache.ibatis.submitted.batch_test.pojo.User">
         <id property="id" column="id" />
         <result property="name" column="name" />
         <association property="dept" column="dept_id"  select="getDept"/>

@@ -27,7 +27,7 @@
     namespace="org.apache.ibatis.submitted.resolution.cacherefs.MapperB" />
 
   <select id="getUser"
-    resultType="org.apache.ibatis.submitted.resolution.User">
+    resultType="org.apache.ibatis.submitted.resolution.pojo.User">
     select id, name
     from users where id = #{id}
   </select>

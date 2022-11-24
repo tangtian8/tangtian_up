@@ -18,9 +18,9 @@ through the `DispatcherServlet` (that is, supporting annotations), complete with
 Spring MVC infrastructure but without an HTTP server.
 See <<testing.adoc#spring-mvc-test-framework, Spring MVC Test>> for more details.
 
-* Client-side REST: `spring-test` provides a `MockRestServiceServer` that you can use as
+* jdkdynamic.Client-side REST: `spring-test` provides a `MockRestServiceServer` that you can use as
 a mock server for testing client-side code that internally uses the `RestTemplate`.
-See <<testing.adoc#spring-mvc-test-client, Client REST Tests>> for more details.
+See <<testing.adoc#spring-mvc-test-client, jdkdynamic.Client REST Tests>> for more details.
 
 * `WebTestClient`: Built for testing WebFlux applications, but it can also be used for
 end-to-end integration testing, to any server, over an HTTP connection. It is a

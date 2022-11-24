@@ -22,65 +22,65 @@
 
 <mapper namespace="org.apache.ibatis.submitted.result_set_type.Mapper">
 
-  <select id="getUserWithStatementAndUnset" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithStatementAndUnset" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="STATEMENT">
         select * from users order by id
     </select>
-  <select id="getUserWithStatementAndDefault" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithStatementAndDefault" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="STATEMENT" resultSetType="DEFAULT">
         select * from users order by id
     </select>
-  <select id="getUserWithStatementAndForwardOnly" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithStatementAndForwardOnly" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="STATEMENT" resultSetType="FORWARD_ONLY">
         select * from users order by id
     </select>
-  <select id="getUserWithStatementAndScrollInsensitive" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithStatementAndScrollInsensitive" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="STATEMENT" resultSetType="SCROLL_INSENSITIVE">
         select * from users order by id
     </select>
-  <select id="getUserWithStatementAndScrollSensitive" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithStatementAndScrollSensitive" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="STATEMENT" resultSetType="SCROLL_SENSITIVE">
         select * from users order by id
     </select>
 
-  <select id="getUserWithPreparedAndUnset" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithPreparedAndUnset" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="PREPARED">
         select * from users order by id
     </select>
-  <select id="getUserWithPreparedAndDefault" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithPreparedAndDefault" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="PREPARED" resultSetType="DEFAULT">
         select * from users order by id
     </select>
-  <select id="getUserWithPreparedAndForwardOnly" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithPreparedAndForwardOnly" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="PREPARED" resultSetType="FORWARD_ONLY">
         select * from users order by id
     </select>
-  <select id="getUserWithPreparedAndScrollInsensitive" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithPreparedAndScrollInsensitive" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="PREPARED" resultSetType="SCROLL_INSENSITIVE">
         select * from users order by id
     </select>
-  <select id="getUserWithPreparedAndScrollSensitive" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithPreparedAndScrollSensitive" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="PREPARED" resultSetType="SCROLL_SENSITIVE">
         select * from users order by id
     </select>
 
-  <select id="getUserWithCallableAndUnset" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithCallableAndUnset" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="CALLABLE">
         {call getusers()}
     </select>
-  <select id="getUserWithCallableAndDefault" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithCallableAndDefault" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="CALLABLE" resultSetType="DEFAULT">
         {call getusers()}
     </select>
-  <select id="getUserWithCallableAndForwardOnly" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithCallableAndForwardOnly" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="CALLABLE" resultSetType="FORWARD_ONLY">
         {call getusers()}
     </select>
-  <select id="getUserWithCallableAndScrollInsensitive" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithCallableAndScrollInsensitive" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="CALLABLE" resultSetType="SCROLL_INSENSITIVE">
         {call getusers()}
     </select>
-  <select id="getUserWithCallableAndScrollSensitive" resultType="org.apache.ibatis.submitted.result_set_type.User"
+  <select id="getUserWithCallableAndScrollSensitive" resultType="org.apache.ibatis.submitted.result_set_type.pojo.User"
           statementType="CALLABLE" resultSetType="SCROLL_SENSITIVE">
         {call getusers()}
     </select>
