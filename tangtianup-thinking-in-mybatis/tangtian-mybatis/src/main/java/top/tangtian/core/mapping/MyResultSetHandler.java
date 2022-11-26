@@ -1,9 +1,8 @@
-package top.tangtian.resulthandler;
+package top.tangtian.core.mapping;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.List;
 
 public interface MyResultSetHandler {

@@ -1,6 +1,10 @@
 package top.tangtian.core.entity;
 
+
+import top.tangtian.core.binding.MapperMethod;
+
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -13,13 +17,13 @@ public class Configuration {
     private String url;
     private String username;
     private String password;
-    private Map<String, SqlSource> sqlSourceMap = new HashMap<>();
+    private Map<String, List<MapperMethod>> sqlSourceMap = new HashMap<>();
 
-    public Map<String, SqlSource> getSqlSourceMap() {
+    public Map<String, List<MapperMethod>> getSqlSourceMap() {
         return sqlSourceMap;
     }
 
-    public void setSqlSourceMap(Map<String, SqlSource> sqlSourceMap) {
+    public void setSqlSourceMap(Map<String, List<MapperMethod>> sqlSourceMap) {
         this.sqlSourceMap = sqlSourceMap;
     }
 

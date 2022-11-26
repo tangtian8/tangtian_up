@@ -1,13 +1,22 @@
-package top.tangtian.core.entity;
+package top.tangtian.core.binding;
 
 /**
  * @author tangtian
  * @description
- * @date 2022/11/23 7:57
+ * @date 2022/11/25 8:11
  */
-public class SqlSource {
+public class MapperMethod {
+    private String id;
     private String sql;
     private String resultType;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getSql() {
         return sql;
@@ -24,4 +33,8 @@ public class SqlSource {
     public void setResultType(String resultType) {
         this.resultType = resultType;
     }
+
+
+
+
 }

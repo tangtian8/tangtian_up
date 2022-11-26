@@ -1,8 +1,10 @@
 package top.tangtian.api;
 
 import top.tangtian.Executor;
+import top.tangtian.core.binding.MappedStatement;
 import top.tangtian.core.entity.Configuration;
-import top.tangtian.resulthandler.MyResultSetHandler;
+import top.tangtian.core.entity.Environment;
+import top.tangtian.core.mapping.MyResultSetHandler;
 
 import java.util.List;
 /**
@@ -13,15 +15,17 @@ import java.util.List;
 public class SqlSessionImpl implements SqlSession{
 
     //每次Sql会话连接，必须要有数据库配置信息
-    private Configuration configuration;
+    private Environment environment;
+    private MappedStatement mappedStatement;
 
-    public SqlSessionImpl(Configuration configuration) {
-        this.configuration = configuration;
+    public SqlSessionImpl(Environment configuration,MappedStatement mappedStatement) {
+        this.environment = configuration;
+        this.mappedStatement = mappedStatement;
     }
 
     @Override
     public <T> List<T> selectList(String sql) throws Exception {
-        Executor executor = new Executor(configuration);
+        Executor executor = new Executor(environment,mappedStatement);
 
         return (List<T>) executor.executeQuery(sql);
     }
@@ -29,7 +33,7 @@ public class SqlSessionImpl implements SqlSession{
 
     @Override
     public <T> List<T> selectList(String sql, MyResultSetHandler setHandler) throws Exception {
-        Executor executor = new Executor(configuration);
+        Executor executor = new Executor(environment,mappedStatement);
 
         return (List<T>) executor.executeQuery(sql,setHandler);
     }

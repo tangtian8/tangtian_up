@@ -1,14 +1,14 @@
 package top.tangtian;
 
-import top.tangtian.core.entity.Configuration;
-import top.tangtian.core.entity.SqlSource;
-import top.tangtian.resulthandler.MyResultSetHandler;
+import top.tangtian.core.binding.MappedStatement;
+import top.tangtian.core.binding.MapperMethod;
+import top.tangtian.core.entity.Environment;
+import top.tangtian.core.mapping.MyResultSetHandler;
 
 import java.lang.reflect.Method;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author tangtian
@@ -16,37 +16,18 @@ import java.util.Map;
  * @date 2022/11/23 8:06
  */
 public class Executor {
-    private Configuration configuration;
-
-    public Executor(Configuration configuration) {
-        this.configuration = configuration;
+    private Environment environment;
+    private MappedStatement mappedStatement;
+    public Executor(Environment environment,MappedStatement mappedStatement) {
+        this.environment = environment;
+        this.mappedStatement = mappedStatement;
     }
 
     public <E> List<E>  executeQuery(String statement) throws Exception {
-        /**
-         * 数据库连接信息硬编码
-         */
-        String driver = configuration.getDriver();
-        String url = configuration.getUrl();
-        String username = configuration.getUsername();
-        String password = configuration.getPassword();
-        Map<String, SqlSource> map = configuration.getSqlSourceMap();
-        //SQL映射对象
-        //SqlSession#selectList("namespace#selectid")
-        //SqlSource 是 UserMapper中封装的Sql标签，sql语句，返回值类型
-        SqlSource mapper = map.get(statement);
-        String sqlStr = mapper.getSql();//获取查询SQL
-        String resultType = mapper.getResultType();//获取返回值类的全限定名(包名+类名)
-
-        //1.注册MySQL驱动
-        Class.forName(driver);
-        //2.获取连接Connection对象
-        /**
-         * 数据库连接的创建和释放频繁，造成系统资源的浪费，严重影响了系统性能
-         */
-        Connection conn = DriverManager.getConnection(url, username, password);
+        Connection connection = environment.getDataSource().getConnection();
+        MapperMethod sql = mappedStatement.getSql(statement);
         //3.创建SQL语句对象Statement，填写SQL语句
-        PreparedStatement ps = conn.prepareStatement(sqlStr);
+        PreparedStatement ps = connection.prepareStatement(sql.getSql());
         //4.执行查询SQL，返回结果集ResultSet
         ResultSet rs = ps.executeQuery();
         //5.解析结果集，获取查询用户list集合
@@ -61,12 +42,11 @@ public class Executor {
         }
         List list = new ArrayList();
         //循环解析结果集
-
         while (rs.next()) {
             //在代码运行的时候，为创建指定类的对象，并且可以调用对象的方法，而且无视权限修饰符！
             //在汽车奔跑的时候，为汽车更换轮子！
             //通过反射获取类的字节码对象，传入的参数是类的全限定名称
-            Class<?> clazz = Class.forName(resultType);
+            Class<?> clazz = Class.forName(sql.getResultType());
             //反射创建对象
             Object user = clazz.newInstance();
             //反射获取当前类的所有方法
@@ -89,36 +69,13 @@ public class Executor {
         //关闭连接，释放资源
         rs.close();
         ps.close();
-        conn.close();
         return list;
     }
 
     public <E> List<E>  executeQuery(String statement, MyResultSetHandler setHandler) throws Exception {
-        /**
-         * 数据库连接信息硬编码
-         */
-        String driver = configuration.getDriver();
-        String url = configuration.getUrl();
-        String username = configuration.getUsername();
-        String password = configuration.getPassword();
-        Map<String, SqlSource> map = configuration.getSqlSourceMap();
-        //SQL映射对象
-        //SqlSession#selectList("namespace#selectid")
-        //SqlSource 是 UserMapper中封装的Sql标签，sql语句，返回值类型
-        SqlSource mapper = map.get(statement);
-        String sqlStr = mapper.getSql();//获取查询SQL
-        String resultType = mapper.getResultType();//获取返回值类的全限定名(包名+类名)
-
-        //1.注册MySQL驱动
-        Class.forName(driver);
-        //2.获取连接Connection对象
-        /**
-         * 数据库连接的创建和释放频繁，造成系统资源的浪费，严重影响了系统性能
-         */
-        Connection conn = DriverManager.getConnection(url, username, password);
-        //3.创建SQL语句对象Statement，填写SQL语句
-        PreparedStatement ps = conn.prepareStatement(sqlStr);
-        //4.执行查询SQL，返回结果集ResultSet
+        Connection connection = environment.getDataSource().getConnection();
+        MapperMethod sql = mappedStatement.getSql(statement);
+        PreparedStatement ps = connection.prepareStatement(sql.getSql());
         ResultSet rs = ps.executeQuery();
         //5.解析结果集，获取查询用户list集合
         //获取结果集元数据
@@ -131,11 +88,12 @@ public class Executor {
             columnNames.add(metaData.getColumnName(i));
         }
         //循环解析结果集
-        List<Object> objects = setHandler.handleResultSets(resultType, rs);
+        List<Object> objects = setHandler.handleResultSets(sql.getResultType(), rs);
         //关闭连接，释放资源
         rs.close();
         ps.close();
-        conn.close();
         return (List<E>) objects;
     }
+
+
 }

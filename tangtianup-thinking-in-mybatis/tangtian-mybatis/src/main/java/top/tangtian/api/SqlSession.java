@@ -1,6 +1,6 @@
 package top.tangtian.api;
 
-import top.tangtian.resulthandler.MyResultSetHandler;
+import top.tangtian.core.mapping.MyResultSetHandler;
 
 import java.util.List;
 

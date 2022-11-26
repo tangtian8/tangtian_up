@@ -6,8 +6,8 @@ import pojo.User;
 import top.tangtian.api.SqlSession;
 import top.tangtian.core.factory.SqlSessionFactory;
 import top.tangtian.core.factory.SqlSessionFactoryBuilder;
-import top.tangtian.resulthandler.DefaultResultSetHandler;
-import top.tangtian.resulthandler.MyResultSetHandler;
+import top.tangtian.core.mapping.DefaultResultSetHandler;
+import top.tangtian.core.mapping.MyResultSetHandler;
 
 import java.io.InputStream;
 import java.util.List;

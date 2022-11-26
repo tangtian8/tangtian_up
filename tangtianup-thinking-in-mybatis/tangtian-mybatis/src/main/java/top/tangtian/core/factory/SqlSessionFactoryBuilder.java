@@ -4,10 +4,12 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
+import top.tangtian.core.binding.MapperMethod;
 import top.tangtian.core.entity.Configuration;
-import top.tangtian.core.entity.SqlSource;
 
 import java.io.InputStream;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,7 +22,7 @@ public class SqlSessionFactoryBuilder {
      * 构建工厂对象
      * 参数：SqlMapConfig.xml配置文件的输入流对象
      */
-    public SqlSessionFactory build(InputStream inputStream) throws DocumentException {
+    public SqlSessionFactory build(InputStream inputStream) throws DocumentException, SQLException {
         Configuration configuration = new Configuration();
         //解析配置文件
         loadXmlConfig(configuration,inputStream);
@@ -58,7 +60,7 @@ public class SqlSessionFactoryBuilder {
             String resource = element.attributeValue("resource");
             //解析SQL映射配置文件
             loadSqlConfig(resource,configuration);
-        }
+         }
     }
     /**
      * 解析SQL配置文件
@@ -77,6 +79,7 @@ public class SqlSessionFactoryBuilder {
         //获取当前SQL映射文件所有查询语句标签
         List<Element> selectNodes = document.selectNodes("//select");
         //循环解析查询标签select，抽取SQL语句
+        List<MapperMethod> mapperMethods = new ArrayList<>();
         for (Element element : selectNodes) {
             //查询语句唯一标识
             String id = element.attributeValue("id");
@@ -85,11 +88,13 @@ public class SqlSessionFactoryBuilder {
             //查询语句
             String sql = element.getText();
             //创建Mapper对象
-            SqlSource mapper = new SqlSource();
+            MapperMethod mapper = new MapperMethod();
             mapper.setSql(sql);
             mapper.setResultType(resultType);
+            mapper.setId(id);
             //在configuration中设置mapper类，key：(命名空间+.+SQL语句唯一标识符)
-            configuration.getSqlSourceMap().put(namespace+"."+id,mapper);
+            mapperMethods.add(mapper);
         }
+        configuration.getSqlSourceMap().put(namespace,mapperMethods);
     }
 }

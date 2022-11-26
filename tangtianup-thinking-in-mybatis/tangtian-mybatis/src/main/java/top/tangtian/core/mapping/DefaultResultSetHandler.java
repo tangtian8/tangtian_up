@@ -1,13 +1,10 @@
-package top.tangtian.resulthandler;
-
-import top.tangtian.core.entity.SqlSource;
+package top.tangtian.core.mapping;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
