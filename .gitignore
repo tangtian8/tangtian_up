@@ -1,15 +1,35 @@
-#过滤文件夹target,.idea
-/target
-/.idea
-/out
+target/
+bin/
+logs/
+build/
+.settings/
+.project
+.classpath
+.iml
+.idea/
 *.iml
-
-#编译文件
+generated-sources/
+  
+# Compiled class file
 *.class
 
-#包文件
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
 *.jar
 *.war
+*.nar
+*.ear
 *.zip
-*.rar
 *.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
