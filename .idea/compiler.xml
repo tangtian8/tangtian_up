@@ -27,6 +27,7 @@
         <module name="mq-demo" />
         <module name="common-api" />
         <module name="tangtianup-thinking-in-jvm" />
+        <module name="tangtianup-thinking-in-springlearn" />
         <module name="framework" />
         <module name="springcloud-gateaway" />
         <module name="herocat-app" />
@@ -69,6 +70,7 @@
       <module name="tangtian-mybatis" target="8" />
       <module name="tangtianup-thinking-in-jvm" target="8" />
       <module name="tangtianup-thinking-in-mybatis" target="1.7" />
+      <module name="tangtianup-thinking-in-springlearn" target="1.8" />
       <module name="usemybatis" target="7" />
     </bytecodeTargetLevel>
   </component>
@@ -87,6 +89,7 @@
       <module name="rocketmq" options="-parameters" />
       <module name="seller-api" options="-parameters" />
       <module name="springcloud-gateaway" options="-parameters" />
+      <module name="tangtianup-thinking-in-springlearn" options="-parameters" />
     </option>
   </component>
 </project>

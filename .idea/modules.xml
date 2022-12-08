@@ -32,6 +32,7 @@
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-mybatis/tangtian-mybatis/tangtian-mybatis.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-mybatis/tangtian-mybatis/tangtian-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tangtian_up.iml" filepath="$PROJECT_DIR$/.idea/tangtian_up.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-jvm/tangtianup-thinking-in-jvm.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-jvm/tangtianup-thinking-in-jvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-springlearn/tangtianup-thinking-in-springlearn.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-springlearn/tangtianup-thinking-in-springlearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/tangtianup-thinking-in-mybatis/usemybatis/usemybatis.iml" filepath="$PROJECT_DIR$/tangtianup-thinking-in-mybatis/usemybatis/usemybatis.iml" />
     </modules>
   </component>
