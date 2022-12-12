@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @description
  * @date 2022/12/12 7:36
  */
-@ConfigurationProperties(prefix = "tangtian.batis.dataSource")
+@ConfigurationProperties(prefix = "tangtian.batis.datasource")
 public class DataSourceProperties {
     private String driver;
     private String url;

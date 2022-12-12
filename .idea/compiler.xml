@@ -68,7 +68,7 @@
       <module name="springboot-permission" target="1.8" />
       <module name="springcloud-gateaway" target="1.8" />
       <module name="tangtian-mybatis" target="8" />
-      <module name="tangtian-mybatis-starter" target="8" />
+      <module name="tangtian-mybatis-starter" target="1.8" />
       <module name="tangtianup-thinking-in-jvm" target="8" />
       <module name="tangtianup-thinking-in-mybatis" target="1.7" />
       <module name="tangtianup-thinking-in-springlearn" target="1.8" />

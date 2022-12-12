@@ -5,21 +5,17 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>top.tangtian</groupId>
 	<artifactId>tangtian-mybatis-starter</artifactId>
-	<packaging>pom</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<!-- TODO project name  -->
 	<name>tangtianbatissarter</name>
 	<description></description>
-
-
-	<licenses>
-		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<java.version>13</java.version>
+		<spring.version>5.2.0.RELEASE</spring.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>dom4j</groupId>
@@ -43,48 +39,24 @@
 			<version>2.1.2.RELEASE</version>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<resources>
 			<resource>
-				<filtering>true</filtering>
-				<directory>src/main/resources</directory>
-			</resource>
-			<resource>
-				<filtering>false</filtering>
 				<directory>src/main/java</directory>
 				<includes>
-					<include>**</include>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
 				</includes>
-				<excludes>
-					<exclude>**/*.java</exclude>
-				</excludes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
 			</resource>
 		</resources>
-		<testResources>
-			<testResource>
-				<filtering>false</filtering>
-				<directory>src/test/java</directory>
-				<includes>
-					<include>**</include>
-				</includes>
-				<excludes>
-					<exclude>**/*.java</exclude>
-				</excludes>
-			</testResource>
-		</testResources>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>8</source>
-					<target>8</target>
-				</configuration>
-			</plugin>
-		</plugins>
-
 	</build>
+
 
 
 

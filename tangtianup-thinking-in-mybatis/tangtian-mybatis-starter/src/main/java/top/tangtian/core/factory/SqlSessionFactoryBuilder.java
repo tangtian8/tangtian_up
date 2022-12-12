@@ -48,22 +48,12 @@ public class SqlSessionFactoryBuilder {
         //获取SqlMapConfig.xml 配置文件内所有property标签元素
         List<Element> selectNodes = document.selectNodes("//property");
         //循环解析property标签内容，抽取配置信息
-        for (Element element : selectNodes) {
-            String name = element.attributeValue("name");
-            if ("driver".equals(name)){//数据库驱动
-                configurationInfo.setDriver(properties.getDriver());
-//                configurationInfo.setDriver(element.attributeValue("value"));
-            } else if ("url".equals(name)){//数据库地址
-                configurationInfo.setUrl(properties.getUrl());
-//                configurationInfo.setUrl(element.attributeValue("value"));
-            } else if ("username".equals(name)){//用户名
-                configurationInfo.setUsername(properties.getUsername());
-//                configurationInfo.setUsername(element.attributeValue("value"));
-            } else if ("password".equals(name)){//密码
-                configurationInfo.setPassword(properties.getPassword());
-//                configurationInfo.setPassword(element.attributeValue("value"));
-            }
-        }
+
+        configurationInfo.setDriver(properties.getDriver());
+        configurationInfo.setUrl(properties.getUrl());
+        configurationInfo.setUsername(properties.getUsername());
+        configurationInfo.setPassword(properties.getPassword());
+
         //解析SqlMapConfig.xml 映射器配置信息
         List<Element> list = document.selectNodes("//mapper");
         for (Element element : list) {
