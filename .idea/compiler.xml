@@ -45,7 +45,7 @@
       <module name="concurrency" target="1.8" />
       <module name="consumer" target="1.8" />
       <module name="day11-netty" target="1.8" />
-      <module name="dubbo-samples-basic" target="1.8" />
+      <module name="dubbo-samples-basic" target="1.5" />
       <module name="framework" target="1.8" />
       <module name="hero-consumer" target="1.8" />
       <module name="hero-producer" target="1.8" />
@@ -68,10 +68,11 @@
       <module name="springboot-permission" target="1.8" />
       <module name="springcloud-gateaway" target="1.8" />
       <module name="tangtian-mybatis" target="8" />
+      <module name="tangtian-mybatis-starter" target="8" />
       <module name="tangtianup-thinking-in-jvm" target="8" />
       <module name="tangtianup-thinking-in-mybatis" target="1.7" />
       <module name="tangtianup-thinking-in-springlearn" target="1.8" />
-      <module name="usemybatis" target="7" />
+      <module name="usemybatis" target="1.7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -90,6 +91,7 @@
       <module name="seller-api" options="-parameters" />
       <module name="springcloud-gateaway" options="-parameters" />
       <module name="tangtianup-thinking-in-springlearn" options="-parameters" />
+      <module name="usemybatis" options="" />
     </option>
   </component>
 </project>

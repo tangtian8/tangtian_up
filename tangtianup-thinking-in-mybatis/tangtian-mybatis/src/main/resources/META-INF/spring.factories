@@ -1,0 +1,11 @@
+# Initializers
+org.springframework.context.ApplicationContextInitializer=\
+top.tangtian.initializer.DemoApplicationContextInitializer
+
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+top.tangtian.configration.BatisAutoConfiguration
+
+# Application Listeners
+org.springframework.context.ApplicationListener=\
+top.tangtian.listener.DemoApplicationListener
