@@ -58,7 +58,7 @@ public class MQConsumerConfigure {
             String[] topicArr = topics.split(";");
             for (String topic : topicArr) {
                 String[] tagArr = topic.split("~");
-                consumer.subscribe(tagArr[0], tagArr[1]);
+                consumer.subscribe(tagArr[0], "*");
             }
             consumer.start();
             System.out.println("consumer 创建成功" + namesrvAddr + topics + groupName);

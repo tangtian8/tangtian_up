@@ -36,7 +36,7 @@ public class MQProducerController {
 //        LOGGER.info("发送MQ消息内容：" + msg);
         Message sendMsg = new Message("TestTopic", "TestTag", msg.getBytes());
         // 默认3秒超时
-        SendResult sendResult = defaultMQProducer.send(sendMsg);
+        SendResult sendResult = defaultMQProducer.send(sendMsg,10000);
 //        LOGGER.info("消息发送响应：" + sendResult.toString());
         return sendResult;
     }

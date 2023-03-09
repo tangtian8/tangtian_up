@@ -18,6 +18,7 @@ import java.util.List;
  * @date 2022/11/8 20:53
  */
 @Component
+@Slf4j
 public class MQConsumeMsgListenerProcessor implements MessageListenerConcurrently {
     public static final Logger LOGGER = LoggerFactory.getLogger(MQConsumeMsgListenerProcessor.class);
 
@@ -41,8 +42,7 @@ public class MQConsumeMsgListenerProcessor implements MessageListenerConcurrentl
             String topic = messageExt.getTopic();
             String tags = messageExt.getTags();
             String body = new String(messageExt.getBody(), "utf-8");
-
-            System.out.println(body);
+            log.info("获取MQ消息内容:{}",body);
         } catch (Exception e) {
             LOGGER.error("获取MQ消息内容异常{}",e);
         }

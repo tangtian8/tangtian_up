@@ -10,7 +10,9 @@
         <module name="agent" />
         <module name="mongoDemo" />
         <module name="mybatis" />
+        <module name="tangtian-mybatis-starter" />
         <module name="admin" />
+        <module name="tangtian-thinking-in-leetcode" />
         <module name="herocat-starter" />
         <module name="usemybatis" />
         <module name="seata-samples-dubbo" />
@@ -33,6 +35,11 @@
         <module name="herocat-app" />
         <module name="hero-producer" />
         <module name="manager-api" />
+      </profile>
+      <profile name="Annotation profile for dubbo-samples-basic" enabled="true">
+        <sourceOutputDir name="../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
         <module name="dubbo-samples-basic" />
       </profile>
     </annotationProcessing>
@@ -65,10 +72,11 @@
       <module name="seata-samples" target="1.8" />
       <module name="seata-samples-dubbo" target="1.8" />
       <module name="seller-api" target="1.8" />
-      <module name="springboot-permission" target="1.8" />
+      <module name="springboot-permission" target="1.6" />
       <module name="springcloud-gateaway" target="1.8" />
       <module name="tangtian-mybatis" target="8" />
       <module name="tangtian-mybatis-starter" target="1.8" />
+      <module name="tangtian-thinking-in-leetcode" target="8" />
       <module name="tangtianup-thinking-in-jvm" target="8" />
       <module name="tangtianup-thinking-in-mybatis" target="1.7" />
       <module name="tangtianup-thinking-in-springlearn" target="1.8" />
