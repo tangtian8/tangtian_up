@@ -73,17 +73,9 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int n = 7;
-        int[] res = new int[n + 1];
-        for (int i = 0; i<= n; i++){
-            if (i == 0 || i == 1){
-                res[i] = 1;
-            }else {
-                res[i] = (res[i - 1] + res[i - 2])%1000000007;
-            }
-        }
-        System.out.println(res[n]);
+        System.out.println(minSubArrayLen(7, new int[]{2,3, 1,2,4,3}));
     }
+
 
     public String reverseLeftWords(String s, int n) {
         if (s == null || s.length() <= n){
@@ -409,6 +401,50 @@ public class Solution {
 //输出: 3
 //解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
     public int lengthOfLongestSubstring(String s) {
-        
+        return 0;
     }
+
+
+    public static String longestCommonPrefix(String[] strs) {
+        int len = strs.length;
+        int minStrLen=strs[0].length();
+        for(int i = 0; i < len; i++){
+            minStrLen = Math.min(minStrLen,strs[i].length());
+        }
+        int minIndex = 0;
+        for(int i = 0; i < len; i++){
+            if(minStrLen == strs[i].length()){
+                minIndex = i;
+            }
+        }
+        String minStr =  strs[minIndex];
+
+        for(int i = 0;i < len; i ++){
+            for(int j = 0;j < minIndex; j ++){
+                String str = strs[i];
+                if(str.charAt(j) != minStr.charAt(j)){
+                    return minStr.substring(0,j);
+                }
+            }
+        }
+        return "";
+    }
+
+    public static int minSubArrayLen(int target, int[] nums) {
+        int len = nums.length;
+        int minLen =  Integer.MAX_VALUE;
+        for(int i = 0; i < len - 1 ; i++){
+            int tempTarget = nums[i];
+            for(int j = i + 1; j < len;j++){
+                tempTarget = tempTarget + nums[j];
+                if(tempTarget >= target){
+                    int tempLen = j - i;
+                    minLen = Math.min(minLen,tempLen);
+                    break;
+                }
+            }
+        }
+        return minLen == Integer.MAX_VALUE ? 0 : minLen;
+    }
+
 }
