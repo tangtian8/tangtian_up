@@ -72,10 +72,6 @@ public class Solution {
         return builder.toString();
     }
 
-    public static void main(String[] args) {
-        System.out.println(minSubArrayLen(7, new int[]{2,3, 1,2,4,3}));
-    }
-
 
     public String reverseLeftWords(String s, int n) {
         if (s == null || s.length() <= n){
@@ -445,6 +441,62 @@ public class Solution {
             }
         }
         return minLen == Integer.MAX_VALUE ? 0 : minLen;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(summaryRanges((new int[]{0,2,3,4,6,8,9})));
+    }
+
+
+    public static boolean containsNearbyDuplicate(int[] nums, int k) {
+        // for(int i = 0;i < nums.length;i++){
+        //     int jIndex = i+1;
+        //     while(jIndex < nums.length){
+        //         if(nums[i] == nums[jIndex] && Math.abs(i - jIndex)<=k){
+        //             return true;
+        //         }
+        //         jIndex++;
+        //     }
+        // }
+        // return false;
+
+        Map<Integer,Integer> numsMap = new HashMap<>();
+
+        for(int i = 0; i < nums.length; i++){
+            Integer value = numsMap.get(nums[i]);
+            if(numsMap.containsKey(nums[i]) && value != null){
+                if(Math.abs(i - value)<=k){
+                    return true;
+                }
+            }else{
+                numsMap.put(nums[i],i);
+            }
+        }
+        return false;
+
+    }
+//[0,2,3,4,6,8,9]
+    public static List<String> summaryRanges(int[] nums) {
+        int left = 0;int i = 0;
+        List<String> list = new ArrayList<>();
+        while(i < nums.length - 1){
+            if(nums[i + 1] - 1 != nums[i]){
+                if(nums[left] == nums[i]){
+                    list.add(nums[left] + "");
+                }else{
+                    list.add(nums[left] + "->" + nums[i]);
+                }
+                left = i + 1;
+            }
+            i++;
+        }
+        if (nums[left] == nums[nums.length -1]){
+            list.add(nums[left] + "");
+        }else {
+            list.add(nums[left] + "->" + nums[nums.length -1]);
+        }
+        return list;
     }
 
 }
